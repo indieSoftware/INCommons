@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DelegatedCall Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/DelegatedCall" class="dashAnchor"></a>
+    <a title="DelegatedCall Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        DelegatedCall Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ControlCallback.html">ControlCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DelegatedCall.html">DelegatedCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DispatchedCall.html">DispatchedCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyboardController.html">KeyboardController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NotificationToken.html">NotificationToken</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/DispatchQueue.html">DispatchQueue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NotificationCenter.html">NotificationCenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIEdgeInsets.html">UIEdgeInsets</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIResponder.html">UIResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/KeyboardControllerDelegate.html">KeyboardControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>DelegatedCall</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DelegatedCall</span><span class="o">&lt;</span><span class="kt">Input</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>A replacement construct for a simple delegate pattern or a callback closure.</p>
+
+<p>Use this instead of a simple delegate closure where the API user might forget to provide a <code>[weak self]</code> in the closure,
+e.g. <code>delegate = { [weak self] image in }</code>.
+With this approach the provided closure has automatically a not-retained strong reference to the object.</p>
+
+<p>Usage example:</p>
+<pre class="highlight swift"><code><span class="c1">// Provide possibility to register.</span>
+<span class="k">let</span> <span class="nv">didDownload</span> <span class="o">=</span> <span class="kt">DelegatedCall</span><span class="o">&lt;</span><span class="kt">UIImage</span><span class="o">&gt;</span><span class="p">()</span>
+
+<span class="c1">// Register as delegate.</span>
+<span class="n">didDownload</span><span class="o">.</span><span class="nf">setDelegate</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">strongSelf</span><span class="p">,</span> <span class="n">image</span><span class="p">)</span> <span class="k">in</span> <span class="p">}</span>
+
+<span class="c1">// Inform registered object.</span>
+<span class="n">didDownload</span><span class="o">.</span><span class="nf">callback</span><span class="p">?(</span><span class="n">image</span><span class="p">)</span>
+</code></pre>
+
+<p>See: <a href="https://medium.com/anysuggestion/preventing-memory-leaks-with-swift-compile-time-safety-49b845df4dc6">https://medium.com/anysuggestion/preventing-memory-leaks-with-swift-compile-time-safety-49b845df4dc6</a></p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Delegate"></a>
+                <a name="//apple_ref/swift/Section/Delegate" class="dashAnchor"></a>
+                <a href="#/Delegate">
+                  <h3 class="section-name">Delegate</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9INCommons13DelegatedCallC11setDelegate2to4withyqd___yqd___xtctRld__ClF"></a>
+                    <a name="//apple_ref/swift/Method/setDelegate(to:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons13DelegatedCallC11setDelegate2to4withyqd___yqd___xtctRld__ClF">setDelegate(to:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the <code>callback</code> property with the delegate for calling when firing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">setDelegate</span><span class="o">&lt;</span><span class="kt">Object</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">&gt;</span><span class="p">(</span><span class="n">to</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Object</span><span class="p">,</span>
+                                           <span class="n">with</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">strongSelf</span><span class="p">:</span> <span class="kt">Object</span><span class="p">,</span> <span class="n">_</span> <span class="nv">delivery</span><span class="p">:</span> <span class="kt">Input</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The delegate object to inform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure to call when the delegate triggers.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>strongSelf</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A non-retaining strong reference to the delegate callee.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delivery</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object to deliver to the delegate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-01-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

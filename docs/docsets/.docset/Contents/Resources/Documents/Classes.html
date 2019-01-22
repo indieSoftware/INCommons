@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
+    <a title="Classes  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Classes  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ControlCallback.html">ControlCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DelegatedCall.html">DelegatedCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DispatchedCall.html">DispatchedCall</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KeyboardController.html">KeyboardController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NotificationToken.html">NotificationToken</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/DispatchQueue.html">DispatchQueue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/NotificationCenter.html">NotificationCenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIEdgeInsets.html">UIEdgeInsets</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIResponder.html">UIResponder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/KeyboardControllerDelegate.html">KeyboardControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9INCommons15ControlCallbackC"></a>
+                    <a name="//apple_ref/swift/Class/ControlCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons15ControlCallbackC">ControlCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A construct replacing the Target-Action-Pairing for <code>UIControl</code>s.</p>
+
+<p>With this approach the provided closure has automatically a not-retained strong reference to the delegate object.</p>
+
+<p>Usage example:</p>
+<pre class="highlight swift"><code><span class="c1">// Provide possibility to register for a button's press action.</span>
+<span class="kd">private(set)</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">onButtonPressed</span><span class="p">:</span> <span class="kt">ControlCallback</span><span class="o">&lt;</span><span class="kt">UIButton</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="kt">ControlCallback</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">button</span><span class="p">,</span> <span class="nv">event</span><span class="p">:</span> <span class="o">.</span><span class="n">touchUpInside</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">unowned</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">button</span>
+  <span class="p">}</span>
+<span class="p">}()</span>
+
+<span class="c1">// Register a callback which will be informed about the button gets pressed.</span>
+<span class="n">onButtonPressed</span><span class="o">.</span><span class="nf">setDelegate</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="p">{</span> <span class="n">strongSelf</span><span class="p">,</span> <span class="n">button</span> <span class="k">in</span> <span class="p">})</span>
+</code></pre>
+
+                        <a href="Classes/ControlCallback.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ControlCallback</span><span class="o">&lt;</span><span class="kt">ReturnType</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9INCommons13DelegatedCallC"></a>
+                    <a name="//apple_ref/swift/Class/DelegatedCall" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons13DelegatedCallC">DelegatedCall</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A replacement construct for a simple delegate pattern or a callback closure.</p>
+
+<p>Use this instead of a simple delegate closure where the API user might forget to provide a <code>[weak self]</code> in the closure,
+e.g. <code>delegate = { [weak self] image in }</code>.
+With this approach the provided closure has automatically a not-retained strong reference to the object.</p>
+
+<p>Usage example:</p>
+<pre class="highlight swift"><code><span class="c1">// Provide possibility to register.</span>
+<span class="k">let</span> <span class="nv">didDownload</span> <span class="o">=</span> <span class="kt">DelegatedCall</span><span class="o">&lt;</span><span class="kt">UIImage</span><span class="o">&gt;</span><span class="p">()</span>
+
+<span class="c1">// Register as delegate.</span>
+<span class="n">didDownload</span><span class="o">.</span><span class="nf">setDelegate</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">strongSelf</span><span class="p">,</span> <span class="n">image</span><span class="p">)</span> <span class="k">in</span> <span class="p">}</span>
+
+<span class="c1">// Inform registered object.</span>
+<span class="n">didDownload</span><span class="o">.</span><span class="nf">callback</span><span class="p">?(</span><span class="n">image</span><span class="p">)</span>
+</code></pre>
+
+<p>See: <a href="https://medium.com/anysuggestion/preventing-memory-leaks-with-swift-compile-time-safety-49b845df4dc6">https://medium.com/anysuggestion/preventing-memory-leaks-with-swift-compile-time-safety-49b845df4dc6</a></p>
+
+                        <a href="Classes/DelegatedCall.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DelegatedCall</span><span class="o">&lt;</span><span class="kt">Input</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9INCommons14DispatchedCallC"></a>
+                    <a name="//apple_ref/swift/Class/DispatchedCall" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons14DispatchedCallC">DispatchedCall</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A dispatch worker item which executes a block after a given time,
+but only as long as this worker object lives and hasn&rsquo;t been cancelled manually.</p>
+
+<p>Usage example:</p>
+<pre class="highlight swift"><code><span class="c1">// Create a new dispatched call worker ready to enqueue the block for later execution.</span>
+<span class="kd">lazy</span> <span class="k">var</span> <span class="nv">worker</span> <span class="o">=</span> <span class="kt">DispatchedCall</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">strongSelf</span> <span class="k">in</span> <span class="p">}</span>
+
+<span class="c1">// Enqueue the block for beeing executed in 1 second.</span>
+<span class="n">worker</span><span class="o">.</span><span class="nf">enqueue</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">// Cancel execution of the block.</span>
+<span class="n">worker</span><span class="o">.</span><span class="nf">cancel</span><span class="p">()</span>
+
+<span class="c1">// Enqueue the block again, but for 2 seconds this time.</span>
+<span class="n">worker</span><span class="o">.</span><span class="nf">enqueue</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">// Automatically cancels the block execution.</span>
+<span class="n">worker</span> <span class="o">=</span> <span class="kc">nil</span>
+</code></pre>
+
+                        <a href="Classes/DispatchedCall.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">DispatchedCall</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9INCommons18KeyboardControllerC"></a>
+                    <a name="//apple_ref/swift/Class/KeyboardController" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons18KeyboardControllerC">KeyboardController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A controller which informs a delegate about keyboard appearance changes.</p>
+
+<p>This controller listens to the keyboard notifications and passes the appropriate callbacks to the delegate.</p>
+
+                        <a href="Classes/KeyboardController.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">KeyboardController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9INCommons17NotificationTokenC"></a>
+                    <a name="//apple_ref/swift/Class/NotificationToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons17NotificationTokenC">NotificationToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wraps the observer token received from <code>NotificationCenter.addObserver(forName:object:queue:using:)</code> and unregisters it in deinit.</p>
+
+<p>This helps to handle notifications with blocks so they unregisters the observer when dealocating.</p>
+
+<p>Usage example:</p>
+<pre class="highlight swift"><code><span class="c1">// Provide a token property.</span>
+<span class="k">var</span> <span class="nv">notificationToken</span><span class="p">:</span> <span class="kt">NotificationToken</span><span class="p">?</span>
+
+<span class="c1">// Add an observer to the notification center and hold the returned token.</span>
+<span class="n">notificationToken</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">observe</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="o">.</span><span class="kt">ANotificationName</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">notification</span> <span class="k">in</span> <span class="p">}</span>
+
+<span class="c1">// Automatically removes the observer from the notification center.</span>
+<span class="n">notificationToken</span> <span class="o">=</span> <span class="kc">nil</span>
+</code></pre>
+
+<p>See: <a href="https://oleb.net/blog/2018/01/notificationcenter-removeobserver/">https://oleb.net/blog/2018/01/notificationcenter-removeobserver/</a></p>
+
+                        <a href="Classes/NotificationToken.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NotificationToken</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-01-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
