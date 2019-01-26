@@ -15,7 +15,6 @@
 		2658A43821F5F230004451F8 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A42721F5F230004451F8 /* UIDevice.swift */; };
 		2658A43921F5F230004451F8 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A42821F5F230004451F8 /* UITextField.swift */; };
 		2658A43A21F5F230004451F8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A42921F5F230004451F8 /* String.swift */; };
-		2658A43B21F5F230004451F8 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A42A21F5F230004451F8 /* UIResponder.swift */; };
 		2658A43C21F5F230004451F8 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A42B21F5F230004451F8 /* UIImage.swift */; };
 		2658A43D21F5F230004451F8 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A42C21F5F230004451F8 /* Bundle.swift */; };
 		2658A43E21F5F230004451F8 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A42D21F5F230004451F8 /* UIEdgeInsets.swift */; };
@@ -37,7 +36,6 @@
 		2658A42721F5F230004451F8 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		2658A42821F5F230004451F8 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		2658A42921F5F230004451F8 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		2658A42A21F5F230004451F8 /* UIResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		2658A42B21F5F230004451F8 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		2658A42C21F5F230004451F8 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		2658A42D21F5F230004451F8 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 				2658A42721F5F230004451F8 /* UIDevice.swift */,
 				2658A42821F5F230004451F8 /* UITextField.swift */,
 				2658A42921F5F230004451F8 /* String.swift */,
-				2658A42A21F5F230004451F8 /* UIResponder.swift */,
 				2658A42B21F5F230004451F8 /* UIImage.swift */,
 				2658A42C21F5F230004451F8 /* Bundle.swift */,
 				2658A42D21F5F230004451F8 /* UIEdgeInsets.swift */,
@@ -204,7 +201,6 @@
 				2658A44121F5F230004451F8 /* DispatchedCall.swift in Sources */,
 				2658A43521F5F230004451F8 /* UIColor.swift in Sources */,
 				2658A44321F5F230004451F8 /* DelegatedCall.swift in Sources */,
-				2658A43B21F5F230004451F8 /* UIResponder.swift in Sources */,
 				2658A43A21F5F230004451F8 /* String.swift in Sources */,
 				2658A43C21F5F230004451F8 /* UIImage.swift in Sources */,
 				2658A43621F5F230004451F8 /* DispatchQueue.swift in Sources */,
@@ -341,6 +337,7 @@
 		2658A42021F5F15A004451F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -366,6 +363,7 @@
 		2658A42121F5F15A004451F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

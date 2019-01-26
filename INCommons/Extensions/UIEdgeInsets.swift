@@ -51,15 +51,6 @@ extension UIEdgeInsets {
 	}
 
 	/**
-	 Adds the application's status bar height to the top of this edge insets.
-
-	 Be aware that the status bar height might change during the app's lifetime.
-	 */
-	public var withStatusBar: UIEdgeInsets {
-		return top(top + UIApplication.shared.statusBarFrame.height)
-	}
-
-	/**
 	 Inverts the edge insets.
 	 */
 	public var inverted: UIEdgeInsets {
