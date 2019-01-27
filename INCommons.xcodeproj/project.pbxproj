@@ -23,6 +23,7 @@
 		2658A44121F5F230004451F8 /* DispatchedCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A43121F5F230004451F8 /* DispatchedCall.swift */; };
 		2658A44221F5F230004451F8 /* ControlCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A43221F5F230004451F8 /* ControlCallback.swift */; };
 		2658A44321F5F230004451F8 /* DelegatedCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2658A43321F5F230004451F8 /* DelegatedCall.swift */; };
+		C1225DE379ED41D8BDDA51F9 /* Pods_INCommons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9E9CB08625D3D944B7B712 /* Pods_INCommons.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,9 @@
 		2658A43121F5F230004451F8 /* DispatchedCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchedCall.swift; sourceTree = "<group>"; };
 		2658A43221F5F230004451F8 /* ControlCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlCallback.swift; sourceTree = "<group>"; };
 		2658A43321F5F230004451F8 /* DelegatedCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegatedCall.swift; sourceTree = "<group>"; };
+		BD9E9CB08625D3D944B7B712 /* Pods_INCommons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INCommons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D780211CF4F0551A63DC29 /* Pods-INCommons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INCommons.release.xcconfig"; path = "Pods/Target Support Files/Pods-INCommons/Pods-INCommons.release.xcconfig"; sourceTree = "<group>"; };
+		FE1B488B9E74E8E9F12AFF53 /* Pods-INCommons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INCommons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-INCommons/Pods-INCommons.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1225DE379ED41D8BDDA51F9 /* Pods_INCommons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,8 @@
 			children = (
 				2658A41921F5F15A004451F8 /* INCommons */,
 				2658A41821F5F15A004451F8 /* Products */,
+				7F14B3DAB370DD7E4E50FB7B /* Pods */,
+				D4A53E3D81D7511E08A86916 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +120,23 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		7F14B3DAB370DD7E4E50FB7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE1B488B9E74E8E9F12AFF53 /* Pods-INCommons.debug.xcconfig */,
+				F9D780211CF4F0551A63DC29 /* Pods-INCommons.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4A53E3D81D7511E08A86916 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD9E9CB08625D3D944B7B712 /* Pods_INCommons.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -131,6 +155,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2658A41F21F5F15A004451F8 /* Build configuration list for PBXNativeTarget "INCommons" */;
 			buildPhases = (
+				6947433320638D16628E3FB4 /* [CP] Check Pods Manifest.lock */,
+				26381DD421FDC19F00DC3917 /* SwiftFormat */,
+				26381DD521FDC1C000DC3917 /* SwiftLint */,
 				2658A41221F5F15A004451F8 /* Headers */,
 				2658A41321F5F15A004451F8 /* Sources */,
 				2658A41421F5F15A004451F8 /* Frameworks */,
@@ -185,6 +212,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26381DD421FDC19F00DC3917 /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"INCommons\" --indent tab --commas inline --stripunusedargs closure-only --disable redundantRawValues\n";
+		};
+		26381DD521FDC1C000DC3917 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		6947433320638D16628E3FB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-INCommons-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2658A41321F5F15A004451F8 /* Sources */ = {
@@ -264,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -322,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -336,6 +424,7 @@
 		};
 		2658A42021F5F15A004451F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE1B488B9E74E8E9F12AFF53 /* Pods-INCommons.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -362,6 +451,7 @@
 		};
 		2658A42121F5F15A004451F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9D780211CF4F0551A63DC29 /* Pods-INCommons.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
