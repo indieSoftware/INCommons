@@ -31,11 +31,11 @@ public final class ControlCallback<ReturnType: Any> {
 	// MARK: - Init
 
 	/**
-	 Initializes the calback with ta control on which this gets registered for a specific event.
+	 Initializes the calback with a control on which this gets registered for a specific event.
 
-	 - parameter control: The control on which to register.
+	 - parameter control: The control on which to register, the reference gets retained.
 	 - parameter event: The event for which to register.
-	 - parameter callback: The callback which returns the desired return value when the control fires.
+	 - parameter callback: The closure which returns the desired return value when the control fires.
 	 */
 	public init(for control: UIControl, event: UIControl.Event, with callback: @escaping () -> ReturnType) {
 		self.control = control
