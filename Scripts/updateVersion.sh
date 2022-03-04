@@ -15,3 +15,10 @@ fi
 agvtool next-version
 # Sets the lib's marketing version to the value passed as argument.
 agvtool new-marketing-version $1
+# Replace the 3rd line in the podspec to update the version number.
+sed -i '' "3s/.*/ spec.version = \"$1\" # auto-generated/" INCommons.podspec
+# Replace the 4th line in the podspec to update the swift version read from the file.
+SWIFT_VERSION=$(<.swift-version)
+sed -i '' "4s/.*/ spec.swift_version = \"$SWIFT_VERSION\" # auto-generated/" INCommons.podspec
+# Lint podspec to be sure everything is still valid.
+pod lib lint INCommons.podspec

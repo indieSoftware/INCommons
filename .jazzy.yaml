@@ -18,3 +18,5 @@ xcodebuild_arguments:
   - INCommons.xcworkspace
   - -scheme
   - INCommons
+  - -destination
+  - platform=iOS Simulator,OS=latest,name=iPhone 13

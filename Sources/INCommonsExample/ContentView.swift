@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  INCommonsExample
-//
-//  Created by Sven Korset on 04.03.22.
-//
-
 import INCommons
 import SwiftUI
 

@@ -1,10 +1,3 @@
-//
-//  INCommons.h
-//  INCommons
-//
-//  Created by Sven Korset on 04.03.22.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for INCommons.
