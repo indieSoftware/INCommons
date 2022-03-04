@@ -1,0 +1,20 @@
+github_url: https://github.com/indieSoftware/INCommons
+author: Sven Korset
+theme: fullwidth
+title: INCommons
+module: INCommons
+clean: true
+output: ./docApi
+readme: README.md
+skip_undocumented: false
+hide_documentation_coverage: false
+min_acl: public
+sdk: iphone
+objc: false
+swift_build_tool: xcodebuild
+xcodebuild_arguments:
+  - build
+  - -workspace
+  - INCommons.xcworkspace
+  - -scheme
+  - INCommons

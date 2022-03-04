@@ -1,10 +1,43 @@
+# Autosave files
+*~
+
+# globs
+Makefile.in
+*.DS_Store
+*.sln.cache
+*.suo
+*.cache
+*.pidb
+*.userprefs
+*.usertasks
+config.log
+config.make
+config.status
+aclocal.m4
+install-sh
+autom4te.cache/
+*.user
+*.tar.gz
+tarballs/
+test-results/
+Thumbs.db
+.vs/
+
+# Mac bundle stuff
+*.dmg
+*.app
+
 # Xcode
 *.xccheckout
 *.xcscmblueprint
 *.moved-aside
+*.xcscmblueprint
 *.xcuserstate
 xcuserdata/
 
-## Build generated
-build/
-DerivedData/
+# CI
+reports
+build
+
+# Jazzy
+docApi/undocumented.json

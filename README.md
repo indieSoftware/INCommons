@@ -1,11 +1,19 @@
 # INCommons
-A Framework with common code used in iOS projects.
 
-## Install via Carthage
+This library provides common functionalities every ios app can use.
 
-	github "indieSoftware/INCommons"
+Functionalities in this package:
 
-## API Docs
+1. [Network Connectivity](https://bitbucket.org/indiesoftware/commonslib/src/testing/docsFeatures/NetworkConnectivity.md).
+2. [Image Picker](https://bitbucket.org/indiesoftware/commonslib/src/testing/docsFeatures/ImagePicker.md).
+3. [Activity View](https://bitbucket.org/indiesoftware/commonslib/src/testing/docsFeatures/ShareSheet.md).
 
-[docs/index.html](https://github.com/indieSoftware/INCommons/docs/index.html)
+## Installation
 
+### SPM
+
+To include via [SwiftPackageManager](https://swift.org/package-manager) add the repository:
+
+```
+https://bitbucket.org/indieSoftware/INCommons.git
+```
