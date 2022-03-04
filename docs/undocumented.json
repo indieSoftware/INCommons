@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Constant.swift",
+      "line": 3,
+      "symbol": "Constant",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Constant.swift",
+      "line": 4,
+      "symbol": "Constant.foo",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons"
+}

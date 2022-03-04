@@ -4,7 +4,7 @@ theme: fullwidth
 title: INCommons
 module: INCommons
 clean: true
-output: ./docApi
+output: ./docs
 readme: README.md
 skip_undocumented: false
 hide_documentation_coverage: false

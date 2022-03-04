@@ -1,6 +1,4 @@
-![iOS Version](https://img.shields.io/badge/iOS-13.0+-brightgreen) [![Build Status](https://travis-ci.com/indieSoftware/INCommons.svg?branch=master)](https://travis-ci.com/indieSoftware/INCommons)
-[![Code Coverage](https://codecov.io/gh/indieSoftware/INCommons/branch/master/graph/badge.svg)](https://codecov.io/gh/indieSoftware/INCommons)
-[![Documentation Coverage](https://indiesoftware.github.io/INCommons/badge.svg)](https://indiesoftware.github.io/INCommons)
+![iOS Version](https://img.shields.io/badge/iOS-13.0+-brightgreen) [![Documentation Coverage](https://indiesoftware.github.io/INCommons/badge.svg)](https://indiesoftware.github.io/INCommons)
 [![License](https://img.shields.io/github/license/indieSoftware/INCommons)](https://github.com/indieSoftware/INCommons/blob/master/LICENSE)
 [![GitHub Tag](https://img.shields.io/github/v/tag/indieSoftware/INCommons?label=version)](https://github.com/indieSoftware/INCommons)
 [![CocoaPods](https://img.shields.io/cocoapods/v/INCommons.svg)](https://cocoapods.org/pods/INCommons)
@@ -13,7 +11,7 @@
 
 # INCommons
 
-This library provides common functionalities every ios app can use.
+This library provides common functionalities for every iOS app.
 
 ## Installation
 
