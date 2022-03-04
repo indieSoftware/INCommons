@@ -13,6 +13,5 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "13.0"
   spec.source       = { :git => "https://github.com/indieSoftware/INCommons.git", :tag => "#{spec.version}" }
   spec.source_files  = "Sources/INCommons/**/*.{swift}"
-  spec.public_header_files = "Sources/INCommons/**/*.h"
   spec.module_name   = 'INCommons'
 end
