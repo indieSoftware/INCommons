@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>INCommons  Reference</title>
+    <title>Functions  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset="utf-8">
@@ -14,8 +14,9 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Functions" class="dashAnchor"></a>
 
-    <a title="INCommons  Reference"></a>
+    <a title="Functions  Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -43,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="index.html">INCommons Reference</a>
       <img class="carat" src="img/carat.png" />
-      INCommons  Reference
+      Functions  Reference
     </p>
 
     <div class="content-wrapper">
@@ -120,51 +121,65 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            
-            <p><img src="https://img.shields.io/badge/iOS-13.0+-brightgreen" alt="iOS Version"> <a href="https://indiesoftware.github.io/INCommons"><img src="https://indiesoftware.github.io/INCommons/badge.svg" alt="Documentation Coverage"></a>
-<a href="https://github.com/indieSoftware/INCommons/blob/master/LICENSE"><img src="https://img.shields.io/github/license/indieSoftware/INCommons" alt="License"></a>
-<a href="https://github.com/indieSoftware/INCommons"><img src="https://img.shields.io/github/v/tag/indieSoftware/INCommons?label=version" alt="GitHub Tag"></a>
-<a href="https://cocoapods.org/pods/INCommons"><img src="https://img.shields.io/cocoapods/v/INCommons.svg" alt="CocoaPods"></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/carthage-compatible-success.svg" alt="carthage compatible"></a>
-<a href="https://github.com/apple/swift-package-manager"><img src="https://img.shields.io/badge/SPM-compatible-success.svg" alt="SPM compatible"></a></p>
-
-<p><a href="https://github.com/indieSoftware/INCommons">GitHub Page</a></p>
-
-<p><a href="https://indiesoftware.github.io/INCommons">Documentation</a></p>
-<h1 id='incommons' class='heading'>INCommons</h1>
-
-<p>This library provides common functionalities for every iOS app.</p>
-<h2 id='feature-overview' class='heading'>Feature overview</h2>
-
-<ul>
-<li><a href="https://indiesoftware.github.io/INCommons/markdowns/Configuration.md">Configuration</a> helps loading a custom configuration plist file with entries like server URLs, tokens, keys, etc.</li>
-<li><a href="https://indiesoftware.github.io/INCommons/markdowns/ShareSheet.md">ShareSheet</a> brings <code>UIActivityViewController</code> to SwiftUI.</li>
-<li><a href="https://indiesoftware.github.io/INCommons/markdowns/Swift.md">Swift</a> extensions and additions.</li>
-<li><a href="https://indiesoftware.github.io/INCommons/markdowns/SwiftUI.md">SwiftUI</a> extensions and additions.</li>
-<li><a href="https://indiesoftware.github.io/INCommons/markdowns/UIKit.md">UIKit</a> extensions and additions.</li>
-</ul>
-<h2 id='installation' class='heading'>Installation</h2>
-
-<p>To include via <a href="https://cocoapods.org">CocoaPods</a> add to the <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'INCommons'
-</code></pre>
-<h3 id='carthage' class='heading'>Carthage</h3>
-
-<p>To include via <a href="https://github.com/Carthage/Carthage">Carthage</a> add to the <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "indieSoftware/INCommons"
-</code></pre>
-<h3 id='spm' class='heading'>SPM</h3>
-
-<p>To include via <a href="https://swift.org/package-manager">SwiftPackageManager</a> add the repository:</p>
-<pre class="highlight plaintext"><code>https://github.com/indieSoftware/INCommons.git
-</code></pre>
-<h2 id='changelog' class='heading'>Changelog</h2>
-
-<p>See <a href="Changelog.md">Changelog.md</a> </p>
+            <h1>Functions</h1>
+            <p>The following functions are available globally.</p>
 
           </div>
         </section>
 
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9INCommons4withyxx_yxzXEtlF"></a>
+                    <a name="//apple_ref/swift/Function/with(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons4withyxx_yxzXEtlF">with(_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides a given object or struct to the block.</p>
+
+<p>This brings the Kotlin functional pattern of <code>with</code> to Swift.</p>
+
+<p>Use it to create an instance and modify it on a limited scope.
+See also <a href="https://betterprogramming.pub/better-swift-with-with-4b071b5ac394">https://betterprogramming.pub/better-swift-with-with-4b071b5ac394</a></p>
+
+<p>Usage:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">makeButton</span><span class="p">(</span><span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIButton</span> <span class="p">{</span>
+     <span class="nf">with</span><span class="p">(</span><span class="kt">UIButton</span><span class="p">())</span> <span class="p">{</span>
+         <span class="nv">$0</span><span class="o">.</span><span class="n">translatesAutoresizingMaskIntoConstraints</span> <span class="o">=</span> <span class="kc">false</span>
+         <span class="nv">$0</span><span class="o">.</span><span class="n">titleLabel</span><span class="p">?</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">title</span>
+         <span class="nv">$0</span><span class="o">.</span><span class="n">titleLabel</span><span class="p">?</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="o">.</span><span class="n">headline</span>
+         <span class="nv">$0</span><span class="o">.</span><span class="nf">setTitleColor</span><span class="p">(</span><span class="o">.</span><span class="n">red</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">with</span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">V</span><span class="p">,</span> <span class="n">_</span> <span class="nv">mutate</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">v</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">V</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">V</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
       </article>
     </div>

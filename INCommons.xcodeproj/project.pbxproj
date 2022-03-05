@@ -38,7 +38,6 @@
 		26FCE75C27D2698B00C229DA /* View+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE75327D2698B00C229DA /* View+Frame.swift */; };
 		26FCE75E27D2698B00C229DA /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE75627D2698B00C229DA /* ShareSheet.swift */; };
 		26FCE76727D2699E00C229DA /* Int+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE75F27D2699E00C229DA /* Int+Time.swift */; };
-		26FCE76827D2699E00C229DA /* MappedEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE76027D2699E00C229DA /* MappedEnum.swift */; };
 		26FCE76927D2699E00C229DA /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE76127D2699E00C229DA /* With.swift */; };
 		26FCE76A27D2699E00C229DA /* Double+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE76227D2699E00C229DA /* Double+Time.swift */; };
 		26FCE76B27D2699E00C229DA /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE76327D2699E00C229DA /* DispatchQueue.swift */; };
@@ -125,7 +124,6 @@
 		26FCE75327D2698B00C229DA /* View+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Frame.swift"; sourceTree = "<group>"; };
 		26FCE75627D2698B00C229DA /* ShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		26FCE75F27D2699E00C229DA /* Int+Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Time.swift"; sourceTree = "<group>"; };
-		26FCE76027D2699E00C229DA /* MappedEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappedEnum.swift; sourceTree = "<group>"; };
 		26FCE76127D2699E00C229DA /* With.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
 		26FCE76227D2699E00C229DA /* Double+Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Time.swift"; sourceTree = "<group>"; };
 		26FCE76327D2699E00C229DA /* DispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 				26FCE76227D2699E00C229DA /* Double+Time.swift */,
 				26FCE76427D2699E00C229DA /* FileManager+Directory.swift */,
 				26FCE75F27D2699E00C229DA /* Int+Time.swift */,
-				26FCE76027D2699E00C229DA /* MappedEnum.swift */,
 				26FCE76627D2699E00C229DA /* String.swift */,
 				26FCE76127D2699E00C229DA /* With.swift */,
 			);
@@ -669,7 +666,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Scripts/extractSwiftVersion.sh\n";
+			shellScript = ". Scripts/extractSwiftVersion.sh\n";
 		};
 		26FCE71527D215F400C229DA /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -688,7 +685,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Scripts/swiftFormatCodePaths.sh\n\"Pods/SwiftFormat/CommandLineTool/swiftformat\" ${swiftFormatCodePaths[*]}\n";
+			shellScript = ". Scripts/swiftFormatCodePaths.sh\n\"Pods/SwiftFormat/CommandLineTool/swiftformat\" ${swiftFormatCodePaths[*]} --exclude **/Generated\n";
 		};
 		37BF3F21F4322B6E0EEEC86F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -757,7 +754,6 @@
 			files = (
 				26FCE75927D2698B00C229DA /* UIDevice.swift in Sources */,
 				26FCE76927D2699E00C229DA /* With.swift in Sources */,
-				26FCE76827D2699E00C229DA /* MappedEnum.swift in Sources */,
 				26FCE76A27D2699E00C229DA /* Double+Time.swift in Sources */,
 				26FCE77127D26E8D00C229DA /* ConfigLoader.swift in Sources */,
 				26FCE75E27D2698B00C229DA /* ShareSheet.swift in Sources */,

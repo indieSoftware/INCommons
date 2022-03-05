@@ -1,17 +1,24 @@
 {
   "warnings": [
     {
-      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Constant.swift",
-      "line": 3,
-      "symbol": "Constant",
-      "symbol_kind": "source.lang.swift.decl.enum",
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Configuration/ConfigLoader.swift",
+      "line": 14,
+      "symbol": "ConfigLoader.Error.fileNotFound",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Constant.swift",
-      "line": 4,
-      "symbol": "Constant.foo",
-      "symbol_kind": "source.lang.swift.decl.var.static",
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Configuration/ConfigLoader.swift",
+      "line": 15,
+      "symbol": "ConfigLoader.Error.fileNotLoadable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Configuration/ConfigLoader.swift",
+      "line": 16,
+      "symbol": "ConfigLoader.Error.configNotDecodable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     }
   ],

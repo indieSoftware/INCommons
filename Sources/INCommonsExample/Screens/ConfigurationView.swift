@@ -28,7 +28,7 @@ struct ConfigurationView: View {
 	}
 
 	func parseTheFile() {
-		if case let .success(data) = ConfigLoader.parseConfig() as Result<Configuration, ConfigLoader.ConfigError> {
+		if case let .success(data) = ConfigLoader.parseConfig() as Result<Configuration, ConfigLoader.Error> {
 			config = data
 		}
 	}

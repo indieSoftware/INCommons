@@ -2,9 +2,11 @@ import INCommons
 import XCTest
 
 class ConfigLoaderTests: XCTestCase {
+	let configName = ConfigLoader.ConfigName
+
 	func testLoadSuccessful() {
 		let result = ConfigLoader
-			.parseConfig(named: "Config.plist", bundle: Bundle(for: ConfigLoaderTests.self)) as Result<ConfigModel, ConfigLoader.ConfigError>
+			.parseConfig(named: configName, bundle: Bundle(for: ConfigLoaderTests.self)) as Result<ConfigModel, ConfigLoader.Error>
 		guard case let .success(data) = result else { XCTFail(); return }
 		XCTAssertEqual("123", data.id)
 		XCTAssertEqual(42, data.age)
@@ -12,10 +14,18 @@ class ConfigLoaderTests: XCTestCase {
 		XCTAssertEqual("info@indie-software.com", data.email)
 	}
 
+	func testSubModelLoadsSuccessful() {
+		let result = ConfigLoader
+			.parseConfig(named: configName, bundle: Bundle(for: ConfigLoaderTests.self)) as Result<SubModel, ConfigLoader.Error>
+		guard case let .success(data) = result else { XCTFail(); return }
+		XCTAssertEqual("123", data.id)
+		XCTAssertEqual("Foo", data.name)
+	}
+
 	func testFileNotFound() throws {
-		let result = ConfigLoader.parseConfig(named: "Foo") as Result<ConfigModel, ConfigLoader.ConfigError>
+		let result = ConfigLoader.parseConfig(named: "Foo") as Result<ConfigModel, ConfigLoader.Error>
 		guard case let .failure(error) = result else { XCTFail(); return }
-		XCTAssertEqual(ConfigLoader.ConfigError.fileNotFound, error)
+		XCTAssertEqual(ConfigLoader.Error.fileNotFound, error)
 	}
 
 	func testFileNotLoadable() throws {
@@ -24,21 +34,25 @@ class ConfigLoaderTests: XCTestCase {
 
 	func testConfigNotDecodable() throws {
 		let result = ConfigLoader
-			.parseConfig(named: "Config.plist", bundle: Bundle(for: ConfigLoaderTests.self)) as Result<MissmatchingModel, ConfigLoader.ConfigError>
+			.parseConfig(named: configName, bundle: Bundle(for: ConfigLoaderTests.self)) as Result<MissmatchingModel, ConfigLoader.Error>
 		guard case let .failure(error) = result else { XCTFail(); return }
-		XCTAssertEqual(ConfigLoader.ConfigError.configNotDecodable, error)
+		XCTAssertEqual(ConfigLoader.Error.configNotDecodable, error)
 	}
 }
 
 private struct ConfigModel: Decodable {
-	var id: String = ""
-	var name: String = ""
-	var email: String = ""
-	var age: Int = 0
+	let id: String
+	let name: String
+	let email: String
+	let age: Int
+}
+
+private struct SubModel: Decodable {
+	let id: String
+	let name: String
 }
 
 private struct MissmatchingModel: Decodable {
-	var id: String = ""
-	var name: String = ""
-	var age: String = ""
+	let id: String
+	let foo: Int
 }

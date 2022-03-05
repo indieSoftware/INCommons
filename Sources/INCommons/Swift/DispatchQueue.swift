@@ -2,7 +2,7 @@ import Foundation
 
 public extension DispatchQueue {
 	/// A list of dispatch tokens to track which have been called once.
-	private static var _onceTracker = [String]()
+	static var onceTracker = [String]()
 
 	/**
 	 Executes a block of code, associated with a unique token, only once.
@@ -20,11 +20,11 @@ public extension DispatchQueue {
 		objc_sync_enter(self)
 		defer { objc_sync_exit(self) }
 
-		if _onceTracker.contains(token) {
+		if onceTracker.contains(token) {
 			return
 		}
 
-		_onceTracker.append(token)
+		onceTracker.append(token)
 		block()
 	}
 
