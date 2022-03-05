@@ -11,8 +11,11 @@ public enum ConfigLoader {
 
 	/// The errors which might occur during parsing a config file.
 	public enum Error: Swift.Error {
+		/// No config file with the given name could be found in the provided bundle.
 		case fileNotFound
+		/// The config file couldn't be loaded for any reason.
 		case fileNotLoadable
+		/// The provided model's type doesn't match the config's structure and thus couldn't be decoded.
 		case configNotDecodable
 	}
 

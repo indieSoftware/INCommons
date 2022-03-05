@@ -15,11 +15,11 @@ This library provides common functionalities for every iOS app.
 
 ## Feature overview
 
-- [Configuration](https://indiesoftware.github.io/INCommons/markdowns/Configuration.md) helps loading a custom configuration plist file with entries like server URLs, tokens, keys, etc.
-- [ShareSheet](https://indiesoftware.github.io/INCommons/markdowns/ShareSheet.md) brings `UIActivityViewController` to SwiftUI.
-- [Swift](https://indiesoftware.github.io/INCommons/markdowns/Swift.md) extensions and additions.
-- [SwiftUI](https://indiesoftware.github.io/INCommons/markdowns/SwiftUI.md) extensions and additions.
-- [UIKit](https://indiesoftware.github.io/INCommons/markdowns/UIKit.md) extensions and additions.
+- [Configuration](https://github.com/indieSoftware/INCommons/blob/master/docu/Configuration.md) helps loading a custom configuration plist file with entries like server URLs, tokens, keys, etc.
+- [ShareSheet](https://github.com/indieSoftware/INCommons/blob/master/docu/ShareSheet.md) brings `UIActivityViewController` to SwiftUI.
+- [Swift](https://github.com/indieSoftware/INCommons/blob/master/docu/Swift.md) extensions and additions.
+- [SwiftUI](https://github.com/indieSoftware/INCommons/blob/master/docu/SwiftUI.md) extensions and additions.
+- [UIKit](https://github.com/indieSoftware/INCommons/blob/master/docu/UIKit.md) extensions and additions.
 
 ## Installation
 
@@ -47,4 +47,4 @@ https://github.com/indieSoftware/INCommons.git
 
 ## Changelog
 
-See [Changelog.md](Changelog.md) 
+See [Changelog](https://github.com/indieSoftware/INCommons/blob/master/Changelog.md) 
