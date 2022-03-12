@@ -10,8 +10,9 @@ struct FunctionalityRow: View {
 
 struct HomeView: View {
 	let exampleViews = [
-		ExampleViewFactory(title: "Share Sheet", view: { AnyView(ShareSheet()) }),
 		ExampleViewFactory(title: "Configuration", view: { AnyView(ConfigurationView()) }),
+		ExampleViewFactory(title: "Share Sheet", view: { AnyView(ShareSheet()) }),
+		ExampleViewFactory(title: "Device Provider", view: { AnyView(DeviceProviderView()) }),
 		ExampleViewFactory(title: "View Condition", view: { AnyView(ViewConditions()) }),
 		ExampleViewFactory(title: "View Frame", view: { AnyView(ViewFrame()) })
 	]

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "INCommons"
- spec.version = "2.0.0" # auto-generated
+ spec.version = "3.0.0" # auto-generated
  spec.swift_version = "5.5.2" # auto-generated
   spec.summary      = "This Package provides common functionalities every iOS app can use."
   spec.description  = <<-DESC
