@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.license      = 'MIT'
   spec.author       = { "Sven Korset" => "sven.korset@indie-software.com" }
   spec.license      = { :type => "MIT", :file => "LICENSE" }
-  spec.ios.deployment_target = "13.0"
+  spec.ios.deployment_target = "15.0"
   spec.source       = { :git => "https://github.com/indieSoftware/INCommons.git", :tag => "#{spec.version}" }
   spec.source_files  = "Sources/INCommons/**/*.{swift}"
   spec.module_name   = 'INCommons'
