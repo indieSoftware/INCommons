@@ -19,7 +19,7 @@ struct ViewConditions: View {
 			}, label: {
 				Text(buttonTitle)
 					.padding(.all)
-					.if(isToggled == true) { $0.background(Color.green) }
+					.if(isToggled) { $0.background(Color.green) }
 			})
 
 			Spacer().frame(height: 20)
@@ -30,7 +30,7 @@ struct ViewConditions: View {
 			}, label: {
 				Text(buttonTitle)
 					.padding(.all)
-					.if(isToggled == true) { $0.background(Color.green) } else: { $0.background(Color.yellow) }
+					.if(isToggled) { $0.background(Color.green) } else: { $0.background(Color.yellow) }
 			})
 
 			Spacer().frame(height: 20)

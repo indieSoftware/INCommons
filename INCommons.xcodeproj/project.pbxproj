@@ -26,7 +26,7 @@
 		268B60D127DCD82D002D6C84 /* UIDeviceProviderMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D027DCD82D002D6C84 /* UIDeviceProviderMockTests.swift */; };
 		268B60D427DCDD7F002D6C84 /* DeviceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D227DCDC36002D6C84 /* DeviceProvider.swift */; };
 		268B60D627DCF981002D6C84 /* Optional+Stringified.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D527DCF981002D6C84 /* Optional+Stringified.swift */; };
-		268B60D927DCF9EB002D6C84 /* OptionStringifiedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D827DCF9EB002D6C84 /* OptionStringifiedTests.swift */; };
+		268B60D927DCF9EB002D6C84 /* OptionalStringifiedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D827DCF9EB002D6C84 /* OptionalStringifiedTests.swift */; };
 		26FCE6D327D1F9C600C229DA /* INCommonsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE6D227D1F9C600C229DA /* INCommonsExampleApp.swift */; };
 		26FCE6D727D1F9C700C229DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FCE6D627D1F9C700C229DA /* Assets.xcassets */; };
 		26FCE6DA27D1F9C700C229DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FCE6D927D1F9C700C229DA /* Preview Assets.xcassets */; };
@@ -116,7 +116,7 @@
 		268B60D027DCD82D002D6C84 /* UIDeviceProviderMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceProviderMockTests.swift; sourceTree = "<group>"; };
 		268B60D227DCDC36002D6C84 /* DeviceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProvider.swift; sourceTree = "<group>"; };
 		268B60D527DCF981002D6C84 /* Optional+Stringified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Stringified.swift"; sourceTree = "<group>"; };
-		268B60D827DCF9EB002D6C84 /* OptionStringifiedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionStringifiedTests.swift; sourceTree = "<group>"; };
+		268B60D827DCF9EB002D6C84 /* OptionalStringifiedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStringifiedTests.swift; sourceTree = "<group>"; };
 		26FCE6CF27D1F9C600C229DA /* INCommonsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INCommonsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FCE6D227D1F9C600C229DA /* INCommonsExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INCommonsExampleApp.swift; sourceTree = "<group>"; };
 		26FCE6D627D1F9C700C229DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 		268B60D727DCF9CF002D6C84 /* Optional */ = {
 			isa = PBXGroup;
 			children = (
-				268B60D827DCF9EB002D6C84 /* OptionStringifiedTests.swift */,
+				268B60D827DCF9EB002D6C84 /* OptionalStringifiedTests.swift */,
 			);
 			path = Optional;
 			sourceTree = "<group>";
@@ -821,7 +821,7 @@
 				26FCE78527D26F8800C229DA /* ConfigLoaderTests.swift in Sources */,
 				26FCE78B27D26F8800C229DA /* IntSecondsToMinutesAndSecondsTests.swift in Sources */,
 				26FCE78C27D26F8800C229DA /* StringTruncateTests.swift in Sources */,
-				268B60D927DCF9EB002D6C84 /* OptionStringifiedTests.swift in Sources */,
+				268B60D927DCF9EB002D6C84 /* OptionalStringifiedTests.swift in Sources */,
 				26FCE78D27D26F8800C229DA /* StringEmptyTests.swift in Sources */,
 				26FCE78627D26F8800C229DA /* WithTests.swift in Sources */,
 				26FCE78727D26F8800C229DA /* DispatchQueueTests.swift in Sources */,

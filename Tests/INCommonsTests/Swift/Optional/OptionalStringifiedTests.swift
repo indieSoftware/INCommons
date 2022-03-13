@@ -1,6 +1,6 @@
 import XCTest
 
-class OptionStringifiedTests: XCTestCase {
+class OptionalStringifiedTests: XCTestCase {
 	func testStringIsReturned() throws {
 		let optionalString: String? = "Foo"
 		let result = optionalString.stringified()
