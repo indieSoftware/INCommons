@@ -24,4 +24,14 @@ class OptionalStringifiedTests: XCTestCase {
 		let result = optionalString.stringified("Fallback")
 		XCTAssertEqual("Fallback", result)
 	}
+
+	func testNonStringOptionalStringified() throws {
+		struct Foo: CustomStringConvertible {
+			var description: String { "FOO" }
+		}
+
+		let foo: Foo? = Foo()
+		let result = foo.stringified()
+		XCTAssertEqual("FOO", result)
+	}
 }
