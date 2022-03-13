@@ -3,7 +3,7 @@
 ### v3.0.0
 
 - Added `Optional+Stringified`.
-- Removed `UIDevice` properties for `isIPhoen`, `isIPad` and `isMac`.
+- Removed `UIDevice` properties for `isIPhone`, `isIPad` and `isMac`.
 - Added `UIDeviceProvider` to solve `UIDevice` dependencies.
 
 ### v2.0.0
