@@ -4,7 +4,7 @@ Adds some Swift extensions / additions.
 
 ## Bundle
 
-### Margeting version
+### Marketing version
 
 Use `Bundle.main.versionNumber` to get the marketing version, e.g. `"1.2.3"`.
 
