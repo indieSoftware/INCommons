@@ -19,6 +19,8 @@ echo "Releasing v$LIB_VERSION"
 git tag $LIB_VERSION
 # Push tags.
 git push --tags
+# Verify podspec is passing validation.
+pod spec lint
 # Update pod.
 pod trunk push INCommons.podspec
 # If updating fails because of an invalid session then run:
