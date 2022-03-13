@@ -7,5 +7,5 @@
 3. Run `./Scripts/updateVersion.sh 1.2.3` from the project's folder with `1.2.3` replaced by the real new marketing version to update build and marketing version. Respect the semantic versioning, i.e. provide `2.0.0` instead of `2.0`.
 4. Run `./Scripts/generateDocs.sh` from the project's folder to update the documentation.
 5. Merge branch with master and push to origin.
-6. Run `./Scripts/releaseVersion.sh` from the project's folder to release the new lib's version.
+6. Run `./Scripts/releaseVersion.sh 1.2.3` from the project's folder with `1.2.3` replaced by the real new marketing version (has to match the marketing version set in step 3) to release the new lib's version.
 
