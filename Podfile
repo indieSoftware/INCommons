@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '13.0'
+platform :ios, '15.0'
 use_frameworks!
 workspace 'INCommons'
 
@@ -33,7 +33,7 @@ post_install do |installer|
       config.build_settings['GCC_WARN_INHIBIT_ALL_WARNINGS'] = "YES"
       config.build_settings['SWIFT_SUPPRESS_WARNINGS'] = "YES"
       config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = "YES"
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = "13.0"
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = "15.0"
     end
   end
 end

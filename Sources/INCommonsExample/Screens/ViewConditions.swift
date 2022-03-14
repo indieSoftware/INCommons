@@ -2,27 +2,46 @@ import INCommons
 import SwiftUI
 
 struct ViewConditions: View {
-	@State var strTitle: String = "Press Me!"
-	@State var isChanged: Bool = false
+	@State var buttonTitle: String = "Toggle me"
+	@State var isToggled: Bool = false
+	@State var color: Color?
+
+	private func toggleButton() {
+		isToggled.toggle()
+		color = isToggled ? Color.green : nil
+	}
 
 	var body: some View {
 		VStack {
-			Text("Checking if function")
+			Text("if modifier")
 			Button(action: {
-				self.isChanged.toggle()
+				toggleButton()
 			}, label: {
-				Text(strTitle)
+				Text(buttonTitle)
 					.padding(.all)
-					.if(isChanged == true) { $0.background(Color.green) }
+					.if(isToggled) { $0.background(Color.green) }
 			})
-		}
 
-		VStack {
-			Text("Checking ifLet function")
-			Button(action: {}, label: {
-				Text(strTitle)
+			Spacer().frame(height: 20)
+
+			Text("if-else modifier")
+			Button(action: {
+				toggleButton()
+			}, label: {
+				Text(buttonTitle)
 					.padding(.all)
-					.ifLet(Color.yellow) { $0.background($1) }
+					.if(isToggled) { $0.background(Color.green) } else: { $0.background(Color.yellow) }
+			})
+
+			Spacer().frame(height: 20)
+
+			Text("ifLet modifier")
+			Button(action: {
+				toggleButton()
+			}, label: {
+				Text(buttonTitle)
+					.padding(.all)
+					.ifLet(color) { $0.background($1) }
 			})
 		}
 	}

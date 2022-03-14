@@ -15,10 +15,12 @@ This library provides common functionalities for every iOS app.
 
 ## Feature overview
 
-- [Configuration](https://github.com/indieSoftware/INCommons/blob/master/docu/Configuration.md) helps loading a custom configuration plist file with entries like server URLs, tokens, keys, etc.
-- [ShareSheet](https://github.com/indieSoftware/INCommons/blob/master/docu/ShareSheet.md) brings `UIActivityViewController` to SwiftUI.
+This library provides the following features:
+
 - [Swift](https://github.com/indieSoftware/INCommons/blob/master/docu/Swift.md) extensions and additions.
+  - [Configuration](https://github.com/indieSoftware/INCommons/blob/master/docu/Configuration.md) helps loading a custom configuration plist file with entries like server URLs, tokens, keys, etc.
 - [SwiftUI](https://github.com/indieSoftware/INCommons/blob/master/docu/SwiftUI.md) extensions and additions.
+  - [ShareSheet](https://github.com/indieSoftware/INCommons/blob/master/docu/ShareSheet.md) brings `UIActivityViewController` to SwiftUI.
 - [UIKit](https://github.com/indieSoftware/INCommons/blob/master/docu/UIKit.md) extensions and additions.
 
 ## Installation

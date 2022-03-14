@@ -26,19 +26,21 @@ Create a UIImage object from a UIView: `UIImage(view: myView)`.
 
 ## UIDevice
 
-### Get device type
+### UIDevice injection
 
-Use the static accessors on `UIDevice` to check whether this device is an iPhone, iPad or Mac:
+Inject a wrapped `UIDevice` object conforming to the `UIDeviceProviderType` protocol to decouple logic code from `UIDevice`. This is useful for UnitTests where you want explicitely define the device's state independent on the device used by the test.
 
-```
-UIDevice.isIPad
-UIDevice.isIPhone
-UIDevice.isMac
-```
+Provided implementations conforming to `UIDeviceProviderType` are `UIDeviceProvider` which wraps the `UIDevice.shared` instance and `UIDeviceProviderMock` which is a mock ready to be used in UnitTests.
+
+Use the accessors on `UIDeviceProviderType`:
+
+- `userInterfaceIdiom` to get the current device's interface type.
+- `isSimulator` to check whether the device is a physical or the simulator.
+- `deviceOrientation` to get the current device's orientation.
 
 ### Force the device into an orinetation
 
-Use `UIDevice.setOrientation(.landscapeRight)` to force the device into a specific orientation.
+Use `UIDevice.setOrientation(.landscapeRight)` to force the device into a specific orientation (very hacky).
 
 ## UIEdgeInsets
 

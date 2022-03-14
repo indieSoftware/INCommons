@@ -1,6 +1,12 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/UIKit/UIDeviceProvider.swift",
+      "line": 30,
+      "symbol": "UIDeviceProvider.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons"
 }

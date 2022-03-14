@@ -16,7 +16,7 @@ struct ViewFrame: View {
 
 	var body: some View {
 		List(arrayAlignment) { alignmentType in
-			Text("I am \(alignmentType.title).")
+			Text(alignmentType.title)
 				.bold()
 				.font(.headline)
 				.frame(size: CGSize(width: 250.0, height: 80.0), alignment: alignmentType.alignment)
