@@ -4,6 +4,6 @@
 # Update gems.
 bundle update
 # Install missing pods.
-pod install
+bundle exec pod install
 # Update pods to newer version.
-pod update
+bundle exec pod update

@@ -97,7 +97,7 @@ And then run it using:
 $ mint run swiftformat
 ```
 
-Or if you prefer, you can check out and build SwiftFormat manually on macOS or Linux as follows:
+Or if you prefer, you can check out and build SwiftFormat manually on macOS, Linux or Windows as follows:
 
 ```bash
 $ git clone https://github.com/nicklockwood/SwiftFormat
@@ -267,7 +267,7 @@ You can also use `swift run -c release --package-path BuildTools swiftformat "$S
 
 **NOTE:** You may wish to check BuildTools/Package.swift into your source control so that the version used by your run-script phase is kept in version control. It is recommended to add the following to your .gitignore file: `BuildTools/.build` and `BuildTools/.swiftpm`.
 
-### Using Cocoapods
+### Using CocoaPods
 
 #### 1) Add the SwiftFormat CLI to your Podfile
 
@@ -722,7 +722,7 @@ FAQ
 
 *Q. What platforms does SwiftFormat support?*
 
-> A. SwiftFormat works on macOS 10.13 (High Sierra) and above, and also runs on Ubuntu Linux.
+> A. SwiftFormat works on macOS 10.13 (High Sierra) and above, and also runs on Ubuntu Linux and Windows.
 
 
 *Q. What versions of Swift are supported?*
