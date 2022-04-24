@@ -2,7 +2,6 @@
 [![License](https://img.shields.io/github/license/indieSoftware/INCommons)](https://github.com/indieSoftware/INCommons/blob/master/LICENSE)
 [![GitHub Tag](https://img.shields.io/github/v/tag/indieSoftware/INCommons?label=version)](https://github.com/indieSoftware/INCommons)
 [![CocoaPods](https://img.shields.io/cocoapods/v/INCommons.svg)](https://cocoapods.org/pods/INCommons)
-
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-success.svg)](https://github.com/apple/swift-package-manager)
 
 [GitHub Page](https://github.com/indieSoftware/INCommons)
