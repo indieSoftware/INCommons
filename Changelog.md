@@ -1,5 +1,13 @@
 # Changelog
 
+### v3.1.0
+
+- Added `firstCapitalized` and `firstUppercased` in the String extension.
+
+### v3.0.1
+
+- Updated Cocoapods to fix a security risk
+
 ### v3.0.0
 
 - Added `Optional+Stringified`.

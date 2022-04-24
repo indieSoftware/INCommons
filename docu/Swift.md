@@ -103,6 +103,18 @@ Crop a string to a given number of characters and adding three dots to its end w
 "FooBar".truncated(numberOfCharacters: 6) // FooBar
 ```
 
+### Capitalize
+
+Uppercase or capitalize the first character of a string without changing the rest of the string:
+
+```
+"myString second".firstCapitalized // "MyString second"
+"myString second".firstUppercased // "MyString second"
+
+"ß".firstCapitalized // "Ss"
+"ß".firstUppercased // "SS"
+```
+
 ## Global functions
 
 ### Kotlin's `with`

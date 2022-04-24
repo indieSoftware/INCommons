@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2684D2992815A2930089A227 /* StringCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684D2982815A2930089A227 /* StringCapitalized.swift */; };
 		268B60CD27DCD6EE002D6C84 /* UIDeviceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60CC27DCD6EE002D6C84 /* UIDeviceProvider.swift */; };
 		268B60D127DCD82D002D6C84 /* UIDeviceProviderMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D027DCD82D002D6C84 /* UIDeviceProviderMockTests.swift */; };
 		268B60D427DCDD7F002D6C84 /* DeviceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D227DCDC36002D6C84 /* DeviceProvider.swift */; };
@@ -112,6 +113,7 @@
 
 /* Begin PBXFileReference section */
 		1D3CF85261265366D7A83882 /* Pods-INCommons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INCommons.debug.xcconfig"; path = "Target Support Files/Pods-INCommons/Pods-INCommons.debug.xcconfig"; sourceTree = "<group>"; };
+		2684D2982815A2930089A227 /* StringCapitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCapitalized.swift; sourceTree = "<group>"; };
 		268B60CC27DCD6EE002D6C84 /* UIDeviceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceProvider.swift; sourceTree = "<group>"; };
 		268B60D027DCD82D002D6C84 /* UIDeviceProviderMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceProviderMockTests.swift; sourceTree = "<group>"; };
 		268B60D227DCDC36002D6C84 /* DeviceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProvider.swift; sourceTree = "<group>"; };
@@ -424,8 +426,9 @@
 		26FCE78027D26F8800C229DA /* String */ = {
 			isa = PBXGroup;
 			children = (
-				26FCE78127D26F8800C229DA /* StringTruncateTests.swift */,
 				26FCE78227D26F8800C229DA /* StringEmptyTests.swift */,
+				2684D2982815A2930089A227 /* StringCapitalized.swift */,
+				26FCE78127D26F8800C229DA /* StringTruncateTests.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -827,6 +830,7 @@
 				26FCE78727D26F8800C229DA /* DispatchQueueTests.swift in Sources */,
 				268B60D127DCD82D002D6C84 /* UIDeviceProviderMockTests.swift in Sources */,
 				26FCE78A27D26F8800C229DA /* IntToTwoDigitsStringTests.swift in Sources */,
+				2684D2992815A2930089A227 /* StringCapitalized.swift in Sources */,
 				26FCE78827D26F8800C229DA /* Double+TimeTests.swift in Sources */,
 				26FCE78E27D26F8800C229DA /* UIEdgeInsetsTests.swift in Sources */,
 			);
@@ -976,7 +980,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Sources/INCommonsExample/Preview Content\"";
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				ENABLE_PREVIEWS = YES;
@@ -1007,7 +1011,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Sources/INCommonsExample/Preview Content\"";
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				ENABLE_PREVIEWS = YES;
@@ -1037,11 +1041,11 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 7;
+				DYLIB_CURRENT_VERSION = 8;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1070,11 +1074,11 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 7;
+				DYLIB_CURRENT_VERSION = 8;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1102,7 +1106,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1119,7 +1123,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;

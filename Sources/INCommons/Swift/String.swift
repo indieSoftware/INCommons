@@ -25,4 +25,34 @@ public extension String {
 		let endIndex = index(startIndex, offsetBy: numberOfCharacters - 3)
 		return String(self[..<endIndex] + "...")
 	}
+
+	/**
+	 Returns this string with the first character capitalized, leaving the rest unchanged.
+
+	 When the first character is replaced by multiple characters when uppercased then only the first replacing character gets uppercased.
+
+	 Examples:
+
+	 - "ǆ" -> "ǅ"
+	 - "ß" -> "Ss"
+	 - "œ" -> "Œ"
+
+	 Usually this is the desired behavior when capitalizing a string rather than `firstUppercased`.
+	 */
+	var firstCapitalized: String { prefix(1).capitalized + dropFirst() }
+
+	/**
+	 Returns the string with the first character uppercased, leaving the rest unchanged.
+
+	 When the first character is replaced by multiple characters when uppercased then all replacing characters get uppercased.
+
+	 Examples:
+
+	 - "ǆ" -> "Ǆ"
+	 - "ß" -> "SS"
+	 - "œ" -> "Œ"
+
+	 Usually `firstCapitalized` is the desired behavior.
+	 */
+	var firstUppercased: String { prefix(1).uppercased() + dropFirst() }
 }
