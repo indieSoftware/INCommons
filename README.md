@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/github/license/indieSoftware/INCommons)](https://github.com/indieSoftware/INCommons/blob/master/LICENSE)
 [![GitHub Tag](https://img.shields.io/github/v/tag/indieSoftware/INCommons?label=version)](https://github.com/indieSoftware/INCommons)
 [![CocoaPods](https://img.shields.io/cocoapods/v/INCommons.svg)](https://cocoapods.org/pods/INCommons)
-[![carthage compatible](https://img.shields.io/badge/carthage-compatible-success.svg)](https://github.com/Carthage/Carthage)
+
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-success.svg)](https://github.com/apple/swift-package-manager)
 
 [GitHub Page](https://github.com/indieSoftware/INCommons)
@@ -29,14 +29,6 @@ To include via [CocoaPods](https://cocoapods.org) add to the `Podfile`:
 
 ```
 pod 'INCommons'
-```
-
-### Carthage
-
-To include via [Carthage](https://github.com/Carthage/Carthage) add to the `Cartfile`:
-
-```
-github "indieSoftware/INCommons"
 ```
 
 ### SPM
