@@ -1,4 +1,4 @@
-extension Collection {
+public extension Collection {
 	/**
 	 Wraps the result from an `enumerated` call in an `Array`.
 
