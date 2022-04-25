@@ -12,6 +12,20 @@ Use `Bundle.main.versionNumber` to get the marketing version, e.g. `"1.2.3"`.
 
 Use `Bundle.main.buildNumber` to get the build version number, e.g. `"42"`.
 
+## Collection
+
+### Enumerated Array
+
+Wrap the result from an `enumerated` call in an `Array`, useful for `ForEach` loops 
+which should enumerate over elements of an array which are not conforming to `Identifiable`.
+
+```
+let myArray = [something, anotherThing]
+ForEach(myArray.enumeratedArray(), id: \.offset) { offset, element in
+	...
+}
+```
+
 ## DispatchQueue
 
 ### Dispatch once
