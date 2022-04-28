@@ -12,6 +12,20 @@ Use `Bundle.main.versionNumber` to get the marketing version, e.g. `"1.2.3"`.
 
 Use `Bundle.main.buildNumber` to get the build version number, e.g. `"42"`.
 
+## Collection
+
+### Enumerated Array
+
+Wrap the result from an `enumerated` call in an `Array`, useful for `ForEach` loops 
+which should enumerate over elements of an array which are not conforming to `Identifiable`.
+
+```
+let myArray = [something, anotherThing]
+ForEach(myArray.enumeratedArray(), id: \.offset) { offset, element in
+	...
+}
+```
+
 ## DispatchQueue
 
 ### Dispatch once
@@ -101,6 +115,18 @@ Crop a string to a given number of characters and adding three dots to its end w
 ```
 "FooBar".truncated(numberOfCharacters: 5) // Fo...
 "FooBar".truncated(numberOfCharacters: 6) // FooBar
+```
+
+### Capitalize
+
+Uppercase or capitalize the first character of a string without changing the rest of the string:
+
+```
+"myString second".firstCapitalized // "MyString second"
+"myString second".firstUppercased // "MyString second"
+
+"ß".firstCapitalized // "Ss"
+"ß".firstUppercased // "SS"
 ```
 
 ## Global functions
