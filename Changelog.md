@@ -1,5 +1,10 @@
 # Changelog
 
+### v4.0.0 (in development)
+
+- Changed `FileManager().documentDirectory` to `FileManager.documentsDirectory`.
+- Added `homeDirectory`, `cachesDirectory` and `tmpDirectory` to `FileManager` extension.
+
 ### v3.1.0
 
 - Added `firstCapitalized` and `firstUppercased` in the String extension.
