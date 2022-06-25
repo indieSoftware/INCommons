@@ -4,6 +4,7 @@
 
 - Changed `FileManager().documentDirectory` to `FileManager.documentsDirectory`.
 - Added `homeDirectory`, `cachesDirectory` and `tmpDirectory` to `FileManager` extension.
+- Added `base64Encoded` and `base64Decoded` as a string extension.
 
 ### v3.1.0
 

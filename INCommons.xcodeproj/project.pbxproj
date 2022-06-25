@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		266913CB2866F55E00EBDB3C /* String+Base64Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266913CA2866F55E00EBDB3C /* String+Base64Coding.swift */; };
+		266913DA2867018A00EBDB3C /* String+Base64CodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266913D92867018A00EBDB3C /* String+Base64CodingTests.swift */; };
 		2684D2992815A2930089A227 /* StringCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684D2982815A2930089A227 /* StringCapitalized.swift */; };
 		26885AE828167FC500901D7F /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26885AE728167FC500901D7F /* Collection.swift */; };
 		268B60CD27DCD6EE002D6C84 /* UIDeviceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60CC27DCD6EE002D6C84 /* UIDeviceProvider.swift */; };
@@ -114,6 +116,8 @@
 
 /* Begin PBXFileReference section */
 		1D3CF85261265366D7A83882 /* Pods-INCommons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INCommons.debug.xcconfig"; path = "Target Support Files/Pods-INCommons/Pods-INCommons.debug.xcconfig"; sourceTree = "<group>"; };
+		266913CA2866F55E00EBDB3C /* String+Base64Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64Coding.swift"; sourceTree = "<group>"; };
+		266913D92867018A00EBDB3C /* String+Base64CodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64CodingTests.swift"; sourceTree = "<group>"; };
 		2684D2982815A2930089A227 /* StringCapitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCapitalized.swift; sourceTree = "<group>"; };
 		26885AE728167FC500901D7F /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		26885AE92816810300901D7F /* docu */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docu; sourceTree = "<group>"; };
@@ -201,6 +205,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		266913D82867017100EBDB3C /* StringProtocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StringProtocol;
+			sourceTree = "<group>";
+		};
 		268B60CE27DCD7FF002D6C84 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +335,7 @@
 				26FCE75F27D2699E00C229DA /* Int+Time.swift */,
 				268B60D527DCF981002D6C84 /* Optional+Stringified.swift */,
 				26FCE76627D2699E00C229DA /* String.swift */,
+				266913CA2866F55E00EBDB3C /* String+Base64Coding.swift */,
 				26FCE76127D2699E00C229DA /* With.swift */,
 			);
 			path = Swift;
@@ -384,6 +396,7 @@
 				26FCE77D27D26F8800C229DA /* Int+Time */,
 				268B60D727DCF9CF002D6C84 /* Optional */,
 				26FCE78027D26F8800C229DA /* String */,
+				266913D82867017100EBDB3C /* StringProtocol */,
 				26FCE77527D26F8800C229DA /* With */,
 			);
 			path = Swift;
@@ -436,6 +449,7 @@
 				26FCE78227D26F8800C229DA /* StringEmptyTests.swift */,
 				2684D2982815A2930089A227 /* StringCapitalized.swift */,
 				26FCE78127D26F8800C229DA /* StringTruncateTests.swift */,
+				266913D92867018A00EBDB3C /* String+Base64CodingTests.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -803,6 +817,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26FCE75927D2698B00C229DA /* UIDevice.swift in Sources */,
+				266913CB2866F55E00EBDB3C /* String+Base64Coding.swift in Sources */,
 				26FCE76927D2699E00C229DA /* With.swift in Sources */,
 				268B60CD27DCD6EE002D6C84 /* UIDeviceProvider.swift in Sources */,
 				26FCE76A27D2699E00C229DA /* Double+Time.swift in Sources */,
@@ -838,6 +853,7 @@
 				26FCE78727D26F8800C229DA /* DispatchQueueTests.swift in Sources */,
 				268B60D127DCD82D002D6C84 /* UIDeviceProviderMockTests.swift in Sources */,
 				26FCE78A27D26F8800C229DA /* IntToTwoDigitsStringTests.swift in Sources */,
+				266913DA2867018A00EBDB3C /* String+Base64CodingTests.swift in Sources */,
 				2684D2992815A2930089A227 /* StringCapitalized.swift in Sources */,
 				26FCE78827D26F8800C229DA /* Double+TimeTests.swift in Sources */,
 				26FCE78E27D26F8800C229DA /* UIEdgeInsetsTests.swift in Sources */,
