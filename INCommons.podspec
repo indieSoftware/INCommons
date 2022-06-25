@@ -7,7 +7,6 @@ Pod::Spec.new do |spec|
   INCommons is a collection of small functions and extensions without any further dependencies. It's meant to be used in any app.
   DESC
   spec.homepage     = "https://github.com/indieSoftware/INCommons"
-  spec.license      = 'MIT'
   spec.author       = { "Sven Korset" => "sven.korset@indie-software.com" }
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.ios.deployment_target = "15.0"
