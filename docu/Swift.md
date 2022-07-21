@@ -48,6 +48,16 @@ DispatchQueue.performOnMainThread {
 }
 ```
 
+## Async/await 
+
+### await for time
+
+To wait for specific amount of seconds in an await/async context:
+
+```	
+try await Task.sleep(seconds: 1.5)
+```
+
 ## Double
 
 ### TimeInterval

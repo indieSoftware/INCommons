@@ -31,6 +31,8 @@
 		268B60D427DCDD7F002D6C84 /* DeviceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D227DCDC36002D6C84 /* DeviceProvider.swift */; };
 		268B60D627DCF981002D6C84 /* Optional+Stringified.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D527DCF981002D6C84 /* Optional+Stringified.swift */; };
 		268B60D927DCF9EB002D6C84 /* OptionalStringifiedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D827DCF9EB002D6C84 /* OptionalStringifiedTests.swift */; };
+		2699C16828898EE40026ED3E /* Task+sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2699C16728898EE40026ED3E /* Task+sleep.swift */; };
+		2699C16B288990FF0026ED3E /* Task+sleepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2699C16A288990FF0026ED3E /* Task+sleepTests.swift */; };
 		26FCE6D327D1F9C600C229DA /* INCommonsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE6D227D1F9C600C229DA /* INCommonsExampleApp.swift */; };
 		26FCE6D727D1F9C700C229DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FCE6D627D1F9C700C229DA /* Assets.xcassets */; };
 		26FCE6DA27D1F9C700C229DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FCE6D927D1F9C700C229DA /* Preview Assets.xcassets */; };
@@ -127,6 +129,8 @@
 		268B60D227DCDC36002D6C84 /* DeviceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProvider.swift; sourceTree = "<group>"; };
 		268B60D527DCF981002D6C84 /* Optional+Stringified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Stringified.swift"; sourceTree = "<group>"; };
 		268B60D827DCF9EB002D6C84 /* OptionalStringifiedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStringifiedTests.swift; sourceTree = "<group>"; };
+		2699C16728898EE40026ED3E /* Task+sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+sleep.swift"; sourceTree = "<group>"; };
+		2699C16A288990FF0026ED3E /* Task+sleepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+sleepTests.swift"; sourceTree = "<group>"; };
 		26FCE6CF27D1F9C600C229DA /* INCommonsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INCommonsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FCE6D227D1F9C600C229DA /* INCommonsExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INCommonsExampleApp.swift; sourceTree = "<group>"; };
 		26FCE6D627D1F9C700C229DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -205,13 +209,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		266913D82867017100EBDB3C /* StringProtocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StringProtocol;
-			sourceTree = "<group>";
-		};
 		268B60CE27DCD7FF002D6C84 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +232,14 @@
 				268B60D827DCF9EB002D6C84 /* OptionalStringifiedTests.swift */,
 			);
 			path = Optional;
+			sourceTree = "<group>";
+		};
+		2699C169288990BC0026ED3E /* Task+sleep */ = {
+			isa = PBXGroup;
+			children = (
+				2699C16A288990FF0026ED3E /* Task+sleepTests.swift */,
+			);
+			path = "Task+sleep";
 			sourceTree = "<group>";
 		};
 		26FCE6C627D1F9C600C229DA = {
@@ -336,6 +341,7 @@
 				268B60D527DCF981002D6C84 /* Optional+Stringified.swift */,
 				26FCE76627D2699E00C229DA /* String.swift */,
 				266913CA2866F55E00EBDB3C /* String+Base64Coding.swift */,
+				2699C16728898EE40026ED3E /* Task+sleep.swift */,
 				26FCE76127D2699E00C229DA /* With.swift */,
 			);
 			path = Swift;
@@ -396,7 +402,7 @@
 				26FCE77D27D26F8800C229DA /* Int+Time */,
 				268B60D727DCF9CF002D6C84 /* Optional */,
 				26FCE78027D26F8800C229DA /* String */,
-				266913D82867017100EBDB3C /* StringProtocol */,
+				2699C169288990BC0026ED3E /* Task+sleep */,
 				26FCE77527D26F8800C229DA /* With */,
 			);
 			path = Swift;
@@ -827,6 +833,7 @@
 				26885AE828167FC500901D7F /* Collection.swift in Sources */,
 				26FCE76727D2699E00C229DA /* Int+Time.swift in Sources */,
 				26FCE75827D2698B00C229DA /* UIImage+UIView.swift in Sources */,
+				2699C16828898EE40026ED3E /* Task+sleep.swift in Sources */,
 				26FCE76C27D2699E00C229DA /* FileManager+Directory.swift in Sources */,
 				26FCE76D27D2699E00C229DA /* Bundle+VersionNumber.swift in Sources */,
 				26FCE75A27D2698B00C229DA /* UIEdgeInsets.swift in Sources */,
@@ -851,6 +858,7 @@
 				26FCE78D27D26F8800C229DA /* StringEmptyTests.swift in Sources */,
 				26FCE78627D26F8800C229DA /* WithTests.swift in Sources */,
 				26FCE78727D26F8800C229DA /* DispatchQueueTests.swift in Sources */,
+				2699C16B288990FF0026ED3E /* Task+sleepTests.swift in Sources */,
 				268B60D127DCD82D002D6C84 /* UIDeviceProviderMockTests.swift in Sources */,
 				26FCE78A27D26F8800C229DA /* IntToTwoDigitsStringTests.swift in Sources */,
 				266913DA2867018A00EBDB3C /* String+Base64CodingTests.swift in Sources */,
