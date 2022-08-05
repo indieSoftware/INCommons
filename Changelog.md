@@ -5,6 +5,8 @@
 - Changed `FileManager().documentDirectory` to `FileManager.documentsDirectory`.
 - Added `homeDirectory`, `cachesDirectory` and `tmpDirectory` to `FileManager` extension.
 - Added `base64Encoded` and `base64Decoded` as a string extension.
+- Added `RgbaColor` inclusive initializer and return value for `UIColor`.
+- Added `UIColor.asData()` and `Data.asUIColor()` extensions to archive and unarchive UIColors.
 
 ### v3.1.0
 

@@ -18,6 +18,28 @@ Or use a 8-digit hex string to also provide an alpha value (i.e. the same value 
 
 To convert a UIColor to SwiftUI's color view simply call `colorView` on a UIColor instance.
 
+### RGBA-Color
+
+Get the RGB and alpha values from a `UIColor` object in a struct and even use it to create a new color object.
+
+```
+let rgba = color.rgbaColor
+_ = rgba.red
+_ = rgba.green
+_ = rgba.blue
+_ = rgba.alpha
+let newColor = UIColor(rgba: rgba)
+```
+
+### UIColor archiver
+
+Archive a `UIColor` object into a data object and vice versa.
+
+```
+let data: Data? = color.asData()
+let uiColor: UIColor = data!.asUIColor()
+```
+
 ## UIImage
 
 ### Image from a UIView

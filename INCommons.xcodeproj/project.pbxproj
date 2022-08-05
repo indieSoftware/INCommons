@@ -22,6 +22,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		260786B0289D2AE600504907 /* UIColor+KeyedArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786AF289D2AE600504907 /* UIColor+KeyedArchiver.swift */; };
+		260786B3289D2B4300504907 /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786B2289D2B4300504907 /* UIColorTests.swift */; };
+		260786B5289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786B4289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift */; };
 		266913CB2866F55E00EBDB3C /* String+Base64Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266913CA2866F55E00EBDB3C /* String+Base64Coding.swift */; };
 		266913DA2867018A00EBDB3C /* String+Base64CodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266913D92867018A00EBDB3C /* String+Base64CodingTests.swift */; };
 		2684D2992815A2930089A227 /* StringCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684D2982815A2930089A227 /* StringCapitalized.swift */; };
@@ -118,6 +121,9 @@
 
 /* Begin PBXFileReference section */
 		1D3CF85261265366D7A83882 /* Pods-INCommons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INCommons.debug.xcconfig"; path = "Target Support Files/Pods-INCommons/Pods-INCommons.debug.xcconfig"; sourceTree = "<group>"; };
+		260786AF289D2AE600504907 /* UIColor+KeyedArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+KeyedArchiver.swift"; sourceTree = "<group>"; };
+		260786B2289D2B4300504907 /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
+		260786B4289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_KeyedArchiverTests.swift; sourceTree = "<group>"; };
 		266913CA2866F55E00EBDB3C /* String+Base64Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64Coding.swift"; sourceTree = "<group>"; };
 		266913D92867018A00EBDB3C /* String+Base64CodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64CodingTests.swift"; sourceTree = "<group>"; };
 		2684D2982815A2930089A227 /* StringCapitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCapitalized.swift; sourceTree = "<group>"; };
@@ -209,9 +215,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		260786B1289D2B2C00504907 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				260786B2289D2B4300504907 /* UIColorTests.swift */,
+				260786B4289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		268B60CE27DCD7FF002D6C84 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				260786B1289D2B2C00504907 /* UIColor */,
 				268B60CF27DCD80E002D6C84 /* UIDeviceProvider */,
 				26FCE78327D26F8800C229DA /* UIEdgeInsets */,
 			);
@@ -351,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				26FCE74D27D2698B00C229DA /* UIColor.swift */,
+				260786AF289D2AE600504907 /* UIColor+KeyedArchiver.swift */,
 				26FCE74E27D2698B00C229DA /* UIImage+UIView.swift */,
 				26FCE74F27D2698B00C229DA /* UIDevice.swift */,
 				268B60CC27DCD6EE002D6C84 /* UIDeviceProvider.swift */,
@@ -838,6 +855,7 @@
 				26FCE76D27D2699E00C229DA /* Bundle+VersionNumber.swift in Sources */,
 				26FCE75A27D2698B00C229DA /* UIEdgeInsets.swift in Sources */,
 				26FCE6EB27D1FAD600C229DA /* INCommons.docc in Sources */,
+				260786B0289D2AE600504907 /* UIColor+KeyedArchiver.swift in Sources */,
 				26FCE75C27D2698B00C229DA /* View+Frame.swift in Sources */,
 				26FCE76E27D2699E00C229DA /* String.swift in Sources */,
 				268B60D627DCF981002D6C84 /* Optional+Stringified.swift in Sources */,
@@ -863,6 +881,8 @@
 				26FCE78A27D26F8800C229DA /* IntToTwoDigitsStringTests.swift in Sources */,
 				266913DA2867018A00EBDB3C /* String+Base64CodingTests.swift in Sources */,
 				2684D2992815A2930089A227 /* StringCapitalized.swift in Sources */,
+				260786B5289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift in Sources */,
+				260786B3289D2B4300504907 /* UIColorTests.swift in Sources */,
 				26FCE78827D26F8800C229DA /* Double+TimeTests.swift in Sources */,
 				26FCE78E27D26F8800C229DA /* UIEdgeInsetsTests.swift in Sources */,
 			);

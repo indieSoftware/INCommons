@@ -5,9 +5,9 @@ public extension UIColor {
 	/// A random opaque color.
 	static var random: UIColor {
 		UIColor(
-			red: CGFloat(arc4random()) / CGFloat(UInt32.max),
-			green: CGFloat(arc4random()) / CGFloat(UInt32.max),
-			blue: CGFloat(arc4random()) / CGFloat(UInt32.max),
+			red: CGFloat.random(in: 0 ... 1),
+			green: CGFloat.random(in: 0 ... 1),
+			blue: CGFloat.random(in: 0 ... 1),
 			alpha: 1.0
 		)
 	}
@@ -50,8 +50,43 @@ public extension UIColor {
 		self.init(red: red, green: green, blue: blue, alpha: alpha)
 	}
 
+	/**
+	 Initializes a `UIColor` with a RGBA struct.
+	 */
+	convenience init(rgba: RgbaColor) {
+		self.init(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: rgba.alpha)
+	}
+
 	/// Converts a UIColor into a SwiftUI Color view.
 	var colorView: Color {
 		Color(self)
+	}
+
+	/// Returns the rgba values of this color.
+	var rgbaColor: RgbaColor? {
+		var red: CGFloat = 0
+		var green: CGFloat = 0
+		var blue: CGFloat = 0
+		var alpha: CGFloat = 0
+		if getRed(&red, green: &green, blue: &blue, alpha: &alpha) {
+			return RgbaColor(red: red, green: green, blue: blue, alpha: alpha)
+		} else {
+			return nil
+		}
+	}
+
+	/// A struct containing the RGBA values of a color.
+	struct RgbaColor {
+		public let red: CGFloat
+		public let green: CGFloat
+		public let blue: CGFloat
+		public let alpha: CGFloat
+
+		public init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) {
+			self.red = red
+			self.green = green
+			self.blue = blue
+			self.alpha = alpha
+		}
 	}
 }
