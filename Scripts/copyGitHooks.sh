@@ -3,7 +3,7 @@
 # Intended to be run via Xcode during the build phase from the project path to prevent any unformatted code commits.
 
 # The version number of the hook scripts. Increment if something has been changed in the scripts.
-scriptVersion="1"
+scriptVersion="2"
 # Some constants for the script.
 pathToGitHooks=".git/hooks" # The relative path from the folder where this script is in to the git hook folder.
 pathToSourcHooks="Scripts/hooks" # The relative path to the hooks folder from where to copy the files from.

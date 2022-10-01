@@ -38,8 +38,3 @@ identifier_name:
 
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle)
 
-included:
-  - Sources
-
-excluded:
-  - Tests
