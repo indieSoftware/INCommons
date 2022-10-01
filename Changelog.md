@@ -2,11 +2,13 @@
 
 ### v4.0.0 (in development)
 
-- Changed `FileManager().documentDirectory` to `FileManager.documentsDirectory`.
 - Added `homeDirectory`, `cachesDirectory` and `tmpDirectory` to `FileManager` extension.
 - Added `base64Encoded` and `base64Decoded` as a string extension.
 - Added `RgbaColor` inclusive initializer and return value for `UIColor`.
 - Added `UIColor.asData()` and `Data.asUIColor()` extensions to archive and unarchive UIColors.
+- Changed `FileManager().documentDirectory` to `FileManager.documentsDirectory`.
+- Changed `DispatchQueue.once(token:block:)` to use a generated default token and an actor.
+- Removed `DispatchQueue.performOnMainThread()` in favor of `Task` and `MainActor`.
 
 ### v3.1.0
 

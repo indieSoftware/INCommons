@@ -18,6 +18,7 @@ struct DeviceProviderView: View {
 	}
 }
 
+@MainActor
 private class DeviceProviderViewModel<DeviceProvider: UIDeviceProviderType>: ObservableObject {
 	private let deviceProvider: DeviceProvider
 	private var deviceProviderCancellable: Cancellable?

@@ -1,13 +1,7 @@
-//
-//  UIDeviceProviderTests.swift
-//  INCommonsTests
-//
-//  Created by Sven Korset on 12.03.22.
-//
-
 import INCommons
 import XCTest
 
+@MainActor
 class UIDeviceProviderMockTests: XCTestCase {
 	func testDefaultValues() throws {
 		let deviceProvider = UIDeviceProviderMock()
