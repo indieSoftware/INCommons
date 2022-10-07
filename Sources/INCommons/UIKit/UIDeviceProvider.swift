@@ -46,9 +46,7 @@ public final class UIDeviceProvider: UIDeviceProviderType, @unchecked Sendable {
 
 	deinit {
 		Task {
-			await MainActor.run {
-				UIDevice.current.endGeneratingDeviceOrientationNotifications()
-			}
+			await UIDevice.current.endGeneratingDeviceOrientationNotifications()
 		}
 	}
 
