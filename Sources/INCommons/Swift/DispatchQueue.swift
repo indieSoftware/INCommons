@@ -1,45 +1,43 @@
 import Foundation
 
 public extension DispatchQueue {
-	/// A list of dispatch tokens to track which have been called once.
-	static var onceTracker = [String]()
+	private actor OnceTracker {
+		/// A list of dispatch tokens to track which have been called once.
+		private var tokens = [String]()
+
+		/**
+		 Performs the block when the token is not part of the tracked tokens.
+
+		 Does nothing when the token has already been added to the list before.
+		 When the block gets executed then the token will be added to the list
+		 of used tokens which prevents of being used again.
+		 */
+		func once(token: String, block: @escaping @Sendable () -> Void) {
+			if tokens.contains(token) {
+				return
+			}
+
+			tokens.append(token)
+			block()
+		}
+	}
+
+	/// A global reference to the tokens used to keep track of blocks already executed.
+	private static let onceTracker = OnceTracker()
 
 	/**
 	 Executes a block of code, associated with a unique token, only once.
 
 	 The code is thread safe and will only execute the block once even in the presence of multithreaded calls.
 
-	 Source:
-	 https://stackoverflow.com/questions/37886994/dispatch-once-after-the-swift-3-gcd-api-changes
-
 	 - parameter token: A unique token as key for the block.
-	 Use a unique reverse DNS style name such as com.vectorform.<name> or a GUID.
+	 Use a unique reverse DNS style name such as com.vectorform.<name> or a string representation of a UUID.
+	 Defaults to a token created out of the file name, function name and the line number of the method's call.
 	 - parameter block: Block to execute once.
 	 */
-	class func once(token: String, block: () -> Void) {
-		objc_sync_enter(self)
-		defer { objc_sync_exit(self) }
-
-		if onceTracker.contains(token) {
-			return
-		}
-
-		onceTracker.append(token)
-		block()
-	}
-
-	/**
-	 Executes a closure on the main tread.
-
-	 If the code is already executing on the main thread the closure will be executed synchronously, otherwise asynchronously.
-
-	 - parameter closure: The closure to execute on the main thread mainly to update the UI.
-	 */
-	class func performOnMainThread(using closure: @escaping () -> Void) {
-		if Thread.isMainThread {
-			closure()
-		} else {
-			main.async(execute: closure)
+	class func once(token: String = "\(#file).\(#function):\(#line)", block: @escaping @Sendable () -> Void) {
+		Task {
+			await onceTracker.once(token: token, block: block)
 		}
 	}
 }

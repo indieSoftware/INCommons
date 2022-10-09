@@ -10,12 +10,14 @@ import UIKit
 /// It's expected that the implementation informs the `ObservableObject` of any value changes.
 public protocol UIDeviceProviderType: ObservableObject {
 	/// The style of interface to use on the current device.
+	@MainActor
 	var userInterfaceIdiom: UIUserInterfaceIdiom { get }
 
 	/// Returns true if this code currently runs on the simulator, false when on a physical device.
 	var isSimulator: Bool { get }
 
 	/// The physical orientation of the device.
+	@MainActor
 	var deviceOrientation: UIDeviceOrientation { get }
 }
 
@@ -24,9 +26,11 @@ public protocol UIDeviceProviderType: ObservableObject {
 /// When instantiating `beginGeneratingDeviceOrientationNotifications()` will be called on
 /// `UIDevice.current` to start the generation of device orientations so that `deviceOrientation` returns correct values.
 /// On de-init `endGeneratingDeviceOrientationNotifications()` will be called to stop it.
-public class UIDeviceProvider: UIDeviceProviderType {
+public final class UIDeviceProvider: UIDeviceProviderType, @unchecked Sendable {
+	@MainActor
 	private var orientationDidChangeNotificationToken: Any?
 
+	@MainActor
 	public init() {
 		orientationDidChangeNotificationToken = NotificationCenter.default.addObserver(
 			forName: UIDevice.orientationDidChangeNotification,
@@ -41,9 +45,12 @@ public class UIDeviceProvider: UIDeviceProviderType {
 	}
 
 	deinit {
-		UIDevice.current.endGeneratingDeviceOrientationNotifications()
+		Task {
+			await UIDevice.current.endGeneratingDeviceOrientationNotifications()
+		}
 	}
 
+	@MainActor
 	public var userInterfaceIdiom: UIUserInterfaceIdiom {
 		UIDevice.current.userInterfaceIdiom
 	}
@@ -56,6 +63,7 @@ public class UIDeviceProvider: UIDeviceProviderType {
 #endif
 	}
 
+	@MainActor
 	public var deviceOrientation: UIDeviceOrientation {
 		UIDevice.current.orientation
 	}
