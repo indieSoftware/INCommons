@@ -31,7 +31,7 @@
 		26885AE828167FC500901D7F /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26885AE728167FC500901D7F /* Collection.swift */; };
 		268B60CD27DCD6EE002D6C84 /* UIDeviceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60CC27DCD6EE002D6C84 /* UIDeviceProvider.swift */; };
 		268B60D127DCD82D002D6C84 /* UIDeviceProviderMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D027DCD82D002D6C84 /* UIDeviceProviderMockTests.swift */; };
-		268B60D427DCDD7F002D6C84 /* DeviceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D227DCDC36002D6C84 /* DeviceProvider.swift */; };
+		268B60D427DCDD7F002D6C84 /* DeviceProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D227DCDC36002D6C84 /* DeviceProviderView.swift */; };
 		268B60D627DCF981002D6C84 /* Optional+Stringified.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D527DCF981002D6C84 /* Optional+Stringified.swift */; };
 		268B60D927DCF9EB002D6C84 /* OptionalStringifiedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D827DCF9EB002D6C84 /* OptionalStringifiedTests.swift */; };
 		2699C16828898EE40026ED3E /* Task+sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2699C16728898EE40026ED3E /* Task+sleep.swift */; };
@@ -50,7 +50,7 @@
 		26FCE75A27D2698B00C229DA /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE75027D2698B00C229DA /* UIEdgeInsets.swift */; };
 		26FCE75B27D2698B00C229DA /* View+Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE75227D2698B00C229DA /* View+Conditions.swift */; };
 		26FCE75C27D2698B00C229DA /* View+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE75327D2698B00C229DA /* View+Frame.swift */; };
-		26FCE75E27D2698B00C229DA /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE75627D2698B00C229DA /* ShareSheet.swift */; };
+		26FCE75E27D2698B00C229DA /* View+ActivitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE75627D2698B00C229DA /* View+ActivitySheet.swift */; };
 		26FCE76727D2699E00C229DA /* Int+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE75F27D2699E00C229DA /* Int+Time.swift */; };
 		26FCE76927D2699E00C229DA /* With.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE76127D2699E00C229DA /* With.swift */; };
 		26FCE76A27D2699E00C229DA /* Double+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE76227D2699E00C229DA /* Double+Time.swift */; };
@@ -132,7 +132,7 @@
 		26885AEA2816818F00901D7F /* Changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
 		268B60CC27DCD6EE002D6C84 /* UIDeviceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceProvider.swift; sourceTree = "<group>"; };
 		268B60D027DCD82D002D6C84 /* UIDeviceProviderMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceProviderMockTests.swift; sourceTree = "<group>"; };
-		268B60D227DCDC36002D6C84 /* DeviceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProvider.swift; sourceTree = "<group>"; };
+		268B60D227DCDC36002D6C84 /* DeviceProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProviderView.swift; sourceTree = "<group>"; };
 		268B60D527DCF981002D6C84 /* Optional+Stringified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Stringified.swift"; sourceTree = "<group>"; };
 		268B60D827DCF9EB002D6C84 /* OptionalStringifiedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStringifiedTests.swift; sourceTree = "<group>"; };
 		2699C16728898EE40026ED3E /* Task+sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+sleep.swift"; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		26FCE75027D2698B00C229DA /* UIEdgeInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		26FCE75227D2698B00C229DA /* View+Conditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Conditions.swift"; sourceTree = "<group>"; };
 		26FCE75327D2698B00C229DA /* View+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Frame.swift"; sourceTree = "<group>"; };
-		26FCE75627D2698B00C229DA /* ShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		26FCE75627D2698B00C229DA /* View+ActivitySheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+ActivitySheet.swift"; sourceTree = "<group>"; };
 		26FCE75F27D2699E00C229DA /* Int+Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Time.swift"; sourceTree = "<group>"; };
 		26FCE76127D2699E00C229DA /* With.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = With.swift; sourceTree = "<group>"; };
 		26FCE76227D2699E00C229DA /* Double+Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Time.swift"; sourceTree = "<group>"; };
@@ -388,7 +388,7 @@
 		26FCE75427D2698B00C229DA /* UIKit2SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				26FCE75627D2698B00C229DA /* ShareSheet.swift */,
+				26FCE75627D2698B00C229DA /* View+ActivitySheet.swift */,
 			);
 			path = UIKit2SwiftUI;
 			sourceTree = "<group>";
@@ -506,7 +506,7 @@
 			children = (
 				26FCE79727D276BF00C229DA /* ConfigurationView.swift */,
 				26FCE79927D276BF00C229DA /* ShareSheet.swift */,
-				268B60D227DCDC36002D6C84 /* DeviceProvider.swift */,
+				268B60D227DCDC36002D6C84 /* DeviceProviderView.swift */,
 				26FCE79627D276BF00C229DA /* ViewConditions.swift */,
 				26FCE79827D276BF00C229DA /* ViewFrame.swift */,
 			);
@@ -733,7 +733,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" lint --path \"Sources/INCommons\" --config \".swiftlint.yml\"\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" lint\n";
 		};
 		26FCE71427D215DD00C229DA /* Extract Swift Version Number */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -771,7 +771,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ". Scripts/swiftFormatCodePaths.sh\n\"Pods/SwiftFormat/CommandLineTool/swiftformat\" ${swiftFormatCodePaths[*]} --exclude **/Generated\n";
+			shellScript = ". config.sh\n\"Pods/SwiftFormat/CommandLineTool/swiftformat\" ${SWIFT_FORMAT_CODE_PATHS[*]} --exclude ${SWIFT_FORMAT_EXCLUDE_PATHS}\n";
 		};
 		37BF3F21F4322B6E0EEEC86F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -826,7 +826,7 @@
 			files = (
 				26FCE79F27D276BF00C229DA /* ConfigurationView.swift in Sources */,
 				26FCE7A227D276BF00C229DA /* ExampleViewFactory.swift in Sources */,
-				268B60D427DCDD7F002D6C84 /* DeviceProvider.swift in Sources */,
+				268B60D427DCDD7F002D6C84 /* DeviceProviderView.swift in Sources */,
 				26FCE7A327D276BF00C229DA /* HomeView.swift in Sources */,
 				26FCE79E27D276BF00C229DA /* ViewConditions.swift in Sources */,
 				26FCE7A027D276BF00C229DA /* ViewFrame.swift in Sources */,
@@ -845,7 +845,7 @@
 				268B60CD27DCD6EE002D6C84 /* UIDeviceProvider.swift in Sources */,
 				26FCE76A27D2699E00C229DA /* Double+Time.swift in Sources */,
 				26FCE77127D26E8D00C229DA /* ConfigLoader.swift in Sources */,
-				26FCE75E27D2698B00C229DA /* ShareSheet.swift in Sources */,
+				26FCE75E27D2698B00C229DA /* View+ActivitySheet.swift in Sources */,
 				26FCE76B27D2699E00C229DA /* DispatchQueue.swift in Sources */,
 				26885AE828167FC500901D7F /* Collection.swift in Sources */,
 				26FCE76727D2699E00C229DA /* Int+Time.swift in Sources */,

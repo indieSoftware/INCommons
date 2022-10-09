@@ -4,8 +4,7 @@
 # https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md
 --maxwidth 160
 --enable isEmpty
---indent tab
---ifdef outdent
+--indent tab 
 --tabwidth 4
 --commas inline
 --wraparguments before-first

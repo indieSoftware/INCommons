@@ -56,11 +56,11 @@ public final class UIDeviceProvider: UIDeviceProviderType, @unchecked Sendable {
 	}
 
 	public var isSimulator: Bool {
-		#if targetEnvironment(simulator)
-			return true
-		#else
-			return false
-		#endif
+#if targetEnvironment(simulator)
+		return true
+#else
+		return false
+#endif
 	}
 
 	@MainActor
