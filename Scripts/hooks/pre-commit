@@ -1,18 +1,14 @@
 #!/bin/sh
 # Runs the SwiftFormat on the source code provided by the code path script and returns an error code if formatting is needed.
 
-# Change to the project's root.
-#cd "iOS"
 # Include swift format code path variable.
-. Scripts/swiftFormatCodePaths.sh
+. config.sh
 # Run SwiftFormat in lint mode which returns an exit code we save in a variable.
-Pods/SwiftFormat/CommandLineTool/swiftformat ${swiftFormatCodePaths[*]} --lint --exclude **/Generated
+Pods/SwiftFormat/CommandLineTool/swiftformat ${SWIFT_FORMAT_CODE_PATHS[*]} --lint --exclude ${SWIFT_FORMAT_EXCLUDE_PATHS}
 result=$?
 if [[ $result -gt 0 ]]
 then
 	# SwiftFormat needs to format anything so print an error message for that.
-	echo "Please run SwiftFormat before committing!"
+	echo "Scheme 'Format Code' needs to be run before committing!"
 fi
-# Switch back to the pre-commit base folder and propagate the SwiftFormat result.
-#cd ..
 exit $result

@@ -7,7 +7,9 @@ struct ShareSheet: View {
 	var body: some View {
 		VStack {
 			Button("Share") {
-				item = ActivityItem(items: URL(string: "https://www.indie-software.com")!)
+				if let url = URL(string: "https://www.indie-software.com") {
+					item = ActivityItem(items: url)
+				}
 			}
 		}
 		.activitySheet($item)
