@@ -17,6 +17,11 @@ class FileManager_DirectoryTests: XCTestCase {
 		XCTAssertTrue(result.absoluteString.hasSuffix("/Library/Caches/"))
 	}
 
+	func testAppSupportDirectoryEndsWithApplicationSupport() {
+		let result = FileManager.appSupportDirectory
+		XCTAssertTrue(result.absoluteString.hasSuffix("/Application%20Support/"))
+	}
+
 	func testTmpDirectoryEndsWithTmp() {
 		let result = FileManager.tmpDirectory
 		XCTAssertTrue(result.absoluteString.hasSuffix("/tmp/"))
