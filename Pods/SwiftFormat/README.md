@@ -22,6 +22,7 @@ Table of Contents
     - [Git pre-commit hook](#git-pre-commit-hook)
     - [On CI using Danger](#on-ci-using-danger)
     - [Bazel build](#bazel-build)
+    - [Docker](#docker)
 - [Configuration](#configuration)
     - [Options](#options)
     - [Rules](#rules)
@@ -44,6 +45,7 @@ What is this?
 SwiftFormat is a code library and command-line tool for reformatting Swift code on macOS or Linux.
 
 SwiftFormat goes above and beyond what you might expect from a code formatter. In addition to adjusting white space it can insert or remove implicit `self`, remove redundant parentheses, and correct many other deviations from the standard Swift idioms.
+
 
 Why would I want to do that?
 -----------------------------
@@ -73,7 +75,7 @@ Command-line tool
 
 **Installation:**
 
-You can install the `swiftformat` command-line tool on macOS using [Homebrew](http://brew.sh/). Assuming you already have Homebrew installed, just type:
+You can install the `swiftformat` command-line tool on macOS or Linux using [Homebrew](http://brew.sh/). Assuming you already have Homebrew installed, just type:
 
 ```bash
 $ brew install swiftformat
@@ -91,12 +93,6 @@ Alternatively, you can install the tool on macOS or Linux by using [Mint](https:
 $ mint install nicklockwood/SwiftFormat
 ```
 
-And then run it using:
-
-```bash
-$ mint run swiftformat
-```
-
 Or if you prefer, you can check out and build SwiftFormat manually on macOS, Linux or Windows as follows:
 
 ```bash
@@ -106,6 +102,16 @@ $ swift build -c release
 ```
 
 If you are installing SwiftFormat into your project directory, you can use [CocoaPods](https://cocoapods.org/) on macOS to automatically install the swiftformat binary along with your other pods - see the Xcode build phase instructions below for details.
+
+Another option is to include the binary artifactbundle in your `Package.swift`:
+
+```swift
+.binaryTarget(
+    name: "SwiftFormat",
+    url: "https://github.com/nicklockwood/SwiftFormat/releases/download/0.49.12/swiftformat-macos.artifactbundle.zip",
+    checksum: "CHECKSUM"
+),
+``` 
 
 If you would prefer not to use a package manager, you can build the command-line app manually:
 
@@ -231,7 +237,7 @@ Alternatively, you might want to consider running SwiftFormat in [lint](#linting
 
 To set up SwiftFormat as an Xcode build phase, do the following:
 
-#### 1) Create a BuildTools folder & Package.swift
+#### 1) Create a BuildTools folder and Package.swift
 
 1. Create a folder called `BuildTools` in the same folder as your xcodeproj file
 2. In this folder, create a file called `Package.swift`, with the following contents:
@@ -250,7 +256,7 @@ let package = Package(
 ```
 3. If you are running Xcode 11.4 or later, in the `BuildTools` folder create a file called `Empty.swift` with nothing in it. This is to satisfy a change in Swift Package Manager.
 
-#### 2) Add a Build phases to your app target
+#### 2) Add a Build phase to your app target
 
 1. Click on your project in the file list, choose your target under `TARGETS`, click the `Build Phases` tab
 2. Add a `New Run Script Phase` by clicking the little plus icon in the top left
@@ -383,6 +389,39 @@ Bazel Build
 
 If you use [Bazel](https://bazel.build/) to build your Swift projects and want to ensure that only properly formatted code is merged to your main branch, try [rules_swiftformat](https://github.com/cgrindel/rules_swiftformat). The repository contains Bazel rules and macros that format Swift source files using SwiftFormat, test that the formatted files exist in the workspace directory, and copy the formatted files to the workspace directory.
 
+
+Docker
+-----------
+
+SwiftFormat publishes releases into [GitHub Packages](https://github.com/features/packages) Docker registry. To pull the image call:
+
+```bash
+$ docker pull ghcr.io/nicklockwood/swiftformat:latest
+```
+
+By default, the container runs `swiftformat .` Therefore, you need to provide a path either via an argument:
+
+```bash
+docker run --rm -v /local/source/path:/work ghcr.io/nicklockwood/swiftformat:latest /work
+```
+
+or by changing the working dir:
+
+```bash
+docker run --rm -v /local/source/path:/work -w /work ghcr.io/nicklockwood/swiftformat:latest
+```
+
+To check the installed SwiftFormat version:
+
+```bash
+docker run --rm ghcr.io/nicklockwood/swiftformat:latest --version
+```
+
+Linting example:
+
+```bash
+docker run --rm -v /local/source/path:/work ghcr.io/nicklockwood/swiftformat:latest /work --lint
+```
 
 Configuration
 -------------
@@ -781,6 +820,8 @@ Known issues
 
 * When using the Xcode Source Editor Extension, the SwiftFormat menu sometimes disappears from Xcode. If this happens, try moving or renaming Xcode temporarily and then changing it back. Failing that, the suggestions in [this thread](https://github.com/nicklockwood/SwiftFormat/issues/494) may help.
 
+* The `enumNamespaces` rule replaces classes that have only static members with an `enum`. If the class is subclassed, or if there is code that depends on the class exposing certain runtime behaviors, this may break the program. To solve this you can either fix it on a per-case basis by adding a `// swiftformat:disable:next enumNamespaces` comment directive above the class declaration, or you can add `--enumnamespaces structs-only` to prevent the rule being applied to classes, or you can just disable the `enumNamespaces` rule completely.
+
 * The `redundantVoidReturnType` rule can inadvertently alter the type signature for closures, for example in cases where the closure calls a `@discardableResult` function. To solve this you can either fix it on a per-case basis by adding a `// swiftformat:disable:next redundantVoidReturnType` comment directive to disable the rule for a specific call site, or you can add `--closurevoid preserve` to your [configuration](#configuration) to disable the rule completely for closures (regular functions or methods aren't affected).
 
 * The `redundantType` rule can introduce ambiguous code in certain cases when using the default mode of `--redundanttype inferred`. This can be worked around by by using `--redundanttype explicit`, or by manually removing the redundant type reference on the affected line, or by using the `// swiftformat:disable:next redundantType` comment directive to disable the rule at the call site (or just disable the `redundantType` rule completely).
@@ -806,6 +847,10 @@ Known issues
 * If a file begins with a comment, the `stripHeaders` rule will remove it if it is followed by a blank line. To avoid this, make sure that the first comment is directly followed by a line of code.
 
 * When running a version of SwiftFormat built using Xcode 10.2 on macOS 10.14.3 or earlier, you may experience a crash with the error "dyld: Library not loaded: @rpath/libswiftCore.dylib". To fix this, you need to install the [Swift 5 Runtime Support for Command Line Tools](https://support.apple.com/kb/DL1998). These tools are included by default in macOS 10.14.4 and later.
+
+* If you have a generic typealias that defines a closure (e.g. `typealias ResultCompletion<T> = (Result<T, Error>) -> Void`) and use this closure as an argument in a generic function (e.g. `func handle<T: Decodable>(_ completion: ResultCompletion<T>)`), the `opaqueGenericParameters` rule may update the function definition to use `some` syntax (e.g. `func handle(_ completion: ResultCompletion<some Decodable>)`). `some` syntax is not permitted in closure parameters, so this will no longer compile. Workarounds include spelling out the closure explicitly in the generic function (instead of using a `typealias`) or disabling the `opaqueGenericParameters` rule (e.g. with `// swiftformat:next:disable opaqueGenericParameters`).
+
+* If compiling for macOS with Xcode 14.0 and configuring SwiftFormat with `--swift-version 5.7`, the `genericExtensions` rule may cause a build failure by updating extensions of the format `extension Collection where Element == Foo` to `extension Collection<Foo>`. This fails to compile for macOS in Xcode 14.0, because the macOS SDK in that version of Xcode [does not include](https://forums.swift.org/t/xcode-14-rc-cannot-specialize-protocol-type/60171) the Swift 5.7 standard library. Workarounds include using `--swift-version 5.6` instead, updating to Xcode 14.1+, or disabling the `genericExtensions` rule (e.g. with `// swiftformat:next:disable genericExtensions`).
 
 
 Tip Jar
@@ -839,6 +884,7 @@ Credits
 * [Jim Puls](https://github.com/puls) - Big Sur icon update
 * [Daniele Formichelli](https://github.com/danyf90) - JSON reporter
 * [Mahdi Bchatnia](https://github.com/inket) - Linux build workflow
+* [Arthur Semenyutin](https://github.com/vox-humana) - Docker image
 * [Nick Lockwood](https://github.com/nicklockwood) - Everything else
 
 ([Full list of contributors](https://github.com/nicklockwood/SwiftFormat/graphs/contributors))
