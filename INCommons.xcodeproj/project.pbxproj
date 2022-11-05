@@ -36,6 +36,8 @@
 		268B60D927DCF9EB002D6C84 /* OptionalStringifiedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268B60D827DCF9EB002D6C84 /* OptionalStringifiedTests.swift */; };
 		2699C16828898EE40026ED3E /* Task+sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2699C16728898EE40026ED3E /* Task+sleep.swift */; };
 		2699C16B288990FF0026ED3E /* Task+sleepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2699C16A288990FF0026ED3E /* Task+sleepTests.swift */; };
+		26B02EA22916324A00F06105 /* View+OnFirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B02EA12916324A00F06105 /* View+OnFirstAppear.swift */; };
+		26B02EA52916334D00F06105 /* FirstAppearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B02EA32916331900F06105 /* FirstAppearView.swift */; };
 		26FCE6D327D1F9C600C229DA /* INCommonsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE6D227D1F9C600C229DA /* INCommonsExampleApp.swift */; };
 		26FCE6D727D1F9C700C229DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FCE6D627D1F9C700C229DA /* Assets.xcassets */; };
 		26FCE6DA27D1F9C700C229DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FCE6D927D1F9C700C229DA /* Preview Assets.xcassets */; };
@@ -137,6 +139,8 @@
 		268B60D827DCF9EB002D6C84 /* OptionalStringifiedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStringifiedTests.swift; sourceTree = "<group>"; };
 		2699C16728898EE40026ED3E /* Task+sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+sleep.swift"; sourceTree = "<group>"; };
 		2699C16A288990FF0026ED3E /* Task+sleepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+sleepTests.swift"; sourceTree = "<group>"; };
+		26B02EA12916324A00F06105 /* View+OnFirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnFirstAppear.swift"; sourceTree = "<group>"; };
+		26B02EA32916331900F06105 /* FirstAppearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppearView.swift; sourceTree = "<group>"; };
 		26FCE6CF27D1F9C600C229DA /* INCommonsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INCommonsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FCE6D227D1F9C600C229DA /* INCommonsExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INCommonsExampleApp.swift; sourceTree = "<group>"; };
 		26FCE6D627D1F9C700C229DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -380,6 +384,7 @@
 			isa = PBXGroup;
 			children = (
 				26FCE75227D2698B00C229DA /* View+Conditions.swift */,
+				26B02EA12916324A00F06105 /* View+OnFirstAppear.swift */,
 				26FCE75327D2698B00C229DA /* View+Frame.swift */,
 			);
 			path = SwiftUI;
@@ -505,8 +510,9 @@
 			isa = PBXGroup;
 			children = (
 				26FCE79727D276BF00C229DA /* ConfigurationView.swift */,
-				26FCE79927D276BF00C229DA /* ShareSheet.swift */,
 				268B60D227DCDC36002D6C84 /* DeviceProviderView.swift */,
+				26B02EA32916331900F06105 /* FirstAppearView.swift */,
+				26FCE79927D276BF00C229DA /* ShareSheet.swift */,
 				26FCE79627D276BF00C229DA /* ViewConditions.swift */,
 				26FCE79827D276BF00C229DA /* ViewFrame.swift */,
 			);
@@ -830,6 +836,7 @@
 				26FCE7A327D276BF00C229DA /* HomeView.swift in Sources */,
 				26FCE79E27D276BF00C229DA /* ViewConditions.swift in Sources */,
 				26FCE7A027D276BF00C229DA /* ViewFrame.swift in Sources */,
+				26B02EA52916334D00F06105 /* FirstAppearView.swift in Sources */,
 				26FCE6D327D1F9C600C229DA /* INCommonsExampleApp.swift in Sources */,
 				26FCE7A127D276BF00C229DA /* ShareSheet.swift in Sources */,
 			);
@@ -841,6 +848,7 @@
 			files = (
 				26FCE75927D2698B00C229DA /* UIDevice.swift in Sources */,
 				266913CB2866F55E00EBDB3C /* String+Base64Coding.swift in Sources */,
+				26B02EA22916324A00F06105 /* View+OnFirstAppear.swift in Sources */,
 				26FCE76927D2699E00C229DA /* With.swift in Sources */,
 				268B60CD27DCD6EE002D6C84 /* UIDeviceProvider.swift in Sources */,
 				26FCE76A27D2699E00C229DA /* Double+Time.swift in Sources */,
