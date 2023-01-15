@@ -1,6 +1,7 @@
 import SwiftUI
 /// Represents clear background for fullscreencover on SwiftUI navigation flow
-public struct BackgroundBlurView: UIViewRepresentable {
+public struct ClearBackgroundView: UIViewRepresentable {
+    public init() { }
     public func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: .zero)
         view.backgroundColor = .clear
