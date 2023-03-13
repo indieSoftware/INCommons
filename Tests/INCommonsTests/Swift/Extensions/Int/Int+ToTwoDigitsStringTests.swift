@@ -1,7 +1,7 @@
 import INCommons
 import XCTest
 
-class IntToTwoDigitsStringTests: XCTestCase {
+class Int_ToTwoDigitsStringTests: XCTestCase {
 	func testSingeDigit() {
 		let value = 5
 		let result = value.toTwoDigitsString()

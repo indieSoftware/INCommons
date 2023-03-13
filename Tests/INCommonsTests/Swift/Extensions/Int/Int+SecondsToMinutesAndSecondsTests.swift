@@ -1,7 +1,7 @@
 import INCommons
 import XCTest
 
-class IntSecondsToMinutesAndSecondsTests: XCTestCase {
+class Int_SecondsToMinutesAndSecondsTests: XCTestCase {
 	func testMinutesAndSeconds() {
 		let seconds = 200
 		let result = seconds.secondsToMinutesAndSeconds()
