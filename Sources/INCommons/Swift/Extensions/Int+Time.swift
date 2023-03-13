@@ -5,7 +5,7 @@ public extension Int {
 	 Hours will be displayed in minutes.
 	 */
 	func secondsToMinutesAndSeconds() -> (minutes: Int, seconds: Int) {
-		return (self / 60, self % 60)
+		(self / 60, self % 60)
 	}
 
 	/**

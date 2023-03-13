@@ -5,7 +5,7 @@
 [![Codecov](https://codecov.io/gh/nicklockwood/SwiftFormat/graphs/badge.svg)](https://codecov.io/gh/nicklockwood/SwiftFormat)
 [![Swift 4.2](https://img.shields.io/badge/swift-4.2-red.svg?style=flat)](https://developer.apple.com/swift)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)
-[![Twitter](https://img.shields.io/badge/twitter-@nicklockwood-blue.svg)](http://twitter.com/nicklockwood)
+[![Mastodon](https://img.shields.io/badge/mastodon-@nicklockwood@mastodon.social-636dff.svg)](https://mastodon.social/@nicklockwood)
 
 Table of Contents
 -----------------
@@ -16,6 +16,7 @@ Table of Contents
     - [Command-line tool](#command-line-tool)
     - [Xcode source editor extension](#xcode-source-editor-extension)
     - [Xcode build phase](#xcode-build-phase)
+    - [Swift Package Manager plugin](#swift-package-manager-plugin)
     - [Via Applescript](#via-applescript)
     - [VSCode plugin](#vscode-plugin)
     - [Sublime Text plugin](#sublime-text-plugin)
@@ -213,7 +214,7 @@ To update to the latest version once installed use:
 $ brew upgrade --cask swiftformat-for-xcode
 ```
 
-Alternatively, if you prefer not to use Homebrew, you'll find the latest version of the SwiftFormat for Xcode application inside the EditorExtension folder included in the SwiftFormat repository. Download and unpack the zip archive, then drag `SwiftFormat for Xcode.app` into your `Applications` folder.
+Alternatively, if you prefer not to use Homebrew, you'll find the latest version of the SwiftFormat for Xcode application on the [GitHub Releases](https://github.com/nicklockwood/SwiftFormat/releases) page. Download and unpack the zip archive, then drag `SwiftFormat for Xcode.app` into your `Applications` folder.
 
 **Usage:**
 
@@ -260,7 +261,8 @@ let package = Package(
 
 1. Click on your project in the file list, choose your target under `TARGETS`, click the `Build Phases` tab
 2. Add a `New Run Script Phase` by clicking the little plus icon in the top left
-3. Drag the new `Run Script` phase **above** the `Compile Sources` phase, expand it and paste the following script:
+3. Uncheck the `Based on dependency analysis` checkbox
+4. Drag the new `Run Script` phase **above** the `Compile Sources` phase, expand it and paste the following script:
 
     ```bash
     cd BuildTools
@@ -291,7 +293,8 @@ You can also use `swift run -c release --package-path BuildTools swiftformat "$S
 
 1. Click on your project in the file list, choose your target under `TARGETS`, click the `Build Phases` tab
 2. Add a `New Run Script Phase` by clicking the little plus icon in the top left
-3. Drag the new `Run Script` phase **above** the `Compile Sources` phase, expand it and paste the following script:
+3. Uncheck the `Based on dependency analysis` checkbox
+4. Drag the new `Run Script` phase **above** the `Compile Sources` phase, expand it and paste the following script:
 
     ```bash
     "${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat" "$SRCROOT"
@@ -311,6 +314,47 @@ fi
 
 This is not recommended for shared projects however, as different team members using different versions of SwiftFormat may result in noise in the commit history as code gets reformatted inconsistently.
 
+Swift Package Manager plugin
+-----------------------------
+
+You can use `SwiftFormat` as a SwiftPM command plugin.
+
+**NOTE:** Swift 5.6 or higher is required. Add the package to your dependencies in your `Package.swift` file.
+
+```swift
+dependencies: [
+    // ...
+    .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.50.4"),
+]
+```
+
+The plugin will find an existing `.swiftformat` in your package root folder and honor it automatically.
+
+### Trigger Plugin From Command-Line
+
+```bash
+swift package plugin --allow-writing-to-package-directory swiftformat
+```
+
+You can limit the formatting to a particular target with `--target` option.
+
+You can also specify `SwiftFormat` arguments, e.g. `--swiftversion`.
+
+Example
+
+```bash
+swift package plugin --allow-writing-to-package-directory swiftformat --target MyLibrary --swiftversion 5.6 --verbose
+```
+
+### Trigger Plugin From Xcode
+
+In Xcode 14 you can trigger the command plugin execution for a Swift package or an Xcode project.
+
+For an Xcode project the project's main directory will be processed and the `--target` option will be ignored.
+
+You can also specify `SwiftFormat` arguments, e.g. `--swiftversion`.
+
+![Run plugin in Xcode 14](https://user-images.githubusercontent.com/4176826/179352584-db7f7f42-452c-4a42-a329-01b115a237a7.gif)
 
 Via AppleScript
 ----------------
@@ -802,7 +846,7 @@ Q. I don't want to be surprised by new rules added when I upgrade SwiftFormat. H
 
 *Q. After applying SwiftFormat, my code won't compile. Is that a bug?*
 
-> A. SwiftFormat should ideally never break your code. Check the [known issues](#known-issues), and if it's not already listed there, or the suggested workaround doesn't solve your problem, please [open an issue on Github](https://github.com/nicklockwood/SwiftFormat/issues).
+> A. SwiftFormat should ideally never break your code. Check the [known issues](#known-issues), and if it's not already listed there, or the suggested workaround doesn't solve your problem, please [open an issue on GitHub](https://github.com/nicklockwood/SwiftFormat/issues).
 
 
 *Q. Can I use SwiftFormat to lint my code without changing it?*
@@ -872,7 +916,7 @@ Credits
 * [Romain Pouclet](https://github.com/palleas) - Homebrew formula
 * [Aerobounce](https://github.com/aerobounce) - Homebrew cask and Sublime Text plugin
 * [Cal Stephens](https://github.com/calda) - Several new formatting rules and options
-* [Facundo Menzella](https://github.com/acumenzella) - Several new formatting rules
+* [Facundo Menzella](https://github.com/facumenzella) - Several new formatting rules and options
 * [Ali Akhtarzada](https://github.com/aliak00) - Several path-related CLI enhancements
 * [Yonas Kolb](https://github.com/yonaskolb) - Swift Package Manager integration
 * [Wolfgang Lutz](https://github.com/Lutzifer) - AppleScript integration instructions
@@ -883,8 +927,10 @@ Credits
 * [Juri Pakaste](https://github.com/juri) - Filelist feature
 * [Jim Puls](https://github.com/puls) - Big Sur icon update
 * [Daniele Formichelli](https://github.com/danyf90) - JSON reporter
+* [Jonas Boberg](https://github.com/bobergj) - Github actions log reporter
 * [Mahdi Bchatnia](https://github.com/inket) - Linux build workflow
 * [Arthur Semenyutin](https://github.com/vox-humana) - Docker image
+* [Marco Eidinger](https://github.com/MarcoEidinger) - Swift Package Manager plugin
 * [Nick Lockwood](https://github.com/nicklockwood) - Everything else
 
 ([Full list of contributors](https://github.com/nicklockwood/SwiftFormat/graphs/contributors))
