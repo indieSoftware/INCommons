@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-MIN_TARGET_VERSION = '15.0'
+MIN_TARGET_VERSION = '16.0'
 platform :ios, MIN_TARGET_VERSION
 use_frameworks!
 workspace 'INCommons'
