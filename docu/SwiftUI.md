@@ -32,4 +32,10 @@ Use the frame modifier with a CGSize rather than unwrapping its width and height
 myView.frame(size: mySize)
 ```
 
+### View on first appear
 
+Trigger an action when a view appears, but in contrast to `.onAppear` which triggers every time when the view appears including when navigating back to the view, the `.onFirstAppear` triggers only once.
+
+```
+myView.onFirstAppear { print("On first appear") }
+```

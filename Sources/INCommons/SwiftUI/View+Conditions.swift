@@ -19,7 +19,7 @@ public extension View {
 	 - returns: Either the new view with the modifier applied or the unmodified view.
 	 */
 	@ViewBuilder
-	func `if`<Transform: View>(_ condition: Bool, transform: (Self) -> Transform) -> some View {
+	func `if`(_ condition: Bool, transform: (Self) -> some View) -> some View {
 		if condition {
 			transform(self)
 		} else {
@@ -43,10 +43,10 @@ public extension View {
 	 - returns: The new view with one of the modifiers applied.
 	 */
 	@ViewBuilder
-	func `if`<TrueContent: View, FalseContent: View>(
+	func `if`(
 		_ condition: Bool,
-		if ifTransform: (Self) -> TrueContent,
-		else elseTransform: (Self) -> FalseContent
+		if ifTransform: (Self) -> some View,
+		else elseTransform: (Self) -> some View
 	) -> some View {
 		if condition {
 			ifTransform(self)
@@ -70,8 +70,8 @@ public extension View {
 	 - returns: The new view with the modifier applied or the unchanged view.
 	 */
 	@ViewBuilder
-	func ifLet<Value, Transform: View>(_ value: Value?, transform: (Self, Value) -> Transform) -> some View {
-		if let value = value {
+	func ifLet<Value>(_ value: Value?, transform: (Self, Value) -> some View) -> some View {
+		if let value {
 			transform(self, value)
 		} else {
 			self

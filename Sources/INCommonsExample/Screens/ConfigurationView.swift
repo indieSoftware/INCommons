@@ -23,7 +23,7 @@ struct ConfigurationView: View {
 			}
 			Spacer()
 		}.onAppear {
-			self.parseTheFile()
+			parseTheFile()
 		}
 	}
 
