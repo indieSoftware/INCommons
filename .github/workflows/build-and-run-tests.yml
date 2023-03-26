@@ -14,8 +14,9 @@ jobs:
           # Refer to the correct branch of the pull-request which prevents some problems with dependencies.
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Build App and Run Unit Tests
+      - name: Build Example App and Run Unit Tests
         run: |
           xcodebuild clean build test \
+            -workspace INCommons.xcworkspace \
             -scheme INCommonsExample \
-            -destination 'platform=iOS Simulator,name=iPhone 14 Pro' \
+            -destination 'platform=iOS Simulator,name=iPhone 14 Pro'
