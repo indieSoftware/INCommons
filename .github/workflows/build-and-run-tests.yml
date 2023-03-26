@@ -1,0 +1,21 @@
+name: build-and-run-tests
+run-name: ${{ github.actor }} runs all tests for branch ${{ github.ref_name }}
+on:
+  # Trigger when a new pull-request has been opened or a new commit has been pushed for an existing pull-request.
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          # Refer to the correct branch of the pull-request which prevents some problems with dependencies.
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Build App and Run Unit Tests
+        run: |
+          xcodebuild clean build test \
+            -scheme INCommonsExample \
+            -destination 'platform=iOS Simulator,name=iPhone 14 Pro' \
