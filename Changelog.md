@@ -6,7 +6,7 @@
 - Added `base64Encoded` and `base64Decoded` as a string extension.
 - Added `RgbaColor` inclusive initializer and return value for `UIColor`.
 - Added `UIColor.asData()` and `Data.asUIColor()` extensions to archive and unarchive UIColors.
-- Added `View.onFirstAppear` modifier which triggers and action when a view appears, but only once.
+- Added `View.onFirstAppear` modifier which triggers an action when a view appears, but only once.
 - Changed `FileManager().documentDirectory` to `FileManager.documentsDirectory`.
 - Changed `DispatchQueue.once(token:block:)` to use a generated default token and an actor.
 - Removed `DispatchQueue.performOnMainThread()` in favor of `Task` and `MainActor`.

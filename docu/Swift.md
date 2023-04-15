@@ -66,16 +66,6 @@ DispatchQueue.once("AnIdentifier") {
 }
 ```
 
-### Perform on main thread
-
-A convenience method to run a block of code on the main thread:
-
-```
-DispatchQueue.performOnMainThread {
-	print("Gets printed immediately when already on the main thread otherwise will be added to the main queue asychronously.")
-}
-```
-
 ## Double
 
 ### TimeInterval
@@ -247,5 +237,4 @@ Conform to this protocol instead to make it possible to compare two references.
 
 Use a `ConfigLoader` to load a configuration `plist` file and mapping it to its model.
 
-The config file should contain all necessary data to run the app, e.g. server URLs, token IDs, etc.
-The config model then provides type-safe properties for the configuration entries.
+See [Configuration](https://github.com/indieSoftware/INCommons/blob/master/docu/Configuration.md) for more information.
