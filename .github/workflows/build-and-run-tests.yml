@@ -11,8 +11,12 @@ jobs:
       group: ${{ github.workflow }}
       cancel-in-progress: true
     steps:
+      - name: check MacOS version
+        run: sw_vers
+
       - name: check Xcode version
         run: /usr/bin/xcodebuild -version
+        
       - name: Checkout code
         uses: actions/checkout@v3
         with:
