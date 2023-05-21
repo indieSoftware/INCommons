@@ -23,18 +23,18 @@
         <a class="header-link" href="../index.html">
           INCommons
         </a>
-         (98% documented)
+         (91% documented)
       </p>
     
-      <p class="header-col--secondary">
+      <div class="header-col--secondary">
         <form role="search" action="../search.json">
           <input type="text" placeholder="Search documentation" data-typeahead>
         </form>
-      </p>
+      </div>
     
         <p class="header-col header-col--secondary">
           <a class="header-link" href="https://github.com/indieSoftware/INCommons">
-            <img class="header-icon" src="../img/gh.png"/>
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
             View on GitHub
           </a>
         </p>
@@ -43,7 +43,7 @@
 
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">INCommons Reference</a>
-      <img class="carat" src="../img/carat.png" />
+      <img class="carat" src="../img/carat.png" alt=""/>
       DispatchQueue Extension Reference
     </p>
 
@@ -79,10 +79,25 @@
                 <a class="nav-group-task-link" href="../Extensions/Bundle.html">Bundle</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/CGFloat.html">CGFloat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Calendar.html">Calendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/DispatchQueue.html">DispatchQueue</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/EdgeInsets.html">EdgeInsets</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/FileManager.html">FileManager</a>
@@ -91,13 +106,31 @@
                 <a class="nav-group-task-link" href="../Extensions/Int.html">Int</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Locale.html">Locale</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/MutableCollection.html">MutableCollection</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ProcessInfo.html">ProcessInfo</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Task.html">Task</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/TimeZone.html">TimeZone</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIColor/RgbaColor.html">– RgbaColor</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIDevice.html">UIDevice</a>
@@ -124,6 +157,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyEquatable.html">AnyEquatable</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/UIDeviceProviderType.html">UIDeviceProviderType</a>
               </li>
@@ -162,36 +198,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So17OS_dispatch_queueC9INCommonsE11onceTrackerSaySSGvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onceTracker" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So17OS_dispatch_queueC9INCommonsE11onceTrackerSaySSGvpZ">onceTracker</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A list of dispatch tokens to track which have been called once.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">onceTracker</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So17OS_dispatch_queueC9INCommonsE4once5token5blockySS_yyXEtFZ"></a>
+                    <a name="/s:So17OS_dispatch_queueC9INCommonsE4once5token5blockySS_yyYbctFZ"></a>
                     <a name="//apple_ref/swift/Method/once(token:block:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So17OS_dispatch_queueC9INCommonsE4once5token5blockySS_yyXEtFZ">once(token:<wbr>block:<wbr>)</a>
+                    <a class="token" href="#/s:So17OS_dispatch_queueC9INCommonsE4once5token5blockySS_yyYbctFZ">once(token:<wbr>block:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -203,15 +212,12 @@
 
 <p>The code is thread safe and will only execute the block once even in the presence of multithreaded calls.</p>
 
-<p>Source:
-<a href="https://stackoverflow.com/questions/37886994/dispatch-once-after-the-swift-3-gcd-api-changes">https://stackoverflow.com/questions/37886994/dispatch-once-after-the-swift-3-gcd-api-changes</a></p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">once</span><span class="p">(</span><span class="nv">token</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">block</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">once</span><span class="p">(</span><span class="nv">token</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"</span><span class="se">\(</span><span class="kd">#file</span><span class="se">)</span><span class="s">.</span><span class="se">\(</span><span class="kd">#function</span><span class="se">)</span><span class="s">:</span><span class="se">\(</span><span class="kd">#line</span><span class="se">)</span><span class="s">"</span><span class="p">,</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kd">@Sendable</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -228,7 +234,8 @@
                               <td>
                                 <div>
                                   <p>A unique token as key for the block.
-Use a unique reverse DNS style name such as com.vectorform.<name> or a GUID.</p>
+Use a unique reverse DNS style name such as com.vectorform.<name> or a string representation of a UUID.
+Defaults to a token created out of the file name, function name and the line number of the method&rsquo;s call.</p>
                                 </div>
                               </td>
                             </tr>
@@ -250,54 +257,6 @@ Use a unique reverse DNS style name such as com.vectorform.<name> or a GUID.</p>
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So17OS_dispatch_queueC9INCommonsE19performOnMainThread5usingyyyc_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/performOnMainThread(using:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So17OS_dispatch_queueC9INCommonsE19performOnMainThread5usingyyyc_tFZ">performOnMainThread(using:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Executes a closure on the main tread.</p>
-
-<p>If the code is already executing on the main thread the closure will be executed synchronously, otherwise asynchronously.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">performOnMainThread</span><span class="p">(</span><span class="n">using</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>closure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The closure to execute on the main thread mainly to update the UI.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
               </ul>
             </div>
           </div>
@@ -306,9 +265,8 @@ Use a unique reverse DNS style name such as com.vectorform.<name> or a GUID.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2022 <a class="link" href="https://github.com/indieSoftware/INCommons" target="_blank" rel="external">Sven Korset</a>. All rights reserved. (Last updated: 2022-03-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2023 <a class="link" href="https://github.com/indieSoftware/INCommons" target="_blank" rel="external noopener">indie-Software</a>. All rights reserved. (Last updated: 2023-04-15)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
-</div>
 </html>

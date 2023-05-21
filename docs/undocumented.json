@@ -1,8 +1,64 @@
 {
   "warnings": [
     {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Swift/Extensions/Collection+SafeAccess.swift",
+      "line": 9,
+      "symbol": "MutableCollection.subscript(safe:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Swift/Types/AnyEquatable.swift",
+      "line": 8,
+      "symbol": "AnyEquatable.isEqualTo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Swift/Types/AnyEquatable.swift",
+      "line": 12,
+      "symbol": "AnyEquatable.isEqualTo(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/UIKit/UIColor.swift",
+      "line": 80,
+      "symbol": "UIColor.RgbaColor.red",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/UIKit/UIColor.swift",
+      "line": 81,
+      "symbol": "UIColor.RgbaColor.green",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/UIKit/UIColor.swift",
+      "line": 82,
+      "symbol": "UIColor.RgbaColor.blue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/UIKit/UIColor.swift",
+      "line": 83,
+      "symbol": "UIColor.RgbaColor.alpha",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/UIKit/UIColor.swift",
+      "line": 85,
+      "symbol": "UIColor.RgbaColor.init(red:green:blue:alpha:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/UIKit/UIDeviceProvider.swift",
-      "line": 30,
+      "line": 34,
       "symbol": "UIDeviceProvider.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

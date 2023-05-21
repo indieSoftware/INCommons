@@ -23,18 +23,18 @@
         <a class="header-link" href="../index.html">
           INCommons
         </a>
-         (98% documented)
+         (91% documented)
       </p>
     
-      <p class="header-col--secondary">
+      <div class="header-col--secondary">
         <form role="search" action="../search.json">
           <input type="text" placeholder="Search documentation" data-typeahead>
         </form>
-      </p>
+      </div>
     
         <p class="header-col header-col--secondary">
           <a class="header-link" href="https://github.com/indieSoftware/INCommons">
-            <img class="header-icon" src="../img/gh.png"/>
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
             View on GitHub
           </a>
         </p>
@@ -43,7 +43,7 @@
 
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">INCommons Reference</a>
-      <img class="carat" src="../img/carat.png" />
+      <img class="carat" src="../img/carat.png" alt=""/>
       View Extension Reference
     </p>
 
@@ -79,10 +79,25 @@
                 <a class="nav-group-task-link" href="../Extensions/Bundle.html">Bundle</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/CGFloat.html">CGFloat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Calendar.html">Calendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/DispatchQueue.html">DispatchQueue</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/EdgeInsets.html">EdgeInsets</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/FileManager.html">FileManager</a>
@@ -91,13 +106,31 @@
                 <a class="nav-group-task-link" href="../Extensions/Int.html">Int</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Locale.html">Locale</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/MutableCollection.html">MutableCollection</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ProcessInfo.html">ProcessInfo</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Task.html">Task</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/TimeZone.html">TimeZone</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIColor/RgbaColor.html">– RgbaColor</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIDevice.html">UIDevice</a>
@@ -124,6 +157,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyEquatable.html">AnyEquatable</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/UIDeviceProviderType.html">UIDeviceProviderType</a>
               </li>
@@ -163,7 +199,7 @@
                 <a name="//apple_ref/swift/Section/Conditional Modifier" class="dashAnchor"></a>
                 <div class="section-name-container">
                   <a class="section-name-link" href="#/Conditional%20Modifier"></a>
-                  <h3 class="section-name"><p>Conditional Modifier</p>
+                  <h3 class="section-name"><span>Conditional Modifier</span>
 </h3>
                 </div>
               </div>
@@ -195,7 +231,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@ViewBuilder</span>
-<span class="kd">func</span> <span class="p">`</span><span class="nv">if</span><span class="p">`</span><span class="o">&lt;</span><span class="kt">Transform</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">condition</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Transform</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span> <span class="k">where</span> <span class="kt">Transform</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
+<span class="kd">func</span> <span class="p">`</span><span class="nv">if</span><span class="p">`(</span><span class="n">_</span> <span class="nv">condition</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
 
                         </div>
                       </div>
@@ -263,10 +299,10 @@ The transform can apply a modifier on the view.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@ViewBuilder</span>
-<span class="kd">func</span> <span class="p">`</span><span class="nv">if</span><span class="p">`</span><span class="o">&lt;</span><span class="kt">TrueContent</span><span class="p">:</span> <span class="kt">View</span><span class="p">,</span> <span class="kt">FalseContent</span><span class="p">:</span> <span class="kt">View</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="kd">func</span> <span class="p">`</span><span class="nv">if</span><span class="p">`(</span>
 	<span class="n">_</span> <span class="nv">condition</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
-	<span class="k">if</span> <span class="nv">ifTransform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">TrueContent</span><span class="p">,</span>
-	<span class="k">else</span> <span class="nv">elseTransform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">FalseContent</span>
+	<span class="k">if</span> <span class="nv">ifTransform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span><span class="p">,</span>
+	<span class="k">else</span> <span class="nv">elseTransform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
 
                         </div>
@@ -347,7 +383,7 @@ The transform can then access the unwrapped optional safely and apply any modife
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@ViewBuilder</span>
-<span class="kd">func</span> <span class="n">ifLet</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt">Transform</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Value</span><span class="p">?,</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Transform</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span> <span class="k">where</span> <span class="kt">Transform</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
+<span class="kd">func</span> <span class="n">ifLet</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Value</span><span class="p">?,</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
 
                         </div>
                       </div>
@@ -455,6 +491,34 @@ alignment applies if this view is smaller than the size given by the resulting f
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:7SwiftUI4ViewP9INCommonsE13onFirstAppearyQryycF"></a>
+                    <a name="//apple_ref/swift/Method/onFirstAppear(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SwiftUI4ViewP9INCommonsE13onFirstAppearyQryycF">onFirstAppear(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Executes the action when the view appears the first time.
+Similar to SwiftUI&rsquo;s <code>onAppear</code>, but fires only once.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">onFirstAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:7SwiftUI4ViewP9INCommonsE13activitySheet_24permittedArrowDirections10onCompleteQrAA7BindingVyAD12ActivityItemVSgG_So09UIPopoverH9DirectionVySo14UIActivityTypeaSg_SbSayypGSgs5Error_pSgtcSgtF"></a>
                     <a name="//apple_ref/swift/Method/activitySheet(_:permittedArrowDirections:onComplete:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:7SwiftUI4ViewP9INCommonsE13activitySheet_24permittedArrowDirections10onCompleteQrAA7BindingVyAD12ActivityItemVSgG_So09UIPopoverH9DirectionVySo14UIActivityTypeaSg_SbSayypGSgs5Error_pSgtcSgtF">activitySheet(_:<wbr>permittedArrowDirections:<wbr>onComplete:<wbr>)</a>
@@ -530,9 +594,8 @@ Apps can also define custom services.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2022 <a class="link" href="https://github.com/indieSoftware/INCommons" target="_blank" rel="external">Sven Korset</a>. All rights reserved. (Last updated: 2022-03-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2023 <a class="link" href="https://github.com/indieSoftware/INCommons" target="_blank" rel="external noopener">indie-Software</a>. All rights reserved. (Last updated: 2023-04-15)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
-</div>
 </html>
