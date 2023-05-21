@@ -23,18 +23,18 @@
         <a class="header-link" href="../index.html">
           INCommons
         </a>
-         (98% documented)
+         (91% documented)
       </p>
     
-      <p class="header-col--secondary">
+      <div class="header-col--secondary">
         <form role="search" action="../search.json">
           <input type="text" placeholder="Search documentation" data-typeahead>
         </form>
-      </p>
+      </div>
     
         <p class="header-col header-col--secondary">
           <a class="header-link" href="https://github.com/indieSoftware/INCommons">
-            <img class="header-icon" src="../img/gh.png"/>
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
             View on GitHub
           </a>
         </p>
@@ -43,7 +43,7 @@
 
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">INCommons Reference</a>
-      <img class="carat" src="../img/carat.png" />
+      <img class="carat" src="../img/carat.png" alt=""/>
       FileManager Extension Reference
     </p>
 
@@ -79,10 +79,25 @@
                 <a class="nav-group-task-link" href="../Extensions/Bundle.html">Bundle</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/CGFloat.html">CGFloat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Calendar.html">Calendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/DispatchQueue.html">DispatchQueue</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/EdgeInsets.html">EdgeInsets</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/FileManager.html">FileManager</a>
@@ -91,13 +106,31 @@
                 <a class="nav-group-task-link" href="../Extensions/Int.html">Int</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Locale.html">Locale</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/MutableCollection.html">MutableCollection</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ProcessInfo.html">ProcessInfo</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Task.html">Task</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/TimeZone.html">TimeZone</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIColor/RgbaColor.html">– RgbaColor</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIDevice.html">UIDevice</a>
@@ -124,6 +157,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AnyEquatable.html">AnyEquatable</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/UIDeviceProviderType.html">UIDeviceProviderType</a>
               </li>
@@ -162,9 +198,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So13NSFileManagerC9INCommonsE17documentDirectory10Foundation3URLVvp"></a>
-                    <a name="//apple_ref/swift/Property/documentDirectory" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So13NSFileManagerC9INCommonsE17documentDirectory10Foundation3URLVvp">documentDirectory</a>
+                    <a name="/s:So13NSFileManagerC9INCommonsE13homeDirectory10Foundation3URLVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/homeDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So13NSFileManagerC9INCommonsE13homeDirectory10Foundation3URLVvpZ">homeDirectory</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -172,20 +208,187 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the document directory of the application.</p>
+                        <p>Returns the application&rsquo;s home directory.</p>
+
+<p>This points to the app&rsquo;s sandbox.
+Shorthand for calling <code>NSHomeDirectory()</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">documentDirectory</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">homeDirectory</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The URL to the application&rsquo;s document directory.</p>
+                        <p>The URL to the directory.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So13NSFileManagerC9INCommonsE18documentsDirectory10Foundation3URLVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/documentsDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So13NSFileManagerC9INCommonsE18documentsDirectory10Foundation3URLVvpZ">documentsDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the app&rsquo;s <code>Documents</code> directory.</p>
+
+<p>Apple recommends to use the <code>Documents</code> directory for user-generated content
+and to use subdirectories to organize the content even further.
+This includes anything a user might create, view or delete through our app,
+e.g. text files, drawings, videos, images, audio files etc.</p>
+
+<p>Files in this directory get backed up by iCloud.</p>
+
+<p>The system additionally creates the <code>Documents/Inbox</code> directory contains files
+which the app was asked to open by other applications.
+It&rsquo;s possible to read and delete those files, but not to edit them or create new files.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">documentsDirectory</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The URL to the directory.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So13NSFileManagerC9INCommonsE15cachesDirectory10Foundation3URLVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/cachesDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So13NSFileManagerC9INCommonsE15cachesDirectory10Foundation3URLVvpZ">cachesDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the app&rsquo;s <code>Library/Caches</code> directory.</p>
+
+<p>This folder can be used to store app supporting files like cached data
+that can be recreated at any time and needs to persist longer than files
+in the tmp directory, e.g. thumbnails.
+The system may delete the directory on rare occasions to free up disk space.</p>
+
+<p>Files in this directory don&rsquo;t get backed up by iCloud.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">cachesDirectory</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The URL to the directory.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So13NSFileManagerC9INCommonsE19appSupportDirectory10Foundation3URLVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/appSupportDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So13NSFileManagerC9INCommonsE19appSupportDirectory10Foundation3URLVvpZ">appSupportDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the app&rsquo;s <code>Library/Application Support</code> directory.</p>
+
+<p>This folder can be used to store app supporting files the app needs,
+but which should not be exposed to the user, e.g. configuration files,
+templates, data bases, etc.
+These files will not be deleted by the system, therefore, it&rsquo;s the app&rsquo;s
+responsibility to manage those files.</p>
+
+<p>Files in this folder get backed up by iCloud defaultly.
+However, for files which can be recreated, e.g. downloads from a server,
+it&rsquo;s possible to exclude files and folders from being backed up
+via <code>URLResourceValues</code>.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">resourceValues</span> <span class="o">=</span> <span class="kt">URLResourceValues</span><span class="p">()</span>
+<span class="n">resourceValues</span><span class="o">.</span><span class="n">isExcludedFromBackup</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="n">url</span><span class="o">.</span><span class="nf">setResourceValues</span><span class="p">(</span><span class="n">resourceValues</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">appSupportDirectory</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The URL to the directory.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So13NSFileManagerC9INCommonsE12tmpDirectory10Foundation3URLVvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/tmpDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So13NSFileManagerC9INCommonsE12tmpDirectory10Foundation3URLVvpZ">tmpDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the application&rsquo;s <code>tmp</code> directory.</p>
+
+<p>This folder can be used to temporarily save files, i.e. to extract compressed files
+before moving the decompressed files to a different place.
+The system periodically purges these files, therefore, don&rsquo;t rely on these files
+because they can be deleted at any time.</p>
+
+<p>Files in this directory don&rsquo;t get backed up by iCloud.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">tmpDirectory</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The URL to the directory.</p>
                       </div>
                     </section>
                   </div>
@@ -198,9 +401,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2022 <a class="link" href="https://github.com/indieSoftware/INCommons" target="_blank" rel="external">Sven Korset</a>. All rights reserved. (Last updated: 2022-03-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2023 <a class="link" href="https://github.com/indieSoftware/INCommons" target="_blank" rel="external noopener">indie-Software</a>. All rights reserved. (Last updated: 2023-04-15)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
-</div>
 </html>
