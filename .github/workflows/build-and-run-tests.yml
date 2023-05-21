@@ -16,6 +16,9 @@ jobs:
 
       - name: check Xcode version
         run: /usr/bin/xcodebuild -version
+        with:
+          xcode-version: latest-stable
+
 
       - name: Checkout code
         uses: actions/checkout@v3
