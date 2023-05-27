@@ -37,7 +37,7 @@ Use `CGFloat.screenWidth` and `CGFloat.screenHeight` to receive the current main
 Wrap the result from an `enumerated` call in an `Array`, useful for `ForEach` loops 
 which should enumerate over elements of an array which are not conforming to `Identifiable`.
 
-```
+```swift
 let myArray = [something, anotherThing]
 ForEach(myArray.enumeratedArray(), id: \.offset) { offset, element in
 	...
@@ -48,7 +48,7 @@ ForEach(myArray.enumeratedArray(), id: \.offset) { offset, element in
 
 Access a collection via the `safe` subscript to receive a nil value instead of crashing the app.
 
-```
+```swift
 let array = ["Foo", "Bar"]
 let bar = array[safe: 2]
 let nilValue = array[safe: 3]
@@ -60,7 +60,7 @@ let nilValue = array[safe: 3]
 
 Use an easy way to run a piece of code only once:
 
-```
+```swift
 DispatchQueue.once("AnIdentifier") {
 	print("This is only printed once even when the method gets called multiple times!")
 }
@@ -72,7 +72,7 @@ DispatchQueue.once("AnIdentifier") {
 
 Convert a double to a `DispatchTimeInterval` or a `TimeInterval`:
 
-```
+```swift
 let myTime: Double = 1.2
 myTime.dispatchTimeInterval
 myTime.timeInterval
@@ -94,7 +94,7 @@ Use `EdgeInsets(horizontal: 12, vertical: 34)` instead of `EdgeInsets(top: 34, l
 
 An easy accessor to the documents directory:
 
-```
+```swift
 FileManager.default.documentDirectory
 ```
 
@@ -104,7 +104,7 @@ FileManager.default.documentDirectory
 
 Convert a value in seconds into a tuple of minutes and seconds. For example 99 seconds become 1 minute and 39 seconds:
 
-```
+```swift
 let (minutes, seconds) = 99.secondsToMinutesAndSeconds()
 ```
 
@@ -112,7 +112,7 @@ let (minutes, seconds) = 99.secondsToMinutesAndSeconds()
 
 Adds a leading zero to single digit value to ensure it has two digits:
 
-```
+```swift
 5.toTwoDigitsString() // 05
 15.toTwoDigitsString() // 15
 -5.toTwoDigitsString() // -05
@@ -130,13 +130,39 @@ Use `Locale.testableCurrent` to get the `current` locale, except when in `TestMo
 
 The check for `TestMode` happens via `ProcessInfo.isRunningInTestMode`, that means `TestMode` needs to be set as scheme parameter for tests. 
 
+## NotificationCenter
+
+### ObserverBag
+
+To hold a strong reference to multiple notification tokens and to automatically de-register them from the notification center when the holder gets released the `ObserverBag` can be used.
+
+Register observer to notifications and put the returned tokens to an `ObserverBag`. When the bag gets released all tokens will be automatically de-registered from the notification center.
+
+```swift
+class ViewModel {
+	let observerBag = NotificationCenter.ObserverBag()
+	
+	init() {
+		observerBag.add(
+			NotificationCenter.default.addObserver(
+				forName: .NSSystemTimeZoneDidChange,
+				object: nil,
+				queue: nil) { notification in
+					// do something with notification
+				}
+			)
+		)
+	}
+}
+```
+
 ## Optional
 
 ### Stringified
 
 Convert an optional string directly into a string or use a fallback string when the optional is nil:
 
-```
+```swift
 ("Foo" as String?).stringified() // "Foo"
 (nil as String?).stringified() // ""
 (nil as String?).stringified("Fallback") // "Fallback"
@@ -164,7 +190,7 @@ A constant definition for the empty string: `String.empty`
 
 Crop a string to a given number of characters and adding three dots to its end when cropped:
 
-```
+```swift
 "FooBar".truncated(numberOfCharacters: 5) // Fo...
 "FooBar".truncated(numberOfCharacters: 6) // FooBar
 ```
@@ -173,7 +199,7 @@ Crop a string to a given number of characters and adding three dots to its end w
 
 Uppercase or capitalize the first character of a string without changing the rest of the string:
 
-```
+```swift
 "myString second".firstCapitalized // "MyString second"
 "myString second".firstUppercased // "MyString second"
 
@@ -193,7 +219,7 @@ Use the counter-part `"Rm9vQmFy".base64Decoded` to decode a base-64 string back 
 
 To wait for specific amount of seconds in an await/async context:
 
-```	
+```	swift
 try await Task.sleep(seconds: 1.5)
 ```
 
@@ -215,7 +241,7 @@ The check for `TestMode` happens via `ProcessInfo.isRunningInTestMode`, that mea
 
 Brings the Kotlin functional pattern of `with` to Swift:
 
-```
+```swift
 let button = with(UIButton()) {
 	$0.translatesAutoresizingMaskIntoConstraints = false
 	$0.titleLabel?.text = title
@@ -238,3 +264,28 @@ Conform to this protocol instead to make it possible to compare two references.
 Use a `ConfigLoader` to load a configuration `plist` file and mapping it to its model.
 
 See [Configuration](https://github.com/indieSoftware/INCommons/blob/master/docu/Configuration.md) for more information.
+
+## ReleaseTrigger
+
+The `ReleaseTrigger` is an object which can hold a strong reference to an object and executes a closure when the trigger object gets released.
+
+This is useful for objects which need a clean up, but where it's not possible to do it in their `deinit` method, for example, when we have a notification token for an observer which we want to de-register from the notification center when the view model gets released without risking to forget to add this in the view model's `deinit` method.
+
+```swift
+class ViewModel {
+	var notificationToken: ReleaseTrigger<Any>?
+	
+	init() {
+		let token = NotificationCenter.default.addObserver(
+			forName: .NSSystemTimeZoneDidChange,
+			object: nil,
+			queue: nil) { notification in
+				// do something with notification
+			}
+		)
+		notificationToken = ReleaseTrigger(reference: token) { token in
+			NotificationCenter.default.removeObserver(token)
+		}
+	}
+}
+```
