@@ -219,7 +219,7 @@ Use the counter-part `"Rm9vQmFy".base64Decoded` to decode a base-64 string back 
 
 To wait for specific amount of seconds in an await/async context:
 
-```	swift
+```swift
 try await Task.sleep(seconds: 1.5)
 ```
 
