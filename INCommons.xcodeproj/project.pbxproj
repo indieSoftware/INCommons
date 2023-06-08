@@ -50,6 +50,10 @@
 		2699C16B288990FF0026ED3E /* Task+sleepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2699C16A288990FF0026ED3E /* Task+sleepTests.swift */; };
 		26B02EA22916324A00F06105 /* View+OnFirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B02EA12916324A00F06105 /* View+OnFirstAppear.swift */; };
 		26B02EA52916334D00F06105 /* FirstAppearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B02EA32916331900F06105 /* FirstAppearView.swift */; };
+		26E93DF82A1FDDDA00F020C1 /* ReleaseTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E93DF72A1FDDDA00F020C1 /* ReleaseTrigger.swift */; };
+		26E93DFA2A1FE12200F020C1 /* NotificationCenter+ObserverBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E93DF92A1FE12200F020C1 /* NotificationCenter+ObserverBag.swift */; };
+		26E93DFD2A1FE38300F020C1 /* ReleaseTriggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E93DFC2A1FE38300F020C1 /* ReleaseTriggerTests.swift */; };
+		26E93E002A1FE52400F020C1 /* NotificationCenter+ObserverBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E93DFF2A1FE52400F020C1 /* NotificationCenter+ObserverBagTests.swift */; };
 		26FCE6D327D1F9C600C229DA /* INCommonsExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE6D227D1F9C600C229DA /* INCommonsExampleApp.swift */; };
 		26FCE6D727D1F9C700C229DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FCE6D627D1F9C700C229DA /* Assets.xcassets */; };
 		26FCE6DA27D1F9C700C229DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FCE6D927D1F9C700C229DA /* Preview Assets.xcassets */; };
@@ -165,6 +169,10 @@
 		2699C16A288990FF0026ED3E /* Task+sleepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+sleepTests.swift"; sourceTree = "<group>"; };
 		26B02EA12916324A00F06105 /* View+OnFirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+OnFirstAppear.swift"; sourceTree = "<group>"; };
 		26B02EA32916331900F06105 /* FirstAppearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppearView.swift; sourceTree = "<group>"; };
+		26E93DF72A1FDDDA00F020C1 /* ReleaseTrigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseTrigger.swift; sourceTree = "<group>"; };
+		26E93DF92A1FE12200F020C1 /* NotificationCenter+ObserverBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+ObserverBag.swift"; sourceTree = "<group>"; };
+		26E93DFC2A1FE38300F020C1 /* ReleaseTriggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseTriggerTests.swift; sourceTree = "<group>"; };
+		26E93DFF2A1FE52400F020C1 /* NotificationCenter+ObserverBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+ObserverBagTests.swift"; sourceTree = "<group>"; };
 		26FCE6CF27D1F9C600C229DA /* INCommonsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INCommonsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FCE6D227D1F9C600C229DA /* INCommonsExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INCommonsExampleApp.swift; sourceTree = "<group>"; };
 		26FCE6D627D1F9C700C229DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -274,6 +282,7 @@
 				26FCE76427D2699E00C229DA /* FileManager+Directory.swift */,
 				26FCE75F27D2699E00C229DA /* Int+Time.swift */,
 				2627A1A829BFA5320006834F /* Locale+TestableCurrent.swift */,
+				26E93DF92A1FE12200F020C1 /* NotificationCenter+ObserverBag.swift */,
 				268B60D527DCF981002D6C84 /* Optional+Stringified.swift */,
 				2627A1A729BFA5320006834F /* ProcessInfo+IsRunningInTestMode.swift */,
 				26FCE76627D2699E00C229DA /* String+Manipulation.swift */,
@@ -296,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				26FCE77227D26F8800C229DA /* ConfigLoader */,
+				26E93DFB2A1FE36100F020C1 /* ReleaseTrigger */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -309,6 +319,7 @@
 				2627A1BC29BFAC9C0006834F /* EdgeInsets */,
 				26FCE77B27D26F8800C229DA /* FileManager */,
 				26FCE77D27D26F8800C229DA /* Int */,
+				26E93DFE2A1FE4F800F020C1 /* NotificationCenter */,
 				268B60D727DCF9CF002D6C84 /* Optional */,
 				2627A1B129BFA6AA0006834F /* ProcessInfo */,
 				26FCE78027D26F8800C229DA /* String */,
@@ -374,6 +385,22 @@
 				2699C16A288990FF0026ED3E /* Task+sleepTests.swift */,
 			);
 			path = Task;
+			sourceTree = "<group>";
+		};
+		26E93DFB2A1FE36100F020C1 /* ReleaseTrigger */ = {
+			isa = PBXGroup;
+			children = (
+				26E93DFC2A1FE38300F020C1 /* ReleaseTriggerTests.swift */,
+			);
+			path = ReleaseTrigger;
+			sourceTree = "<group>";
+		};
+		26E93DFE2A1FE4F800F020C1 /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				26E93DFF2A1FE52400F020C1 /* NotificationCenter+ObserverBagTests.swift */,
+			);
+			path = NotificationCenter;
 			sourceTree = "<group>";
 		};
 		26FCE6C627D1F9C600C229DA = {
@@ -508,6 +535,7 @@
 			children = (
 				2627A1A329BFA5320006834F /* AnyEquatable.swift */,
 				26FCE77027D26E8D00C229DA /* ConfigLoader.swift */,
+				26E93DF72A1FDDDA00F020C1 /* ReleaseTrigger.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -950,6 +978,7 @@
 				26FCE75927D2698B00C229DA /* UIDevice.swift in Sources */,
 				2627A1AC29BFA5320006834F /* Calendar+Gregorian.swift in Sources */,
 				266913CB2866F55E00EBDB3C /* String+Base64Coding.swift in Sources */,
+				26E93DF82A1FDDDA00F020C1 /* ReleaseTrigger.swift in Sources */,
 				2627A1AA29BFA5320006834F /* TimeZone+TestableCurrent.swift in Sources */,
 				26B02EA22916324A00F06105 /* View+OnFirstAppear.swift in Sources */,
 				26FCE76927D2699E00C229DA /* With.swift in Sources */,
@@ -973,6 +1002,7 @@
 				260786B0289D2AE600504907 /* UIColor+KeyedArchiver.swift in Sources */,
 				26FCE75C27D2698B00C229DA /* View+Frame.swift in Sources */,
 				26FCE76E27D2699E00C229DA /* String+Manipulation.swift in Sources */,
+				26E93DFA2A1FE12200F020C1 /* NotificationCenter+ObserverBag.swift in Sources */,
 				268B60D627DCF981002D6C84 /* Optional+Stringified.swift in Sources */,
 				26FCE75727D2698B00C229DA /* UIColor.swift in Sources */,
 				26FCE75B27D2698B00C229DA /* View+Conditions.swift in Sources */,
@@ -1000,10 +1030,12 @@
 				26FCE78A27D26F8800C229DA /* Int+ToTwoDigitsStringTests.swift in Sources */,
 				2627A1B329BFA6AA0006834F /* ProcessInfo+isRunningInTestModeTests.swift in Sources */,
 				266913DA2867018A00EBDB3C /* String+Base64CodingTests.swift in Sources */,
+				26E93DFD2A1FE38300F020C1 /* ReleaseTriggerTests.swift in Sources */,
 				2684D2992815A2930089A227 /* StringCapitalized.swift in Sources */,
 				260786B5289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift in Sources */,
 				260786B3289D2B4300504907 /* UIColorTests.swift in Sources */,
 				26FCE78827D26F8800C229DA /* Double+TimeTests.swift in Sources */,
+				26E93E002A1FE52400F020C1 /* NotificationCenter+ObserverBagTests.swift in Sources */,
 				26FCE78E27D26F8800C229DA /* UIEdgeInsetsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

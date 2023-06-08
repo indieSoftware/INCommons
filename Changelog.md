@@ -10,6 +10,8 @@
 - Changed `FileManager().documentDirectory` to `FileManager.documentsDirectory`.
 - Changed `DispatchQueue.once(token:block:)` to use a generated default token and an actor.
 - Removed `DispatchQueue.performOnMainThread()` in favor of `Task` and `MainActor`.
+- Added `ReleaseTrigger` to get a callback when an object gets released.
+- Added `NotificationCenter.ObserverBag` to have a container for notification observer tokens which get automatically removed from the notification center when released.
 
 ### v3.1.0
 
