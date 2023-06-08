@@ -66,7 +66,7 @@ final class NotificationCenter_ObserverBagTests: XCTestCase {
 		}
 		observerBag?.add(observerToken1)
 
-		let notification2Expectation = expectation(description: "notification1Expectation")
+		let notification2Expectation = expectation(description: "notification2Expectation")
 		notification2Expectation.isInverted = true
 		let observerToken2 = notificationCenter.addObserver(
 			forName: .NSCalendarDayChanged,
@@ -82,7 +82,7 @@ final class NotificationCenter_ObserverBagTests: XCTestCase {
 		waitForExpectations(timeout: 1)
 
 		// Add new observer to the bag to verify that it's not called later.
-		let notification3Expectation = expectation(description: "notification1Expectation")
+		let notification3Expectation = expectation(description: "notification3Expectation")
 		notification3Expectation.isInverted = true
 		let observerToken3 = notificationCenter.addObserver(
 			forName: .NSSystemTimeZoneDidChange,
