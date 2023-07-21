@@ -26,8 +26,6 @@
 		260786B3289D2B4300504907 /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786B2289D2B4300504907 /* UIColorTests.swift */; };
 		260786B5289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786B4289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift */; };
 		2615DB9E2A6AA169004D0233 /* UIApplication+KeyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2615DB9D2A6AA169004D0233 /* UIApplication+KeyWindow.swift */; };
-		2615DBA02A6AA19D004D0233 /* ObserverCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2615DB9F2A6AA19D004D0233 /* ObserverCollection.swift */; };
-		2615DBA32A6AA1C5004D0233 /* ObserverCollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2615DBA22A6AA1C5004D0233 /* ObserverCollectionTests.swift */; };
 		2627A1A129BFA4650006834F /* CGFloat+ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2627A19F29BFA4650006834F /* CGFloat+ScreenSize.swift */; };
 		2627A1A229BFA4650006834F /* EdgeInsets+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2627A1A029BFA4650006834F /* EdgeInsets+Init.swift */; };
 		2627A1A929BFA5320006834F /* AnyEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2627A1A329BFA5320006834F /* AnyEquatable.swift */; };
@@ -146,8 +144,6 @@
 		260786B2289D2B4300504907 /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
 		260786B4289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_KeyedArchiverTests.swift; sourceTree = "<group>"; };
 		2615DB9D2A6AA169004D0233 /* UIApplication+KeyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+KeyWindow.swift"; sourceTree = "<group>"; };
-		2615DB9F2A6AA19D004D0233 /* ObserverCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverCollection.swift; sourceTree = "<group>"; };
-		2615DBA22A6AA1C5004D0233 /* ObserverCollectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverCollectionTests.swift; sourceTree = "<group>"; };
 		2627A19F29BFA4650006834F /* CGFloat+ScreenSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+ScreenSize.swift"; sourceTree = "<group>"; };
 		2627A1A029BFA4650006834F /* EdgeInsets+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+Init.swift"; sourceTree = "<group>"; };
 		2627A1A329BFA5320006834F /* AnyEquatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyEquatable.swift; sourceTree = "<group>"; };
@@ -266,14 +262,6 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
-		2615DBA12A6AA1C5004D0233 /* ObserverCollection */ = {
-			isa = PBXGroup;
-			children = (
-				2615DBA22A6AA1C5004D0233 /* ObserverCollectionTests.swift */,
-			);
-			path = ObserverCollection;
-			sourceTree = "<group>";
-		};
 		2627A1AF29BFA5980006834F /* Global */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				26FCE77227D26F8800C229DA /* ConfigLoader */,
-				2615DBA12A6AA1C5004D0233 /* ObserverCollection */,
 				26E93DFB2A1FE36100F020C1 /* ReleaseTrigger */,
 			);
 			path = Types;
@@ -551,7 +538,6 @@
 			children = (
 				2627A1A329BFA5320006834F /* AnyEquatable.swift */,
 				26FCE77027D26E8D00C229DA /* ConfigLoader.swift */,
-				2615DB9F2A6AA19D004D0233 /* ObserverCollection.swift */,
 				26E93DF72A1FDDDA00F020C1 /* ReleaseTrigger.swift */,
 			);
 			path = Types;
@@ -993,7 +979,6 @@
 			files = (
 				2627A1A129BFA4650006834F /* CGFloat+ScreenSize.swift in Sources */,
 				26FCE75927D2698B00C229DA /* UIDevice.swift in Sources */,
-				2615DBA02A6AA19D004D0233 /* ObserverCollection.swift in Sources */,
 				2627A1AC29BFA5320006834F /* Calendar+Gregorian.swift in Sources */,
 				266913CB2866F55E00EBDB3C /* String+Base64Coding.swift in Sources */,
 				26E93DF82A1FDDDA00F020C1 /* ReleaseTrigger.swift in Sources */,
@@ -1056,7 +1041,6 @@
 				26FCE78827D26F8800C229DA /* Double+TimeTests.swift in Sources */,
 				26E93E002A1FE52400F020C1 /* NotificationCenter+ObserverBagTests.swift in Sources */,
 				26FCE78E27D26F8800C229DA /* UIEdgeInsetsTests.swift in Sources */,
-				2615DBA32A6AA1C5004D0233 /* ObserverCollectionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
