@@ -35,19 +35,19 @@ private class DeviceProviderViewModel<DeviceProvider: UIDeviceProviderType>: Obs
 	var userInterfaceIdiomText: String {
 		switch deviceProvider.userInterfaceIdiom {
 		case .unspecified:
-			return "unspecified"
+			"unspecified"
 		case .phone:
-			return "phone"
+			"phone"
 		case .pad:
-			return "pad"
+			"pad"
 		case .tv:
-			return "tv"
+			"tv"
 		case .carPlay:
-			return "carPlay"
+			"carPlay"
 		case .mac:
-			return "mac"
+			"mac"
 		@unknown default:
-			return "unknown default"
+			"unknown default"
 		}
 	}
 
@@ -58,21 +58,21 @@ private class DeviceProviderViewModel<DeviceProvider: UIDeviceProviderType>: Obs
 	var deviceOrientationText: String {
 		switch deviceProvider.deviceOrientation {
 		case .unknown:
-			return "unknown"
+			"unknown"
 		case .portrait:
-			return "portrait"
+			"portrait"
 		case .portraitUpsideDown:
-			return "portraitUpsideDown"
+			"portraitUpsideDown"
 		case .landscapeLeft:
-			return "landscapeLeft"
+			"landscapeLeft"
 		case .landscapeRight:
-			return "landscapeRight"
+			"landscapeRight"
 		case .faceUp:
-			return "faceUp"
+			"faceUp"
 		case .faceDown:
-			return "faceDown"
+			"faceDown"
 		@unknown default:
-			return "unknown default"
+			"unknown default"
 		}
 	}
 }

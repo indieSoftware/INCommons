@@ -22,6 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0951F7712ACEDD6000C72C7C /* Calendar+iso8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0951F7702ACEDD6000C72C7C /* Calendar+iso8601.swift */; };
 		260786B0289D2AE600504907 /* UIColor+KeyedArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786AF289D2AE600504907 /* UIColor+KeyedArchiver.swift */; };
 		260786B3289D2B4300504907 /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786B2289D2B4300504907 /* UIColorTests.swift */; };
 		260786B5289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786B4289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift */; };
@@ -139,6 +140,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0951F7702ACEDD6000C72C7C /* Calendar+iso8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+iso8601.swift"; sourceTree = "<group>"; };
 		1D3CF85261265366D7A83882 /* Pods-INCommons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INCommons.debug.xcconfig"; path = "Target Support Files/Pods-INCommons/Pods-INCommons.debug.xcconfig"; sourceTree = "<group>"; };
 		260786AF289D2AE600504907 /* UIColor+KeyedArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+KeyedArchiver.swift"; sourceTree = "<group>"; };
 		260786B2289D2B4300504907 /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			children = (
 				26FCE76527D2699E00C229DA /* Bundle+VersionNumber.swift */,
 				2627A1A629BFA5320006834F /* Calendar+Gregorian.swift */,
+				0951F7702ACEDD6000C72C7C /* Calendar+iso8601.swift */,
 				2627A19F29BFA4650006834F /* CGFloat+ScreenSize.swift */,
 				26885AE728167FC500901D7F /* Collection+EnumeratedArray.swift */,
 				2627A1A529BFA5320006834F /* Collection+SafeAccess.swift */,
@@ -980,6 +983,7 @@
 				2627A1A129BFA4650006834F /* CGFloat+ScreenSize.swift in Sources */,
 				26FCE75927D2698B00C229DA /* UIDevice.swift in Sources */,
 				2627A1AC29BFA5320006834F /* Calendar+Gregorian.swift in Sources */,
+				0951F7712ACEDD6000C72C7C /* Calendar+iso8601.swift in Sources */,
 				266913CB2866F55E00EBDB3C /* String+Base64Coding.swift in Sources */,
 				26E93DF82A1FDDDA00F020C1 /* ReleaseTrigger.swift in Sources */,
 				2627A1AA29BFA5320006834F /* TimeZone+TestableCurrent.swift in Sources */,

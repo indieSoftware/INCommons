@@ -11,9 +11,9 @@ public extension Locale {
 	/// Relies on `ProcessInfo.isRunningInTestMode` to determine if the code is running in test mode or not.
 	static var testableCurrent: Locale {
 		if ProcessInfo.isRunningInTestMode {
-			return .enUsPosix
+			.enUsPosix
 		} else {
-			return .current
+			.current
 		}
 	}
 }

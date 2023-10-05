@@ -18,6 +18,8 @@ Use `Bundle.main.buildNumber` to get the build version number, e.g. `"42"`.
 
 Use `Calendar.gregorian` to get a gregorian calendar back which has its `locale` and `timeZone` set to `testableCurrent`.
 
+Use `Calendar.iso` to get a iso8601 calendar back which has its `locale` and `timeZone` set to `testableCurrent`.
+
 ### Testable current
 
 Use `Calendar.testableCurrent` to get the `current` calendar, except when in `TestMode` where the `gregorian` is returned instead to prevent flaky tests.
