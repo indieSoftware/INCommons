@@ -13,6 +13,7 @@
 - Added `ReleaseTrigger` to get a callback when an object gets released.
 - Added `NotificationCenter.ObserverBag` to have a container for notification observer tokens which get automatically removed from the notification center when released.
 - Added `UIApplication.activeWindowScene` and `UIApplication.keyWindow` to retrieve the current window.
+- Added `iso8601` as an extension to Calendar to retrieve ISO8601 calendar format.
 
 ### v3.1.0
 
