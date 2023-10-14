@@ -16,9 +16,9 @@ public extension Calendar {
 	/// Relies on `ProcessInfo.isRunningInTestMode` to determine if the code is running in test mode or not.
 	static var testableCurrent: Calendar {
 		if ProcessInfo.isRunningInTestMode {
-			return .gregorian
+			.gregorian
 		} else {
-			return .current
+			.current
 		}
 	}
 }

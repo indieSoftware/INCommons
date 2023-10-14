@@ -11,9 +11,9 @@ public extension TimeZone {
 	/// Relies on `ProcessInfo.isRunningInTestMode` to determine if the code is running in test mode or not.
 	static var testableCurrent: TimeZone {
 		if ProcessInfo.isRunningInTestMode {
-			return .utc
+			.utc
 		} else {
-			return .current
+			.current
 		}
 	}
 }
