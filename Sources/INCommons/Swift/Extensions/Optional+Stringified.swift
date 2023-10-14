@@ -10,9 +10,9 @@ public extension Optional {
 	func stringified(_ fallback: String = .empty) -> String {
 		switch self {
 		case let .some(value):
-			return String(describing: value)
+			String(describing: value)
 		case .none:
-			return fallback
+			fallback
 		}
 	}
 }

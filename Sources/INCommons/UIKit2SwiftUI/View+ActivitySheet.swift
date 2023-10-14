@@ -92,9 +92,9 @@ private final class ActivityViewControllerWrapper: UIViewController {
 
 /// Represents an activity for presenting an ActivityView (Share sheet) via the `activitySheet` modifier
 public struct ActivityItem {
-	internal var items: [Any]
-	internal var activities: [UIActivity]
-	internal var excludedTypes: [UIActivity.ActivityType]
+	var items: [Any]
+	var activities: [UIActivity]
+	var excludedTypes: [UIActivity.ActivityType]
 
 	/// The
 	/// - Parameters:
