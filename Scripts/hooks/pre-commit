@@ -3,12 +3,17 @@
 
 # Include swift format code path variable.
 . config.sh
+
 # Run SwiftFormat in lint mode which returns an exit code we save in a variable.
-Pods/SwiftFormat/CommandLineTool/swiftformat ${SWIFT_FORMAT_CODE_PATHS[*]} --lint --exclude ${SWIFT_FORMAT_EXCLUDE_PATHS}
+./Scripts/swiftFormat.sh --lint
+
+# If swift format failed formatting is required.
 result=$?
+# If result is not 0, it means there was an error.
 if [[ $result -gt 0 ]]
 then
 	# SwiftFormat needs to format anything so print an error message for that.
 	echo "Scheme 'Format Code' needs to be run before committing!"
+	
 fi
 exit $result

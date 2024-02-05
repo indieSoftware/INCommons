@@ -1,6 +1,0 @@
-framework module Pods_INCommons {
-  umbrella header "Pods-INCommons-umbrella.h"
-
-  export *
-  module * { export * }
-}

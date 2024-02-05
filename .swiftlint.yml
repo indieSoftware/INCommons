@@ -22,7 +22,7 @@ opt_in_rules:
 
 line_length: 160 # instead of 120
 file_length: 400
-function_body_length: 40
+function_body_length: 60 # instead of 40
 
 type_name:
   min_length:
@@ -34,7 +34,7 @@ type_name:
 
 identifier_name:
   excluded:
-    - id
+    - id # exception for min 3 char length
 
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle)
 
