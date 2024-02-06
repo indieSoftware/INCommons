@@ -97,8 +97,6 @@
 		26FCE7A227D276BF00C229DA /* ExampleViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE79A27D276BF00C229DA /* ExampleViewFactory.swift */; };
 		26FCE7A327D276BF00C229DA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE79B27D276BF00C229DA /* HomeView.swift */; };
 		26FCE7A727D2783000C229DA /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FCE7A627D2783000C229DA /* Config.plist */; };
-		41980954330F1CBB38EA8773 /* Pods_INCommons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81449F7F71630EA9DE31C59A /* Pods_INCommons.framework */; };
-		9A886A5C404411A5FADCA8C6 /* Pods_INCommonsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB55D7ABEC1132CCF782889E /* Pods_INCommonsExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +139,6 @@
 
 /* Begin PBXFileReference section */
 		0951F7702ACEDD6000C72C7C /* Calendar+iso8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+iso8601.swift"; sourceTree = "<group>"; };
-		1D3CF85261265366D7A83882 /* Pods-INCommons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INCommons.debug.xcconfig"; path = "Target Support Files/Pods-INCommons/Pods-INCommons.debug.xcconfig"; sourceTree = "<group>"; };
 		260786AF289D2AE600504907 /* UIColor+KeyedArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+KeyedArchiver.swift"; sourceTree = "<group>"; };
 		260786B2289D2B4300504907 /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
 		260786B4289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_KeyedArchiverTests.swift; sourceTree = "<group>"; };
@@ -219,11 +216,6 @@
 		26FCE79A27D276BF00C229DA /* ExampleViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewFactory.swift; sourceTree = "<group>"; };
 		26FCE79B27D276BF00C229DA /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		26FCE7A627D2783000C229DA /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
-		67BF383CCDD0E96374B9F2A1 /* Pods-INCommonsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INCommonsExample.debug.xcconfig"; path = "Target Support Files/Pods-INCommonsExample/Pods-INCommonsExample.debug.xcconfig"; sourceTree = "<group>"; };
-		81449F7F71630EA9DE31C59A /* Pods_INCommons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INCommons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2E8259FAF6787CBFA87BD66 /* Pods-INCommons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INCommons.release.xcconfig"; path = "Target Support Files/Pods-INCommons/Pods-INCommons.release.xcconfig"; sourceTree = "<group>"; };
-		D8B4F37595AC576D2D0591E2 /* Pods-INCommonsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INCommonsExample.release.xcconfig"; path = "Target Support Files/Pods-INCommonsExample/Pods-INCommonsExample.release.xcconfig"; sourceTree = "<group>"; };
-		FB55D7ABEC1132CCF782889E /* Pods_INCommonsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INCommonsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				26FCE6FC27D1FAD700C229DA /* INCommons.framework in Frameworks */,
-				9A886A5C404411A5FADCA8C6 /* Pods_INCommonsExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +231,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41980954330F1CBB38EA8773 /* Pods_INCommons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,8 +407,6 @@
 				26FCE6E027D1FA1D00C229DA /* Sources */,
 				26FCE6E127D1FA1D00C229DA /* Tests */,
 				26FCE6D027D1F9C600C229DA /* Products */,
-				A1A334526A815466A067FA00 /* Pods */,
-				2959848DA52289D979AB1FD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -669,26 +657,6 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		2959848DA52289D979AB1FD6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				81449F7F71630EA9DE31C59A /* Pods_INCommons.framework */,
-				FB55D7ABEC1132CCF782889E /* Pods_INCommonsExample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A1A334526A815466A067FA00 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1D3CF85261265366D7A83882 /* Pods-INCommons.debug.xcconfig */,
-				D2E8259FAF6787CBFA87BD66 /* Pods-INCommons.release.xcconfig */,
-				67BF383CCDD0E96374B9F2A1 /* Pods-INCommonsExample.debug.xcconfig */,
-				D8B4F37595AC576D2D0591E2 /* Pods-INCommonsExample.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -707,7 +675,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26FCE6DD27D1F9C700C229DA /* Build configuration list for PBXNativeTarget "INCommonsExample" */;
 			buildPhases = (
-				37BF3F21F4322B6E0EEEC86F /* [CP] Check Pods Manifest.lock */,
 				26FCE6CB27D1F9C600C229DA /* Sources */,
 				26FCE6CC27D1F9C600C229DA /* Frameworks */,
 				26FCE6CD27D1F9C600C229DA /* Resources */,
@@ -727,7 +694,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26FCE6FE27D1FAD700C229DA /* Build configuration list for PBXNativeTarget "INCommons" */;
 			buildPhases = (
-				9D0DC6C45750C6510E64A69D /* [CP] Check Pods Manifest.lock */,
 				26FCE70C27D214E900C229DA /* Install GitHooks */,
 				26FCE70D27D2152400C229DA /* SwiftLint */,
 				26FCE6E227D1FAD600C229DA /* Headers */,
@@ -771,7 +737,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					26FCE6CE27D1F9C600C229DA = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -873,7 +839,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" lint\n";
+			shellScript = "\"./Scripts/tools/swiftlint\" lint\n";
 		};
 		26FCE71427D215DD00C229DA /* Extract Swift Version Number */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -892,7 +858,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ". Scripts/extractSwiftVersion.sh\n";
+			shellScript = "./Scripts/extractSwiftVersion.sh\n";
 		};
 		26FCE71527D215F400C229DA /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -911,51 +877,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ". config.sh\n\"Pods/SwiftFormat/CommandLineTool/swiftformat\" ${SWIFT_FORMAT_CODE_PATHS[*]} --exclude ${SWIFT_FORMAT_EXCLUDE_PATHS}\n";
-		};
-		37BF3F21F4322B6E0EEEC86F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-INCommonsExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9D0DC6C45750C6510E64A69D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-INCommons-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = ". config.sh\n\"./Scripts/tools/swiftformat\" ${SWIFT_FORMAT_CODE_PATHS[*]} --exclude ${SWIFT_FORMAT_EXCLUDE_PATHS}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1106,6 +1028,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1167,6 +1090,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1187,7 +1111,6 @@
 		};
 		26FCE6DE27D1F9C700C229DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67BF383CCDD0E96374B9F2A1 /* Pods-INCommonsExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1217,7 +1140,6 @@
 		};
 		26FCE6DF27D1F9C700C229DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8B4F37595AC576D2D0591E2 /* Pods-INCommonsExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1247,9 +1169,9 @@
 		};
 		26FCE6FF27D1FAD700C229DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D3CF85261265366D7A83882 /* Pods-INCommons.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEFINES_MODULE = YES;
@@ -1257,6 +1179,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 8;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1266,6 +1190,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.indie-software.INCommons";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1280,9 +1206,9 @@
 		};
 		26FCE70027D1FAD700C229DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2E8259FAF6787CBFA87BD66 /* Pods-INCommons.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEFINES_MODULE = YES;
@@ -1290,6 +1216,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 8;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1299,6 +1227,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.indie-software.INCommons";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1350,6 +1280,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1359,6 +1290,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

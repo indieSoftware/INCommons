@@ -10,7 +10,7 @@ final class Collection_EnumeratedArrayTests: XCTestCase {
 			(1, "Bar")
 		]
 		XCTAssertEqual(result.count, expectedResult.count)
-		result.forEach { (offset: Int, element: String) in
+		for (offset, element) in result {
 			let expectedEntry = expectedResult[safe: offset]
 			XCTAssertEqual(expectedEntry?.0, offset)
 			XCTAssertEqual(expectedEntry?.1, element)

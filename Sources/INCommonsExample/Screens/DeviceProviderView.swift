@@ -46,6 +46,8 @@ private class DeviceProviderViewModel<DeviceProvider: UIDeviceProviderType>: Obs
 			"carPlay"
 		case .mac:
 			"mac"
+		case .vision:
+			"vision"
 		@unknown default:
 			"unknown default"
 		}

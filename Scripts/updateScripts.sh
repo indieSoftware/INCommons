@@ -21,4 +21,8 @@ cat swiftlint-base.yml swiftlint-addition.yml > .swiftlint.yml
 
 # Clean ups.
 rm -rf $TMP_FOLDER_PATH
+
+# Create tools.
+./Scripts/createTools.sh
+
 echo "Update done"
