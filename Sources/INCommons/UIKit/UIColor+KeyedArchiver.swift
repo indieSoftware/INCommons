@@ -18,6 +18,6 @@ public extension Data {
 	 - returns: The decoded color.
 	 */
 	func asUIColor() -> UIColor? {
-		try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(self) as? UIColor
+		try? NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: self)
 	}
 }

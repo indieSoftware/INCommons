@@ -76,7 +76,7 @@ public extension UIColor {
 	}
 
 	/// A struct containing the RGBA values of a color.
-	struct RgbaColor {
+	struct RgbaColor: Codable, Equatable {
 		public let red: CGFloat
 		public let green: CGFloat
 		public let blue: CGFloat
