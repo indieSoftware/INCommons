@@ -97,6 +97,8 @@
 		26FCE7A227D276BF00C229DA /* ExampleViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE79A27D276BF00C229DA /* ExampleViewFactory.swift */; };
 		26FCE7A327D276BF00C229DA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FCE79B27D276BF00C229DA /* HomeView.swift */; };
 		26FCE7A727D2783000C229DA /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FCE7A627D2783000C229DA /* Config.plist */; };
+		53C33F662C0C209C0086F634 /* ClearButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C33F652C0C209C0086F634 /* ClearButtonModifier.swift */; };
+		53C33F682C0C21700086F634 /* OverlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C33F672C0C21700086F634 /* OverlayButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +218,8 @@
 		26FCE79A27D276BF00C229DA /* ExampleViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewFactory.swift; sourceTree = "<group>"; };
 		26FCE79B27D276BF00C229DA /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		26FCE7A627D2783000C229DA /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		53C33F652C0C209C0086F634 /* ClearButtonModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearButtonModifier.swift; sourceTree = "<group>"; };
+		53C33F672C0C21700086F634 /* OverlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,6 +513,8 @@
 		26FCE75127D2698B00C229DA /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				53C33F672C0C21700086F634 /* OverlayButton.swift */,
+				53C33F652C0C209C0086F634 /* ClearButtonModifier.swift */,
 				26FCE75227D2698B00C229DA /* View+Conditions.swift */,
 				26B02EA12916324A00F06105 /* View+OnFirstAppear.swift */,
 				26FCE75327D2698B00C229DA /* View+Frame.swift */,
@@ -912,6 +918,7 @@
 				26B02EA22916324A00F06105 /* View+OnFirstAppear.swift in Sources */,
 				26FCE76927D2699E00C229DA /* With.swift in Sources */,
 				2627A1A929BFA5320006834F /* AnyEquatable.swift in Sources */,
+				53C33F662C0C209C0086F634 /* ClearButtonModifier.swift in Sources */,
 				2627A1AE29BFA5320006834F /* Locale+TestableCurrent.swift in Sources */,
 				268B60CD27DCD6EE002D6C84 /* UIDeviceProvider.swift in Sources */,
 				26FCE76A27D2699E00C229DA /* Double+Time.swift in Sources */,
@@ -936,6 +943,7 @@
 				268B60D627DCF981002D6C84 /* Optional+Stringified.swift in Sources */,
 				26FCE75727D2698B00C229DA /* UIColor.swift in Sources */,
 				26FCE75B27D2698B00C229DA /* View+Conditions.swift in Sources */,
+				53C33F682C0C21700086F634 /* OverlayButton.swift in Sources */,
 				2627A1AD29BFA5320006834F /* ProcessInfo+IsRunningInTestMode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
