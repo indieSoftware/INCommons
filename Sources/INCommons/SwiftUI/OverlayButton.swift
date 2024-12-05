@@ -1,5 +1,7 @@
 import SwiftUI
 
+/// A customizable overlay button that takes a view as a base shape and returns it as an overlay,
+/// so that it can be customized (e.g frame for tappable area) without interfering with layout of surrounding objects.
 public struct OverlayButton<BaseShape: View, Content: View>: View {
 	private let baseShape: () -> BaseShape
 	private let decoration: (BaseShape) -> Content
