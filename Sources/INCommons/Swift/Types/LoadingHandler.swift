@@ -1,10 +1,13 @@
-/// Responsible for calling any concurrency loading methods on the `CalendarManager`
-/// to prevent race conditions.
-actor LoadingHandler {
+/// `LoadingHandler` is designed to manage the execution of asynchronous tasks sequentially,
+/// ensuring that no two tasks execute concurrently. This is particularly useful in scenarios where race
+/// conditions might occur due to simultaneous access or modification of shared resources.
+public actor LoadingHandler {
 	/// A queue of actions for being executed in sequence.
 	private var actionQueue = [@Sendable () async -> Void]()
 	/// The task currently executed.
 	private var currentTask: Task<Void, Never>?
+
+	public init() {}
 
 	/// Adds an action to the task queue for being executed on a background task.
 	/// - parameter action: A closure to execute on a background task.

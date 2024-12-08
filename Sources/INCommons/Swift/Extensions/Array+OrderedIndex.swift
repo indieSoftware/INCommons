@@ -1,4 +1,4 @@
-extension Array {
+public extension Array {
 	/// Finds the index where an element should be in a sorted array.
 	///
 	/// Can be used to determine the insertion index into the sorted array.

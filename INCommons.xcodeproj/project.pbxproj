@@ -28,6 +28,8 @@
 		0922195B2D01E02800AF95C4 /* Array+OrderedIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922195A2D01E02700AF95C4 /* Array+OrderedIndex.swift */; };
 		0922195D2D01E04200AF95C4 /* LoadingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922195C2D01E03F00AF95C4 /* LoadingHandler.swift */; };
 		0922195F2D01E06100AF95C4 /* FileManager+EnsureFolderExists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922195E2D01E05900AF95C4 /* FileManager+EnsureFolderExists.swift */; };
+		092219972D05D15300AF95C4 /* LoadingHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092219962D05D15300AF95C4 /* LoadingHandlerTests.swift */; };
+		0922199B2D05D30500AF95C4 /* Collection+OrderedIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922199A2D05D30500AF95C4 /* Collection+OrderedIndex.swift */; };
 		0951F7712ACEDD6000C72C7C /* Calendar+iso8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0951F7702ACEDD6000C72C7C /* Calendar+iso8601.swift */; };
 		260786B0289D2AE600504907 /* UIColor+KeyedArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786AF289D2AE600504907 /* UIColor+KeyedArchiver.swift */; };
 		260786B3289D2B4300504907 /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786B2289D2B4300504907 /* UIColorTests.swift */; };
@@ -152,6 +154,8 @@
 		0922195A2D01E02700AF95C4 /* Array+OrderedIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+OrderedIndex.swift"; sourceTree = "<group>"; };
 		0922195C2D01E03F00AF95C4 /* LoadingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHandler.swift; sourceTree = "<group>"; };
 		0922195E2D01E05900AF95C4 /* FileManager+EnsureFolderExists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+EnsureFolderExists.swift"; sourceTree = "<group>"; };
+		092219962D05D15300AF95C4 /* LoadingHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHandlerTests.swift; sourceTree = "<group>"; };
+		0922199A2D05D30500AF95C4 /* Collection+OrderedIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+OrderedIndex.swift"; sourceTree = "<group>"; };
 		0951F7702ACEDD6000C72C7C /* Calendar+iso8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+iso8601.swift"; sourceTree = "<group>"; };
 		260786AF289D2AE600504907 /* UIColor+KeyedArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+KeyedArchiver.swift"; sourceTree = "<group>"; };
 		260786B2289D2B4300504907 /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
@@ -261,6 +265,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092219952D05D13A00AF95C4 /* LoadingHandler */ = {
+			isa = PBXGroup;
+			children = (
+				092219962D05D15300AF95C4 /* LoadingHandlerTests.swift */,
+			);
+			path = LoadingHandler;
+			sourceTree = "<group>";
+		};
 		260786B1289D2B2C00504907 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +330,7 @@
 		2627A1B429BFA72B0006834F /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				092219952D05D13A00AF95C4 /* LoadingHandler */,
 				26FCE77227D26F8800C229DA /* ConfigLoader */,
 				26E93DFB2A1FE36100F020C1 /* ReleaseTrigger */,
 			);
@@ -355,6 +368,7 @@
 			children = (
 				2627A1BA29BFAA680006834F /* Collection+EnumeratedArrayTests.swift */,
 				2627A1B829BFA96B0006834F /* Collection+SafeAccessTests.swift */,
+				0922199A2D05D30500AF95C4 /* Collection+OrderedIndex.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -995,7 +1009,9 @@
 				26E93DFD2A1FE38300F020C1 /* ReleaseTriggerTests.swift in Sources */,
 				2684D2992815A2930089A227 /* StringCapitalized.swift in Sources */,
 				260786B5289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift in Sources */,
+				092219972D05D15300AF95C4 /* LoadingHandlerTests.swift in Sources */,
 				260786B3289D2B4300504907 /* UIColorTests.swift in Sources */,
+				0922199B2D05D30500AF95C4 /* Collection+OrderedIndex.swift in Sources */,
 				26FCE78827D26F8800C229DA /* Double+TimeTests.swift in Sources */,
 				26E93E002A1FE52400F020C1 /* NotificationCenter+ObserverBagTests.swift in Sources */,
 				26FCE78E27D26F8800C229DA /* UIEdgeInsetsTests.swift in Sources */,
