@@ -2,112 +2,61 @@ import INCommons
 import XCTest
 
 final class LoadingHandlerTests: XCTestCase {
-	private var loadingHandler: LoadingHandler!
-	private var executionOrder: [Int]!
+	private var sut: LoadingHandler!
 
 	override func setUp() {
 		super.setUp()
-		loadingHandler = LoadingHandler()
-		executionOrder = []
+		sut = LoadingHandler()
 	}
 
 	override func tearDown() {
-		loadingHandler = nil
-		executionOrder = nil
+		sut = nil
 		super.tearDown()
 	}
 
-	/// Tests that actions are executed sequentially.
-	func testActionsExecuteSequentially() async {
-		let expectation = XCTestExpectation(description: "All actions should execute in sequence")
-
-		// Add multiple actions to the handler
-		await loadingHandler.addAction {
-			self.executionOrder.append(1)
-			try? await Task.sleep(nanoseconds: 100_000_000) // Simulate delay (0.1s)
+	func test_addingActionToEmptyQueueExecutesAction() async {
+		let actionExpectation = expectation(description: "actionExpectation")
+		await sut.addAction {
+			actionExpectation.fulfill()
 		}
-		await loadingHandler.addAction {
-			self.executionOrder.append(2)
-			try? await Task.sleep(nanoseconds: 50_000_000) // Simulate delay (0.05s)
-		}
-		await loadingHandler.addAction {
-			self.executionOrder.append(3)
-		}
-
-		// Wait for actions to complete
-		await waitUntilQueueIsEmpty()
-
-		// Verify the execution order
-		XCTAssertEqual(executionOrder, [1, 2, 3], "Actions did not execute sequentially.")
-		expectation.fulfill()
-		await fulfillment(of: [expectation], timeout: 1)
+		await fulfillment(of: [actionExpectation], timeout: 1.0)
 	}
 
-	/// Tests that the task queue processes actions automatically when added using `spawnTaskToAddAction`.
-	func testSpawnTaskToAddAction() async {
-		let expectation = XCTestExpectation(description: "Actions added using spawnTaskToAddAction should execute sequentially")
-
-		// Add actions using spawnTaskToAddAction
-		loadingHandler.spawnTaskToAddAction {
-			self.executionOrder.append(1)
-			try? await Task.sleep(nanoseconds: 50_000_000) // Simulate delay
+	func test_addingActionsPerformsThemInSequence() async {
+		let firstActionBlockedExpectation = expectation(description: "firstActionBlockedExpectation")
+		let mainActionsEnqueuedExpectation = expectation(description: "mainActionsEnqueuedExpectation")
+		await sut.addAction {
+			// Inform the test that this action has been started.
+			firstActionBlockedExpectation.fulfill()
+			// Wait for the test to enqueue the other actions before finishing this set up action.
+			await self.fulfillment(of: [mainActionsEnqueuedExpectation], timeout: 1.0)
 		}
-		loadingHandler.spawnTaskToAddAction {
-			self.executionOrder.append(2)
+		// It's not defined whether the action gets immediately executed or delayed,
+		// therefore, we are waiting for setUpStartedExpectation to ensure the
+		// action has been started, but is now waiting for the test to continue.
+		await fulfillment(of: [firstActionBlockedExpectation], timeout: 1.0)
+
+		// Enqueue some "real" actions.
+		let action1Expectation = expectation(description: "action1Expectation")
+		await sut.addAction {
+			action1Expectation.fulfill()
 		}
-
-		// Wait for actions to complete
-		await waitUntilQueueIsEmpty()
-
-		// Verify the execution order
-		XCTAssertEqual(executionOrder, [1, 2], "Actions did not execute sequentially when added via spawnTaskToAddAction.")
-		expectation.fulfill()
-		await fulfillment(of: [expectation], timeout: 1)
-	}
-
-	/// Tests that adding no actions does not cause unexpected execution.
-	func testEmptyQueue() async {
-		let expectation = XCTestExpectation(description: "No actions should execute with an empty queue")
-
-		// Nothing is added to the action queue
-		await waitUntilQueueIsEmpty()
-
-		// Verify no action was executed
-		XCTAssertTrue(executionOrder.isEmpty, "Queue executed actions when it was expected to remain empty.")
-		expectation.fulfill()
-		await fulfillment(of: [expectation], timeout: 1)
-	}
-
-	/// Tests that multiple concurrent calls to `spawnTaskToAddAction` do not cause race conditions.
-	func testConcurrentActionAddition() async {
-		let expectation = XCTestExpectation(description: "Concurrent action additions should execute sequentially")
-
-		// Add actions concurrently
-		let group = DispatchGroup()
-		for i in 1 ... 5 {
-			group.enter()
-			Task {
-				loadingHandler.spawnTaskToAddAction {
-					self.executionOrder.append(i)
-					try? await Task.sleep(nanoseconds: 20_000_000) // Simulate slight delay
-					group.leave()
-				}
-			}
+		// The first action has to be executed before the second one.
+		let action2Expectation = expectation(description: "action2Expectation")
+		await sut.addAction {
+			await self.fulfillment(of: [action1Expectation], timeout: 1.0)
+			action2Expectation.fulfill()
+		}
+		// This is just another action but gets enqueued with a different method.
+		let action3Expectation = expectation(description: "action3Expectation")
+		sut.spawnTaskToAddAction {
+			action3Expectation.fulfill()
 		}
 
-		group.wait()
-		await waitUntilQueueIsEmpty()
+		// Inform the first action that everything has been prepared to proceed with the real test.
+		mainActionsEnqueuedExpectation.fulfill()
 
-		// Verify all actions executed sequentially
-		XCTAssertEqual(executionOrder, [1, 2, 3, 4, 5], "Concurrent additions did not execute sequentially.")
-		expectation.fulfill()
-		await fulfillment(of: [expectation], timeout: 2)
-	}
-
-	// MARK: - Helper Methods
-
-	/// Waits for the queue to be empty.
-	private func waitUntilQueueIsEmpty() async {
-		try? await Task.sleep(nanoseconds: 200_000_000) // Wait briefly to ensure all tasks are complete
+		// Now wait for the first action to be finished.
+		await fulfillment(of: [action2Expectation, action3Expectation], timeout: 1.0)
 	}
 }

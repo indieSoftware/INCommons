@@ -1,7 +1,7 @@
 import INCommons
 import XCTest
 
-final class Array: XCTestCase {
+final class Array_OrderedIndexTests: XCTestCase {
 	/// Tests finding the exact position of an existing element.
 	func testOrderedIndexOfExistingElement() {
 		let array = [1, 3, 5, 7, 9, 11]
