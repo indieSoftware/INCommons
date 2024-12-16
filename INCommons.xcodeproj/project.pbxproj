@@ -22,6 +22,14 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		092219552D01DF8A00AF95C4 /* WeakObserverBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092219542D01DF8600AF95C4 /* WeakObserverBag.swift */; };
+		092219572D01DFD100AF95C4 /* PostPublished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092219562D01DFCC00AF95C4 /* PostPublished.swift */; };
+		092219592D01E00900AF95C4 /* Publisher+VoidPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092219582D01DFEF00AF95C4 /* Publisher+VoidPublisher.swift */; };
+		0922195B2D01E02800AF95C4 /* Array+OrderedIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922195A2D01E02700AF95C4 /* Array+OrderedIndex.swift */; };
+		0922195D2D01E04200AF95C4 /* LoadingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922195C2D01E03F00AF95C4 /* LoadingHandler.swift */; };
+		0922195F2D01E06100AF95C4 /* FileManager+EnsureFolderExists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922195E2D01E05900AF95C4 /* FileManager+EnsureFolderExists.swift */; };
+		092219972D05D15300AF95C4 /* LoadingHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092219962D05D15300AF95C4 /* LoadingHandlerTests.swift */; };
+		0922199B2D05D30500AF95C4 /* Array+OrderedIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922199A2D05D30500AF95C4 /* Array+OrderedIndexTests.swift */; };
 		0951F7712ACEDD6000C72C7C /* Calendar+iso8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0951F7702ACEDD6000C72C7C /* Calendar+iso8601.swift */; };
 		260786B0289D2AE600504907 /* UIColor+KeyedArchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786AF289D2AE600504907 /* UIColor+KeyedArchiver.swift */; };
 		260786B3289D2B4300504907 /* UIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260786B2289D2B4300504907 /* UIColorTests.swift */; };
@@ -140,6 +148,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		092219542D01DF8600AF95C4 /* WeakObserverBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakObserverBag.swift; sourceTree = "<group>"; };
+		092219562D01DFCC00AF95C4 /* PostPublished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPublished.swift; sourceTree = "<group>"; };
+		092219582D01DFEF00AF95C4 /* Publisher+VoidPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+VoidPublisher.swift"; sourceTree = "<group>"; };
+		0922195A2D01E02700AF95C4 /* Array+OrderedIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+OrderedIndex.swift"; sourceTree = "<group>"; };
+		0922195C2D01E03F00AF95C4 /* LoadingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHandler.swift; sourceTree = "<group>"; };
+		0922195E2D01E05900AF95C4 /* FileManager+EnsureFolderExists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+EnsureFolderExists.swift"; sourceTree = "<group>"; };
+		092219962D05D15300AF95C4 /* LoadingHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHandlerTests.swift; sourceTree = "<group>"; };
+		0922199A2D05D30500AF95C4 /* Array+OrderedIndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+OrderedIndexTests.swift"; sourceTree = "<group>"; };
 		0951F7702ACEDD6000C72C7C /* Calendar+iso8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+iso8601.swift"; sourceTree = "<group>"; };
 		260786AF289D2AE600504907 /* UIColor+KeyedArchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+KeyedArchiver.swift"; sourceTree = "<group>"; };
 		260786B2289D2B4300504907 /* UIColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorTests.swift; sourceTree = "<group>"; };
@@ -249,6 +265,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		092219952D05D13A00AF95C4 /* LoadingHandler */ = {
+			isa = PBXGroup;
+			children = (
+				092219962D05D15300AF95C4 /* LoadingHandlerTests.swift */,
+			);
+			path = LoadingHandler;
+			sourceTree = "<group>";
+		};
 		260786B1289D2B2C00504907 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +293,8 @@
 		2627A1B029BFA5CB0006834F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0922195A2D01E02700AF95C4 /* Array+OrderedIndex.swift */,
+				092219582D01DFEF00AF95C4 /* Publisher+VoidPublisher.swift */,
 				26FCE76527D2699E00C229DA /* Bundle+VersionNumber.swift */,
 				2627A1A629BFA5320006834F /* Calendar+Gregorian.swift */,
 				0951F7702ACEDD6000C72C7C /* Calendar+iso8601.swift */,
@@ -279,6 +305,7 @@
 				26FCE76227D2699E00C229DA /* Double+Time.swift */,
 				2627A1A029BFA4650006834F /* EdgeInsets+Init.swift */,
 				26FCE76427D2699E00C229DA /* FileManager+Directory.swift */,
+				0922195E2D01E05900AF95C4 /* FileManager+EnsureFolderExists.swift */,
 				26FCE75F27D2699E00C229DA /* Int+Time.swift */,
 				2627A1A829BFA5320006834F /* Locale+TestableCurrent.swift */,
 				26E93DF92A1FE12200F020C1 /* NotificationCenter+ObserverBag.swift */,
@@ -303,6 +330,7 @@
 		2627A1B429BFA72B0006834F /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				092219952D05D13A00AF95C4 /* LoadingHandler */,
 				26FCE77227D26F8800C229DA /* ConfigLoader */,
 				26E93DFB2A1FE36100F020C1 /* ReleaseTrigger */,
 			);
@@ -340,6 +368,7 @@
 			children = (
 				2627A1BA29BFAA680006834F /* Collection+EnumeratedArrayTests.swift */,
 				2627A1B829BFA96B0006834F /* Collection+SafeAccessTests.swift */,
+				0922199A2D05D30500AF95C4 /* Array+OrderedIndexTests.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -533,6 +562,9 @@
 		26FCE76F27D26E8D00C229DA /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				0922195C2D01E03F00AF95C4 /* LoadingHandler.swift */,
+				092219562D01DFCC00AF95C4 /* PostPublished.swift */,
+				092219542D01DF8600AF95C4 /* WeakObserverBag.swift */,
 				2627A1A329BFA5320006834F /* AnyEquatable.swift */,
 				26FCE77027D26E8D00C229DA /* ConfigLoader.swift */,
 				26E93DF72A1FDDDA00F020C1 /* ReleaseTrigger.swift */,
@@ -921,18 +953,21 @@
 				53C33F662C0C209C0086F634 /* ClearButtonModifier.swift in Sources */,
 				2627A1AE29BFA5320006834F /* Locale+TestableCurrent.swift in Sources */,
 				268B60CD27DCD6EE002D6C84 /* UIDeviceProvider.swift in Sources */,
+				0922195F2D01E06100AF95C4 /* FileManager+EnsureFolderExists.swift in Sources */,
 				26FCE76A27D2699E00C229DA /* Double+Time.swift in Sources */,
 				26FCE77127D26E8D00C229DA /* ConfigLoader.swift in Sources */,
 				26FCE75E27D2698B00C229DA /* View+ActivitySheet.swift in Sources */,
 				26FCE76B27D2699E00C229DA /* DispatchQueue+Once.swift in Sources */,
 				26885AE828167FC500901D7F /* Collection+EnumeratedArray.swift in Sources */,
 				26FCE76727D2699E00C229DA /* Int+Time.swift in Sources */,
+				0922195D2D01E04200AF95C4 /* LoadingHandler.swift in Sources */,
 				2627A1AB29BFA5320006834F /* Collection+SafeAccess.swift in Sources */,
 				2627A1A229BFA4650006834F /* EdgeInsets+Init.swift in Sources */,
 				26FCE75827D2698B00C229DA /* UIImage+UIView.swift in Sources */,
 				2699C16828898EE40026ED3E /* Task+Sleep.swift in Sources */,
 				26FCE76C27D2699E00C229DA /* FileManager+Directory.swift in Sources */,
 				26FCE76D27D2699E00C229DA /* Bundle+VersionNumber.swift in Sources */,
+				092219592D01E00900AF95C4 /* Publisher+VoidPublisher.swift in Sources */,
 				26FCE75A27D2698B00C229DA /* UIEdgeInsets.swift in Sources */,
 				2615DB9E2A6AA169004D0233 /* UIApplication+KeyWindow.swift in Sources */,
 				26FCE6EB27D1FAD600C229DA /* INCommons.docc in Sources */,
@@ -942,8 +977,11 @@
 				26E93DFA2A1FE12200F020C1 /* NotificationCenter+ObserverBag.swift in Sources */,
 				268B60D627DCF981002D6C84 /* Optional+Stringified.swift in Sources */,
 				26FCE75727D2698B00C229DA /* UIColor.swift in Sources */,
+				0922195B2D01E02800AF95C4 /* Array+OrderedIndex.swift in Sources */,
 				26FCE75B27D2698B00C229DA /* View+Conditions.swift in Sources */,
+				092219572D01DFD100AF95C4 /* PostPublished.swift in Sources */,
 				53C33F682C0C21700086F634 /* OverlayButton.swift in Sources */,
+				092219552D01DF8A00AF95C4 /* WeakObserverBag.swift in Sources */,
 				2627A1AD29BFA5320006834F /* ProcessInfo+IsRunningInTestMode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -971,7 +1009,9 @@
 				26E93DFD2A1FE38300F020C1 /* ReleaseTriggerTests.swift in Sources */,
 				2684D2992815A2930089A227 /* StringCapitalized.swift in Sources */,
 				260786B5289D3CEA00504907 /* UIColor_KeyedArchiverTests.swift in Sources */,
+				092219972D05D15300AF95C4 /* LoadingHandlerTests.swift in Sources */,
 				260786B3289D2B4300504907 /* UIColorTests.swift in Sources */,
+				0922199B2D05D30500AF95C4 /* Array+OrderedIndexTests.swift in Sources */,
 				26FCE78827D26F8800C229DA /* Double+TimeTests.swift in Sources */,
 				26E93E002A1FE52400F020C1 /* NotificationCenter+ObserverBagTests.swift in Sources */,
 				26FCE78E27D26F8800C229DA /* UIEdgeInsetsTests.swift in Sources */,
