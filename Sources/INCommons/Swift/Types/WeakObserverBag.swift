@@ -3,6 +3,8 @@ public actor WeakObserverBag {
 	/// A list to wrapped object holders which are keeping a weak reference of an observer.
 	private var observers = [WeakObject]()
 
+	public init() {}
+
 	/// Adds an observer to the bag.
 	public func add(observer: AnyObject) {
 		cleanUp()
