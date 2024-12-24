@@ -1,10 +1,11 @@
 import INCommons
 import XCTest
 
+@MainActor
 final class NotificationCenter_ObserverBagTests: XCTestCase {
 	func testNotificationCenterHoldsStrongReferenceOfObserver() throws {
 		let dummyObjectReleasedExpectation = expectation(description: "dummyObjectReleasedExpectation")
-		var dummyObject: ReleaseTrigger<Bool>? = ReleaseTrigger<Bool>(reference: false) { _ in
+		var dummyObject: SendableReleaseTrigger<Bool>? = SendableReleaseTrigger<Bool>(reference: false) { _ in
 			dummyObjectReleasedExpectation.fulfill()
 		}
 		weak var weakDummyObject = dummyObject

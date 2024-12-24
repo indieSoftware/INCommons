@@ -2,12 +2,12 @@ import Foundation
 
 /// A class which holds a reference and calls a closure when the classes' instance gets released.
 ///
-/// - Important: This type is not sendable, use `SendableReleaseTrigger` instead for a sendable version.
-public class ReleaseTrigger<ReferenceType> {
+/// - Important: This type is sendable and thus its reference type has to be. Consider using `ReleaseTrigger` if sendable is not needed.
+public final class SendableReleaseTrigger<ReferenceType: Sendable>: Sendable {
 	/// The object or value to keep a reference on during lifetime of this object.
 	private let reference: ReferenceType
 	/// The closure to call when this object gets released.
-	private let onDeinit: (_ reference: ReferenceType) -> Void
+	private let onDeinit: @Sendable (_ reference: ReferenceType) -> Void
 
 	/// Initializes an object.
 	///
@@ -17,7 +17,7 @@ public class ReleaseTrigger<ReferenceType> {
 	/// As a parameter the `reference` will be passed.
 	public init(
 		reference: ReferenceType,
-		onDeinit: @escaping (_ reference: ReferenceType) -> Void
+		onDeinit: @escaping @Sendable (_ reference: ReferenceType) -> Void
 	) {
 		self.reference = reference
 		self.onDeinit = onDeinit

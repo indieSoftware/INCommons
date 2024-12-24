@@ -1,17 +1,18 @@
 import INCommons
 import XCTest
 
-final class LoadingHandlerTests: XCTestCase {
+@MainActor
+final class LoadingHandlerTests: XCTestCase, @unchecked Sendable {
 	private var sut: LoadingHandler!
 
-	override func setUp() {
-		super.setUp()
+	override func setUp() async throws {
+		try await super.setUp()
 		sut = LoadingHandler()
 	}
 
-	override func tearDown() {
+	override func tearDown() async throws {
 		sut = nil
-		super.tearDown()
+		try await super.tearDown()
 	}
 
 	func test_addingActionToEmptyQueueExecutesAction() async {

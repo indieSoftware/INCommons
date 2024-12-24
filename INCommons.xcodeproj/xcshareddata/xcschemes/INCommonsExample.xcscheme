@@ -58,6 +58,17 @@
                ReferencedContainer = "container:INCommons.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "26D260552D1AF5BE0019825B"
+               BuildableName = "INCommonsExampleTests.xctest"
+               BlueprintName = "INCommonsExampleTests"
+               ReferencedContainer = "container:INCommons.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

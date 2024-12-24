@@ -2,6 +2,7 @@ import INCommons
 import SwiftUI
 import XCTest
 
+@MainActor
 class DispatchQueueTests: XCTestCase {
 	func testDispatchOnceCalled() {
 		let token = #function

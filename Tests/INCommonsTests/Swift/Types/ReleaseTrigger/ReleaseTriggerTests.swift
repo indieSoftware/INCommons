@@ -1,6 +1,7 @@
 import INCommons
 import XCTest
 
+@MainActor
 final class ReleaseTriggerTests: XCTestCase {
 	func testClosureGetsCalledOnDeinit() {
 		let callbackExpectation = expectation(description: "callbackExpectation")

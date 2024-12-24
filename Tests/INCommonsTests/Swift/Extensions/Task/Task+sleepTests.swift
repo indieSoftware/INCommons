@@ -1,6 +1,7 @@
 import INCommons
 import XCTest
 
+@MainActor
 class Task_sleepTests: XCTestCase {
 	func testSleepInSeconds() throws {
 		let secondsToWait = 1.5
