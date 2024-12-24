@@ -1,6 +1,6 @@
 # Changelog
 
-### v4.0.0 (in development)
+### v4.0.0
 
 - Added `homeDirectory`, `cachesDirectory`, `appSupportDirectory` and `tmpDirectory` to `FileManager` extension.
 - Added `base64Encoded` and `base64Decoded` as a string extension.
@@ -16,6 +16,15 @@
 - Added `iso8601` as an extension to Calendar to retrieve ISO8601 calendar format.
 - Fixed deprecation warning for `UIColor+KeyedArchiver`.
 - Added conformance for `Codable` and `Equatable` to `UIColor.RgbaColor`.
+- Added `ClearButtonModifier` and `View.clearButton`.
+- Added `OverlayButton`.
+- Added `Array.orderedIndexOf()`.
+- Added `FileManager.ensureFolderExists(folderUrl:)`.
+- Added `Publisher.voidPublisher`.
+- Added `LoadingHandler`.
+- Added `PostPublished` property wrapper.
+- Added `WeakObserverBag`.
+
 
 ### v3.1.0
 

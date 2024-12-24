@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           INCommons
         </a>
-         (91% documented)
+         (90% documented)
       </p>
     
       <div class="header-col--secondary">
@@ -42,17 +42,36 @@
     </header>
 
     <p class="breadcrumbs">
-      <a class="breadcrumb" href="../index.html">INCommons Reference</a>
+      <a class="breadcrumb" href="../index.html">INCommons</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      View Extension Reference
+      <a class="breadcrumb" href="../Extensions.html">Extensions</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      SwiftUICore.View Extension Reference
     </p>
 
     <div class="content-wrapper">
       <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Actors.html">Actors</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Actors/LoadingHandler.html">LoadingHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Actors/WeakObserverBag.html">WeakObserverBag</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/PostPublished.html">PostPublished</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ReleaseTrigger.html">ReleaseTrigger</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/UIDeviceProvider.html">UIDeviceProvider</a>
               </li>
@@ -75,6 +94,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Bundle.html">Bundle</a>
               </li>
@@ -112,10 +134,19 @@
                 <a class="nav-group-task-link" href="../Extensions/MutableCollection.html">MutableCollection</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotificationCenter.html">NotificationCenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NotificationCenter/ObserverBag.html">– ObserverBag</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/Optional.html">Optional</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/ProcessInfo.html">ProcessInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Publisher.html">Publisher</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
@@ -125,6 +156,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/TimeZone.html">TimeZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UIApplication.html">UIApplication</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/UIColor.html">UIColor</a>
@@ -171,6 +205,12 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ActivityItem.html">ActivityItem</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ClearButtonModifier.html">ClearButtonModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/OverlayButton.html">OverlayButton</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -193,6 +233,44 @@
 
         <section class="section">
           <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SwiftUI4ViewP9INCommonsE11clearButton4text9tintColor8baseSize08tappableK05imageQrAA7BindingVySSG_AA0I0VSo6CGSizeVAqA5ImageVtF"></a>
+                    <a name="//apple_ref/swift/Method/clearButton(text:tintColor:baseSize:tappableSize:image:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SwiftUI4ViewP9INCommonsE11clearButton4text9tintColor8baseSize08tappableK05imageQrAA7BindingVySSG_AA0I0VSo6CGSizeVAqA5ImageVtF">clearButton(text:<wbr>tintColor:<wbr>baseSize:<wbr>tappableSize:<wbr>image:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">func</span> <span class="nf">clearButton</span><span class="p">(</span>
+	<span class="nv">text</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">,</span>
+	<span class="nv">tintColor</span><span class="p">:</span> <span class="kt">Color</span><span class="p">,</span>
+	<span class="nv">baseSize</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span>
+	<span class="nv">tappableSize</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span>
+	<span class="nv">image</span><span class="p">:</span> <span class="kt">Image</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Conditional%20Modifier"></a>
@@ -231,6 +309,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@ViewBuilder</span>
+<span class="kd">@MainActor</span>
 <span class="kd">func</span> <span class="p">`</span><span class="nv">if</span><span class="p">`(</span><span class="n">_</span> <span class="nv">condition</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
 
                         </div>
@@ -299,6 +378,7 @@ The transform can apply a modifier on the view.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@ViewBuilder</span>
+<span class="kd">@MainActor</span>
 <span class="kd">func</span> <span class="p">`</span><span class="nv">if</span><span class="p">`(</span>
 	<span class="n">_</span> <span class="nv">condition</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
 	<span class="k">if</span> <span class="nv">ifTransform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span><span class="p">,</span>
@@ -383,6 +463,7 @@ The transform can then access the unwrapped optional safely and apply any modife
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@ViewBuilder</span>
+<span class="kd">@MainActor</span>
 <span class="kd">func</span> <span class="n">ifLet</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Value</span><span class="p">?,</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
 
                         </div>
@@ -445,7 +526,8 @@ The transform can then access the unwrapped optional safely and apply any modife
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">frame</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">alignment</span><span class="p">:</span> <span class="kt">Alignment</span> <span class="o">=</span> <span class="o">.</span><span class="n">center</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">func</span> <span class="nf">frame</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span> <span class="nv">alignment</span><span class="p">:</span> <span class="kt">Alignment</span> <span class="o">=</span> <span class="o">.</span><span class="n">center</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
 
                         </div>
                       </div>
@@ -509,7 +591,8 @@ Similar to SwiftUI&rsquo;s <code>onAppear</code>, but fires only once.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">onFirstAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">func</span> <span class="nf">onFirstAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
 
                         </div>
                       </div>
@@ -540,9 +623,10 @@ Apps can also define custom services.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">activitySheet</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">func</span> <span class="nf">activitySheet</span><span class="p">(</span>
 	<span class="n">_</span> <span class="nv">item</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ActivityItem.html">ActivityItem</a></span><span class="p">?</span><span class="o">&gt;</span><span class="p">,</span>
-	<span class="nv">permittedArrowDirections</span><span class="p">:</span> <span class="kt">UIPopoverArrowDirection</span> <span class="o">=</span> <span class="o">.</span><span class="n">any</span><span class="p">,</span>
+	<span class="nv">permittedArrowDirections</span><span class="p">:</span> <span class="kt">UIPopoverArrowDirection</span> <span class="o">=</span> <span class="o">.</span><span class="kd">any</span><span class="p">,</span>
 	<span class="nv">onComplete</span><span class="p">:</span> <span class="kt">UIActivityViewController</span><span class="o">.</span><span class="kt">CompletionWithItemsHandler</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
 
@@ -594,8 +678,8 @@ Apps can also define custom services.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2023 <a class="link" href="https://github.com/indieSoftware/INCommons" target="_blank" rel="external noopener">indie-Software</a>. All rights reserved. (Last updated: 2023-04-15)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>&copy; 2024 <a class="link" href="https://github.com/indieSoftware/INCommons" target="_blank" rel="external noopener">indie-Software</a>. All rights reserved. (Last updated: 2024-12-24)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>

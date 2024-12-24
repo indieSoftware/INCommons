@@ -19,4 +19,4 @@ xcodebuild_arguments:
   - -scheme
   - INCommons
   - -destination
-  - platform=iOS Simulator,OS=latest,name=iPhone 13
+  - platform=iOS Simulator,OS=latest,name=iPhone 16

@@ -47,6 +47,8 @@
 		2627A1B929BFA96B0006834F /* Collection+SafeAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2627A1B829BFA96B0006834F /* Collection+SafeAccessTests.swift */; };
 		2627A1BB29BFAA680006834F /* Collection+EnumeratedArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2627A1BA29BFAA680006834F /* Collection+EnumeratedArrayTests.swift */; };
 		2627A1BE29BFACB30006834F /* EdgeInsets+InitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2627A1BD29BFACB30006834F /* EdgeInsets+InitTests.swift */; };
+		2656ADC72D1A911100961EF7 /* OverlayButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2656ADC62D1A910700961EF7 /* OverlayButtonExample.swift */; };
+		2656ADC92D1A954400961EF7 /* ClearButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2656ADC82D1A953900961EF7 /* ClearButtonExample.swift */; };
 		266913CB2866F55E00EBDB3C /* String+Base64Coding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266913CA2866F55E00EBDB3C /* String+Base64Coding.swift */; };
 		266913DA2867018A00EBDB3C /* String+Base64CodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266913D92867018A00EBDB3C /* String+Base64CodingTests.swift */; };
 		2684D2992815A2930089A227 /* StringCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684D2982815A2930089A227 /* StringCapitalized.swift */; };
@@ -173,6 +175,8 @@
 		2627A1B829BFA96B0006834F /* Collection+SafeAccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeAccessTests.swift"; sourceTree = "<group>"; };
 		2627A1BA29BFAA680006834F /* Collection+EnumeratedArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+EnumeratedArrayTests.swift"; sourceTree = "<group>"; };
 		2627A1BD29BFACB30006834F /* EdgeInsets+InitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+InitTests.swift"; sourceTree = "<group>"; };
+		2656ADC62D1A910700961EF7 /* OverlayButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayButtonExample.swift; sourceTree = "<group>"; };
+		2656ADC82D1A953900961EF7 /* ClearButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButtonExample.swift; sourceTree = "<group>"; };
 		266913CA2866F55E00EBDB3C /* String+Base64Coding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64Coding.swift"; sourceTree = "<group>"; };
 		266913D92867018A00EBDB3C /* String+Base64CodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64CodingTests.swift"; sourceTree = "<group>"; };
 		2684D2982815A2930089A227 /* StringCapitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCapitalized.swift; sourceTree = "<group>"; };
@@ -670,8 +674,10 @@
 			isa = PBXGroup;
 			children = (
 				26FCE79727D276BF00C229DA /* ConfigurationView.swift */,
+				2656ADC82D1A953900961EF7 /* ClearButtonExample.swift */,
 				268B60D227DCDC36002D6C84 /* DeviceProviderView.swift */,
 				26B02EA32916331900F06105 /* FirstAppearView.swift */,
+				2656ADC62D1A910700961EF7 /* OverlayButtonExample.swift */,
 				26FCE79927D276BF00C229DA /* ShareSheet.swift */,
 				26FCE79627D276BF00C229DA /* ViewConditions.swift */,
 				26FCE79827D276BF00C229DA /* ViewFrame.swift */,
@@ -929,9 +935,11 @@
 				268B60D427DCDD7F002D6C84 /* DeviceProviderView.swift in Sources */,
 				26FCE7A327D276BF00C229DA /* HomeView.swift in Sources */,
 				26FCE79E27D276BF00C229DA /* ViewConditions.swift in Sources */,
+				2656ADC72D1A911100961EF7 /* OverlayButtonExample.swift in Sources */,
 				26FCE7A027D276BF00C229DA /* ViewFrame.swift in Sources */,
 				26B02EA52916334D00F06105 /* FirstAppearView.swift in Sources */,
 				26FCE6D327D1F9C600C229DA /* INCommonsExampleApp.swift in Sources */,
+				2656ADC92D1A954400961EF7 /* ClearButtonExample.swift in Sources */,
 				26FCE7A127D276BF00C229DA /* ShareSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1163,7 +1171,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Sources/INCommonsExample/Preview Content\"";
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				ENABLE_PREVIEWS = YES;
@@ -1192,7 +1200,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Sources/INCommonsExample/Preview Content\"";
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				ENABLE_PREVIEWS = YES;
@@ -1221,11 +1229,11 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 8;
+				DYLIB_CURRENT_VERSION = 9;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1258,11 +1266,11 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 8;
+				DYLIB_CURRENT_VERSION = 9;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1294,7 +1302,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1311,7 +1319,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = H6T8HJZGHY;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
