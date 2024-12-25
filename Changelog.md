@@ -1,5 +1,9 @@
 # Changelog
 
+### v4.0.1
+
+- Moved the example project to its own folder.
+
 ### v4.0.0
 
 - Added `homeDirectory`, `cachesDirectory`, `appSupportDirectory` and `tmpDirectory` to `FileManager` extension.
