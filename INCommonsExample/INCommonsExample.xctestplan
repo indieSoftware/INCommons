@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "0D937C75-4925-4595-98F7-2DF3F2765052",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "commandLineArgumentEntries" : [
+      {
+        "argument" : "TestMode"
+      }
+    ],
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:..",
+        "identifier" : "INCommonsTests",
+        "name" : "INCommonsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:INCommonsExample.xcodeproj",
+        "identifier" : "268FD0232D1BCF4400B6CCF2",
+        "name" : "INCommonsExampleTests"
+      }
+    }
+  ],
+  "version" : 1
+}

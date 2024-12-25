@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct INCommonsExampleApp: App {
+struct INCommonsExample: App {
 	var body: some Scene {
 		WindowGroup {
 			HomeView()
