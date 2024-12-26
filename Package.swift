@@ -23,5 +23,8 @@ let package = Package(
             name: "INCommonsTests",
             dependencies: ["INCommons"]
 		),
-    ]
+	],
+	swiftLanguageModes: [
+		.v5, .version("6")
+	]
 )
