@@ -1,6 +1,8 @@
 public extension String {
 	/// Represents the empty string `""`.
 	static let empty = ""
+    /// Represents the new line string .
+    static let newLine = "\n"
 
 	/**
 	 Crops the string to a given number of characters, truncating the rest and replacing the last 3 characters with '...'.
