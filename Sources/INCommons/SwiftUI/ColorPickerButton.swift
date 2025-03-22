@@ -1,5 +1,9 @@
 import SwiftUI
 
+/// A re-created button view which looks like Apple's color picker button.
+/// The problem with Apple's color picker is that it's directly linked to the color picker view,
+/// so there is no way to navigate first to a different screen before showing Apple's color picker.
+/// To by-pass this shortcoming we can use this custom button.
 public struct ColorPickerButton: View {
 	enum Constants {
 		static let colorButtonSize: CGSize = .init(width: 36, height: 36)
