@@ -1,7 +1,7 @@
 public extension String {
 	/// Represents the empty string `""`.
 	static let empty = ""
-    /// Represents the new line string .
+    /// Represents the new line string `\n`.
     static let newLine = "\n"
 
 	/**
