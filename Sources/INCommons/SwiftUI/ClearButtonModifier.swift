@@ -9,7 +9,7 @@ public struct ClearButtonModifier: ViewModifier {
 	let image: Image
 
 	@Binding var text: String
-    @Binding var isFocused: Bool
+	@Binding var isFocused: Bool
 
 	@ViewBuilder
 	public func body(content: Content) -> some View {
@@ -34,7 +34,7 @@ public struct ClearButtonModifier: ViewModifier {
 public extension View {
 	func clearButton(
 		text: Binding<String>,
-        isFocused: Binding<Bool>,
+		isFocused: Binding<Bool>,
 		tintColor: Color,
 		baseSize: CGSize,
 		tappableSize: CGSize,
@@ -47,7 +47,7 @@ public extension View {
 				tappableSize: tappableSize,
 				image: image,
 				text: text,
-                isFocused: isFocused
+				isFocused: isFocused
 			)
 		)
 	}
