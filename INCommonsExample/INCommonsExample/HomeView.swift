@@ -18,8 +18,7 @@ struct HomeView: View {
 		ExampleViewFactory(title: "Share Sheet", view: { AnyView(ShareSheet()) }),
 		ExampleViewFactory(title: "View Condition", view: { AnyView(ViewConditions()) }),
 		ExampleViewFactory(title: "View Frame", view: { AnyView(ViewFrame()) }),
-        ExampleViewFactory(title: "Color Picker", view: { AnyView(ColorPickerExample()) })
-
+		ExampleViewFactory(title: "Color Picker", view: { AnyView(ColorPickerExample()) })
 	]
 
 	var body: some View {
