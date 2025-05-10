@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Int Extension Reference</title>
+    <title>ApplicationManagerLogic Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/Int" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/ApplicationManagerLogic" class="dashAnchor"></a>
 
-    <a title="Int Extension Reference"></a>
+    <a title="ApplicationManagerLogic Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,9 +44,9 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">INCommons</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      <a class="breadcrumb" href="../Extensions.html">Extensions</a>
+      <a class="breadcrumb" href="../Classes.html">Classes</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      Swift.Int Extension Reference
+      ApplicationManagerLogic Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -231,15 +231,19 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Int</h1>
+            <h1>ApplicationManagerLogic</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Int</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOSApplicationExtension</span><span class="p">,</span> <span class="n">unavailable</span><span class="p">)</span>
+<span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ApplicationManagerLogic</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ApplicationManager.html">ApplicationManager</a></span></code></pre>
 
                 </div>
               </div>
-            
+            <p>A concrete implementation of the <code><a href="../Protocols/ApplicationManager.html">ApplicationManager</a></code> protocol which can be used in app code
+to return the corresponding values from <code>UIApplication</code>.</p>
+
           </div>
         </section>
 
@@ -250,9 +254,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Si9INCommonsE26secondsToMinutesAndSecondsSi7minutes_Si0B0tyF"></a>
-                    <a name="//apple_ref/swift/Method/secondsToMinutesAndSeconds()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Si9INCommonsE26secondsToMinutesAndSecondsSi7minutes_Si0B0tyF">secondsToMinutesAndSeconds()</a>
+                    <a name="/s:9INCommons18ApplicationManagerP19isScreenLockEnabledSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isScreenLockEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons18ApplicationManagerP19isScreenLockEnabledSbvp">isScreenLockEnabled</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -260,16 +264,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts a value in seconds into a tuple of minutes and seconds, e.g. 99 → (1, 39).</p>
-
-<p>Hours will be displayed in minutes.</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">secondsToMinutesAndSeconds</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">minutes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">isScreenLockEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -279,9 +281,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Si9INCommonsE17toTwoDigitsStringSSyF"></a>
-                    <a name="//apple_ref/swift/Method/toTwoDigitsString()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Si9INCommonsE17toTwoDigitsStringSSyF">toTwoDigitsString()</a>
+                    <a name="/s:9INCommons18ApplicationManagerP17disableScreenLockyyF"></a>
+                    <a name="//apple_ref/swift/Method/disableScreenLock()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons18ApplicationManagerP17disableScreenLockyyF">disableScreenLock()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -289,20 +291,71 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds leading zero to Int if needed, e.g. 5 → 05, 15 → 15, -5 → -05</p>
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">disableScreenLock</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9INCommons18ApplicationManagerP16enableScreenLockyyF"></a>
+                    <a name="//apple_ref/swift/Method/enableScreenLock()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons18ApplicationManagerP16enableScreenLockyyF">enableScreenLock()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">enableScreenLock</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9INCommons23ApplicationManagerLogicCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons23ApplicationManagerLogicCACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">toTwoDigitsString</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Modified value as String.</p>
                       </div>
                     </section>
                   </div>

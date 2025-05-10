@@ -67,6 +67,9 @@
             <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ApplicationManagerLogic.html">ApplicationManagerLogic</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/PostPublished.html">PostPublished</a>
               </li>
               <li class="nav-group-task">
@@ -198,6 +201,9 @@
                 <a class="nav-group-task-link" href="../Protocols/AnyEquatable.html">AnyEquatable</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ApplicationManager.html">ApplicationManager</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/UIDeviceProviderType.html">UIDeviceProviderType</a>
               </li>
             </ul>
@@ -210,6 +216,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ClearButtonModifier.html">ClearButtonModifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ColorPickerButton.html">ColorPickerButton</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/OverlayButton.html">OverlayButton</a>
@@ -241,9 +250,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7SwiftUI4ViewP9INCommonsE11clearButton4text9tintColor8baseSize08tappableK05imageQrAA7BindingVySSG_AA0I0VSo6CGSizeVAqA5ImageVtF"></a>
-                    <a name="//apple_ref/swift/Method/clearButton(text:tintColor:baseSize:tappableSize:image:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7SwiftUI4ViewP9INCommonsE11clearButton4text9tintColor8baseSize08tappableK05imageQrAA7BindingVySSG_AA0I0VSo6CGSizeVAqA5ImageVtF">clearButton(text:<wbr>tintColor:<wbr>baseSize:<wbr>tappableSize:<wbr>image:<wbr>)</a>
+                    <a name="/s:7SwiftUI4ViewP9INCommonsE11clearButton4text9isFocused9tintColor8baseSize08tappableM05imageQrAA7BindingVySSG_AMySbGAA0K0VSo6CGSizeVAsA5ImageVtF"></a>
+                    <a name="//apple_ref/swift/Method/clearButton(text:isFocused:tintColor:baseSize:tappableSize:image:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SwiftUI4ViewP9INCommonsE11clearButton4text9isFocused9tintColor8baseSize08tappableM05imageQrAA7BindingVySSG_AMySbGAA0K0VSo6CGSizeVAsA5ImageVtF">clearButton(text:<wbr>isFocused:<wbr>tintColor:<wbr>baseSize:<wbr>tappableSize:<wbr>image:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -261,10 +270,45 @@
                           <pre class="highlight swift"><code><span class="kd">@MainActor</span>
 <span class="kd">func</span> <span class="nf">clearButton</span><span class="p">(</span>
 	<span class="nv">text</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">,</span>
+	<span class="nv">isFocused</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">,</span>
 	<span class="nv">tintColor</span><span class="p">:</span> <span class="kt">Color</span><span class="p">,</span>
 	<span class="nv">baseSize</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span>
 	<span class="nv">tappableSize</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">,</span>
 	<span class="nv">image</span><span class="p">:</span> <span class="kt">Image</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7SwiftUI4ViewP9INCommonsE16colorPickerSheet11isPresented9selection13supportsAlpha5title8animatedQrAA7BindingVySbG_ALyAA5ColorVGSbSSSgSbtF"></a>
+                    <a name="//apple_ref/swift/Method/colorPickerSheet(isPresented:selection:supportsAlpha:title:animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SwiftUI4ViewP9INCommonsE16colorPickerSheet11isPresented9selection13supportsAlpha5title8animatedQrAA7BindingVySbG_ALyAA5ColorVGSbSSSgSbtF">colorPickerSheet(isPresented:<wbr>selection:<wbr>supportsAlpha:<wbr>title:<wbr>animated:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">func</span> <span class="nf">colorPickerSheet</span><span class="p">(</span>
+	<span class="nv">isPresented</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">,</span>
+	<span class="nv">selection</span><span class="p">:</span> <span class="kt">Binding</span><span class="o">&lt;</span><span class="kt">Color</span><span class="o">&gt;</span><span class="p">,</span>
+	<span class="nv">supportsAlpha</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+	<span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+	<span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kd">some</span> <span class="kt">View</span></code></pre>
 
                         </div>
@@ -681,7 +725,7 @@ Apps can also define custom services.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="https://github.com/indieSoftware/INCommons" target="_blank" rel="external noopener">indie-Software</a>. All rights reserved. (Last updated: 2024-12-26)</p>
+      <p>&copy; 2025 <a class="link" href="https://github.com/indieSoftware/INCommons" target="_blank" rel="external noopener">indie-Software</a>. All rights reserved. (Last updated: 2025-05-10)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>

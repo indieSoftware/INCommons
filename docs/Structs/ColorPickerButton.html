@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Int Extension Reference</title>
+    <title>ColorPickerButton Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Extension/Int" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/ColorPickerButton" class="dashAnchor"></a>
 
-    <a title="Int Extension Reference"></a>
+    <a title="ColorPickerButton Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,9 +44,9 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">INCommons</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      <a class="breadcrumb" href="../Extensions.html">Extensions</a>
+      <a class="breadcrumb" href="../Structs.html">Structures</a>
       <img class="carat" src="../img/carat.png" alt=""/>
-      Swift.Int Extension Reference
+      ColorPickerButton Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -231,15 +231,20 @@
 
         <section class="section">
           <div class="section-content top-matter">
-            <h1>Int</h1>
+            <h1>ColorPickerButton</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">Int</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ColorPickerButton</span> <span class="p">:</span> <span class="kt">View</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>A re-created button view which looks like Apple&rsquo;s color picker button.
+The problem with Apple&rsquo;s color picker is that it&rsquo;s directly linked to the color picker view,
+so there is no way to navigate first to a different screen before showing Apple&rsquo;s color picker.
+To by-pass this shortcoming we can use this custom button.</p>
+
           </div>
         </section>
 
@@ -250,9 +255,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Si9INCommonsE26secondsToMinutesAndSecondsSi7minutes_Si0B0tyF"></a>
-                    <a name="//apple_ref/swift/Method/secondsToMinutesAndSeconds()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Si9INCommonsE26secondsToMinutesAndSecondsSi7minutes_Si0B0tyF">secondsToMinutesAndSeconds()</a>
+                    <a name="/s:9INCommons17ColorPickerButtonV5color6actionAC7SwiftUI0B0V_yyctcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(color:action:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9INCommons17ColorPickerButtonV5color6actionAC7SwiftUI0B0V_yyctcfc">init(color:<wbr>action:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -260,16 +265,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Converts a value in seconds into a tuple of minutes and seconds, e.g. 99 → (1, 39).</p>
-
-<p>Hours will be displayed in minutes.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">secondsToMinutesAndSeconds</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">minutes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt">Color</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -279,9 +283,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Si9INCommonsE17toTwoDigitsStringSSyF"></a>
-                    <a name="//apple_ref/swift/Method/toTwoDigitsString()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Si9INCommonsE17toTwoDigitsStringSSyF">toTwoDigitsString()</a>
+                    <a name="/s:7SwiftUI4ViewP4body4BodyQzvp"></a>
+                    <a name="//apple_ref/swift/Property/body" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7SwiftUI4ViewP4body4BodyQzvp">body</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -289,20 +293,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds leading zero to Int if needed, e.g. 5 → 05, 15 → 15, -5 → -05</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">toTwoDigitsString</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Modified value as String.</p>
                       </div>
                     </section>
                   </div>

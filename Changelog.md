@@ -5,7 +5,7 @@
 - Added `newLine` property to the `String` extension.
 - Introduced an `ApplicationManager` to control the screen lock mechanism.
 - Improved the `ClearButtonModifier` to show & hide itself depending on a focus binding.
-- Introdcued a color picker button mimicing Apple's ColorPicker.
+- Introdcued a `ColorPickerButton` mimicing Apple's ColorPicker button.
 
 ### v4.0.1
 

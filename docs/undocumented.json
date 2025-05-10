@@ -1,13 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Swift/Extensions/Collection+SafeAccess.swift",
-      "line": 9,
-      "symbol": "MutableCollection.subscript(safe:)",
-      "symbol_kind": "source.lang.swift.decl.function.subscript",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Swift/Types/AnyEquatable.swift",
       "line": 8,
       "symbol": "AnyEquatable.isEqualTo(_:)",
@@ -51,8 +44,29 @@
     },
     {
       "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/SwiftUI/ClearButtonModifier.swift",
-      "line": 33,
-      "symbol": "View.clearButton(text:tintColor:baseSize:tappableSize:image:)",
+      "line": 35,
+      "symbol": "View.clearButton(text:isFocused:tintColor:baseSize:tappableSize:image:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/SwiftUI/ColorPickerButton.swift",
+      "line": 30,
+      "symbol": "ColorPickerButton.init(color:action:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/SwiftUI/ColorPickerSheet.swift",
+      "line": 4,
+      "symbol": "View.colorPickerSheet(isPresented:selection:supportsAlpha:title:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/UIKit/ApplicationManagerLogic.swift",
+      "line": 19,
+      "symbol": "ApplicationManagerLogic.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

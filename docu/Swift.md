@@ -190,6 +190,11 @@ This is used by `Calendar.testableCurrent`, `Locale.testableCurrent` and `TimeZo
 
 A constant definition for the empty string: `String.empty`
 
+### New-line string
+
+A constant definition for the new-line string:
+`String.newLine`
+
 ### Truncate
 
 Crop a string to a given number of characters and adding three dots to its end when cropped:

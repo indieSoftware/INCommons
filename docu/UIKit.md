@@ -2,6 +2,17 @@
 
 Adds some UIKit extensions / additions.
 
+## ApplicationManager
+
+A protocol together with its implementation. Check and change the screen lock state.
+
+```
+let applicationManager: ApplicationManager = ApplicationManagerLogic()
+_ = applicationManager.isScreenLockEnabled
+applicationManager.disableScreenlock()
+applicationManager.enableScreenLock()
+```
+
 ## UIColor
 
 ### Random color

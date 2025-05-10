@@ -7,14 +7,44 @@ Adds some SwiftUI extensions / additions.
 Provide a customizable SwiftUI clear button to `TextField`s which clears the text field on tap and only appears when editing the field.
 
 ```swift
+@FocusState var fieldIsFocussed: Bool
+
 TextField(text: $fieldString)
+	.focused($fieldIsFocussed)
 	.clearButton(
 		text: $fieldString,
+		isFocused: Binding(
+			get: {
+				fieldIsFocussed
+			}, set: { value in
+				fieldIsFocussed = value
+			}
+		),
 		tintColor: .red,
 		baseSize: CGSize(width: 20, height: 20),
 		tappableSize: CGSize(width: 100, height: 100),
 		image: Image(systemName: "x.square.fill")
 	)
+```
+
+## ColorPickerButton
+
+A custom button looking like Apple's ColorPicker with the gradient colored circle. Especially useful in combination with the `ColorPickerSheet` view-modifier.
+
+```
+@State var showColorPicker: Bool = false
+@State var selectedColor: Color = .green
+
+ColorPickerButton(color: selectedColor) {
+	showColorPicker.toggle()
+}
+.colorPickerSheet(
+	isPresented: $showColorPicker,
+	selection: $selectedColor,
+	supportsAlpha: false,
+	title: "Color Picker",
+	animated: true
+)
 ```
 
 ## OverlayButton
