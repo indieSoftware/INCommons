@@ -1,5 +1,12 @@
 # Changelog
 
+### v4.2.0
+
+- Added `UIApplication` extension `applyDisplayMode`.
+- Added `UIApplication` extension `dismissKeyboard`.
+- Added `UIApplication` documentation for `activeWindowScene` and `keyWindow`.
+- Introduced `OverlayWindowPresenter` to show overlays in new windows on top of the view hierarchy.
+
 ### v4.1.0
 
 - Added `newLine` property to the `String` extension.

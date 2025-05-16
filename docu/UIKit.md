@@ -6,11 +6,38 @@ Adds some UIKit extensions / additions.
 
 A protocol together with its implementation. Check and change the screen lock state.
 
-```
+```swift
 let applicationManager: ApplicationManager = ApplicationManagerLogic()
 _ = applicationManager.isScreenLockEnabled
 applicationManager.disableScreenlock()
 applicationManager.enableScreenLock()
+```
+
+## UIApplication
+
+### Set a display mode
+
+Set a specific display mode to all windows.
+
+```swift
+UIApplication.shared.applyDisplayMode(.light)
+```
+
+### Hide keyboard
+
+Dismisses the keyboard by resigning the first responder.
+
+```swift
+UIApplication.shared.dismissKeyboard()
+```
+
+### Finding the key window
+
+Retrieves the active window scene or the key window directly.
+
+```swift
+let activeWindowScene: UIWindowScene? = UIApplication.shared.activeWindowScene
+let keyWindow: UIWindow? = UIApplication.shared.keyWindow 
 ```
 
 ## UIColor
@@ -33,7 +60,7 @@ To convert a UIColor to SwiftUI's color view simply call `colorView` on a UIColo
 
 Get the RGB and alpha values from a `UIColor` object in a struct and even use it to create a new color object.
 
-```
+```swift
 let rgba = color.rgbaColor
 _ = rgba.red
 _ = rgba.green
@@ -46,7 +73,7 @@ let newColor = UIColor(rgba: rgba)
 
 Archive a `UIColor` object into a data object and vice versa.
 
-```
+```swift
 let data: Data? = color.asData()
 let uiColor: UIColor = data!.asUIColor()
 ```
@@ -81,7 +108,7 @@ Use `UIDevice.setOrientation(.landscapeRight)` to force the device into a specif
 
 To get the `NSDirectionalEdgeInsets` from a `UIEdgeInsets`:
 
-```
+```swift
 var edgeInsets = UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4)
 let directionalEdgeInsets = edgeInsets.directional
 ```
@@ -90,7 +117,7 @@ let directionalEdgeInsets = edgeInsets.directional
 
 To only change one edge of a UIEdgeInsets use the following methods:
 
-```
+```swift
 edgeInsets = edgeInsets.top(11)
 edgeInsets = edgeInsets.left(22)
 edgeInsets = edgeInsets.bottom(33)

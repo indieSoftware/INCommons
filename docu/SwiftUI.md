@@ -68,6 +68,20 @@ OverlayButton(
 )
 ```
 
+## OverlayWindowPresenter
+
+A helper presenting a view in a new window on top of others.
+
+Helpful to show an error state or something similar on top of the current view hierarchy regardless of the current state and without injecting something to each screen.
+
+```swift
+let overlayWindowPresenter = OverlayWindowPresenter()
+overlayWindowPresenter.present(
+	view: someOverlayView
+)
+overlayWindowPresenter.dismiss()
+```
+
 ## UIView
 
 ### Condition modifier

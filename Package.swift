@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "INCommons",
-    platforms: [.iOS("16.0")],
+    platforms: [.iOS("17.0")],
     products: [
         .library(
             name: "INCommons",
