@@ -1,5 +1,11 @@
 # Changelog
 
+### v4.3.0
+
+- Added `toHexString(includeAlpha:)` to `UIColor` to print the color's values as a hex string.
+- Added `sha256Hash`, `sha256HashString` and `sha256HashInt` to `Data` to calculate its hash value.
+- Added `sha256HashString` and `sha256HashInt` to `String` to calculate its hash value.
+
 ### v4.2.0
 
 - Added `UIApplication` extension `applyDisplayMode`.

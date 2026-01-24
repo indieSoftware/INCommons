@@ -64,6 +64,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/SwiftUI/OverlayWindowPresenter.swift",
+      "line": 11,
+      "symbol": "OverlayWindowPresenter.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/UIKit/ApplicationManagerLogic.swift",
       "line": 19,
       "symbol": "ApplicationManagerLogic.init()",

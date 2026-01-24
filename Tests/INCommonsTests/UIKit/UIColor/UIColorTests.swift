@@ -50,4 +50,20 @@ final class UIColorTests: XCTestCase {
 		XCTAssertEqual(result?.blue, 1.0)
 		XCTAssertEqual(result?.alpha, 1.0)
 	}
+
+	func testHexStringWithoutAlpha() throws {
+		let color = try XCTUnwrap(UIColor(hex: "12DEFF"))
+		let colorStringWithoutAlpha = color.toHexString(includeAlpha: false)
+		XCTAssertEqual(colorStringWithoutAlpha, "#12DEFF")
+		let colorStringWithAlpha = color.toHexString(includeAlpha: true)
+		XCTAssertEqual(colorStringWithAlpha, "#12DEFFFF")
+	}
+
+	func testHexStringWithAlpha() throws {
+		let color = try XCTUnwrap(UIColor(hex: "FFDD5588"))
+		let colorStringWithoutAlpha = color.toHexString(includeAlpha: false)
+		XCTAssertEqual(colorStringWithoutAlpha, "#FFDD55")
+		let colorStringWithAlpha = color.toHexString(includeAlpha: true)
+		XCTAssertEqual(colorStringWithAlpha, "#FFDD5588")
+	}
 }

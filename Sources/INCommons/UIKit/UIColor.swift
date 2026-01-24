@@ -89,4 +89,29 @@ public extension UIColor {
 			self.alpha = alpha
 		}
 	}
+
+	/// Returns the hex-code as a string of the given color.
+	/// - Parameter includeAlpha: Whether the alpha channel should be appended to the hex code or not, e.g. #RRGGBBAA.
+	/// - Returns: The hex-string, e.g. `#FF0000` or `#FF0000FF`.
+	func toHexString(includeAlpha: Bool = false) -> String? {
+		var red: CGFloat = 0
+		var green: CGFloat = 0
+		var blue: CGFloat = 0
+		var alpha: CGFloat = 0
+
+		guard getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
+			return nil
+		}
+
+		let redInt = Int(round(red * 255))
+		let greenInt = Int(round(green * 255))
+		let blueInt = Int(round(blue * 255))
+		let alphaInt = Int(round(alpha * 255))
+
+		if includeAlpha {
+			return String(format: "#%02X%02X%02X%02X", redInt, greenInt, blueInt, alphaInt)
+		} else {
+			return String(format: "#%02X%02X%02X", redInt, greenInt, blueInt)
+		}
+	}
 }
