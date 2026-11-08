@@ -23,12 +23,13 @@ if [ "$IS_LIB_PROJECT" = true ]
 then
   # Update podspec of lib project.
   # Replace the 3rd line in the podspec to update the version number.
-  sed -i '' "3s/.*/ spec.version = \"$1\" # auto-generated/" INLibTemplate.podspec
+  sed -i '' "3s/.*/ spec.version = \"$1\" # auto-generated/" "$POD_SPEC_NAME"
   # Replace the 4th line in the podspec to update the swift version read from the file.
   SWIFT_VERSION=$(<.swift-version)
-  sed -i '' "4s/.*/ spec.swift_version = \"$SWIFT_VERSION\" # auto-generated/" INLibTemplate.podspec
+  sed -i '' "4s/.*/ spec.swift_version = \"$SWIFT_VERSION\" # auto-generated/" "$POD_SPEC_NAME"
   # Lint podspec to be sure everything is still valid.
-  pod lib lint INLibTemplate.podspec
+  pod lib lint "$POD_SPEC_NAME"
 else
   # Nothing to do for app projects.
+  :
 fi
