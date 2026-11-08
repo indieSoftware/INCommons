@@ -16,7 +16,7 @@
     },
     {
       "file": "/Users/sven/Work/Git/indieSoftware/ios-tools/INCommons/Sources/INCommons/Swift/Types/LoadingHandler.swift",
-      "line": 10,
+      "line": 18,
       "symbol": "LoadingHandler.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

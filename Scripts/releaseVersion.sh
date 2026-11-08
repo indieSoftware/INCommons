@@ -44,4 +44,5 @@ then
   fi
 else
   # Nothing to do for app projects.
+  :
 fi
