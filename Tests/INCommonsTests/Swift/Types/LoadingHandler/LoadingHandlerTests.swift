@@ -1,4 +1,5 @@
 import INCommons
+import os
 import XCTest
 
 @MainActor
@@ -59,5 +60,65 @@ final class LoadingHandlerTests: XCTestCase, @unchecked Sendable {
 
 		// Now wait for the first action to be finished.
 		await fulfillment(of: [action2Expectation, action3Expectation], timeout: 1.0)
+	}
+
+	func test_waitUntilIdle_withoutActions_returnsImmediately() async {
+		await sut.waitUntilIdle()
+	}
+
+	func test_waitUntilIdle_returnsAfterAllAddedActionsFinished() async {
+		let finishedActions = OSAllocatedUnfairLock(initialState: [Int]())
+		for index in 1 ... 3 {
+			await sut.addAction {
+				try? await Task.sleep(for: .milliseconds(20))
+				finishedActions.withLock { $0.append(index) }
+			}
+		}
+
+		await sut.waitUntilIdle()
+
+		XCTAssertEqual(finishedActions.withLock { $0 }, [1, 2, 3])
+	}
+
+	func test_waitUntilIdle_waitsForSpawnedActionsNotQueuedYet() async {
+		let isFinished = OSAllocatedUnfairLock(initialState: false)
+		// The spawned task adds the action later, so it may not be queued yet when waiting starts.
+		sut.spawnTaskToAddAction {
+			try? await Task.sleep(for: .milliseconds(20))
+			isFinished.withLock { $0 = true }
+		}
+
+		await sut.waitUntilIdle()
+
+		XCTAssertTrue(isFinished.withLock { $0 })
+	}
+
+	func test_waitUntilIdle_waitsForActionsAddedByRunningActions() async {
+		let isFinished = OSAllocatedUnfairLock(initialState: false)
+		let handler: LoadingHandler = sut
+		await sut.addAction {
+			// A running action which hands follow-up work to the same handler, e.g. a reload after a write.
+			handler.spawnTaskToAddAction {
+				try? await Task.sleep(for: .milliseconds(20))
+				isFinished.withLock { $0 = true }
+			}
+		}
+
+		await sut.waitUntilIdle()
+
+		XCTAssertTrue(isFinished.withLock { $0 })
+	}
+
+	func test_waitUntilIdle_resumesEveryWaitingCaller() async {
+		await sut.addAction {
+			try? await Task.sleep(for: .milliseconds(20))
+		}
+		let handler: LoadingHandler = sut
+
+		async let firstWait: Void = handler.waitUntilIdle()
+		async let secondWait: Void = handler.waitUntilIdle()
+		_ = await (firstWait, secondWait)
+
+		await sut.waitUntilIdle()
 	}
 }

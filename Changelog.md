@@ -1,5 +1,9 @@
 # Changelog
 
+### v4.4.0
+
+- Added `waitUntilIdle()` to `LoadingHandler` to wait until all added and spawned actions have finished.
+
 ### v4.3.0
 
 - Added `toHexString(includeAlpha:)` to `UIColor` to print the color's values as a hex string.
